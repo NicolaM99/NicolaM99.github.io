@@ -1,70 +1,70 @@
 # Portfolio Personale - Nicola Mastromarino
 
-Questo repository contiene il codice sorgente del mio portfolio personale, un sito web statico ospitato su GitHub Pages.
+Benvenuto nel repository del mio portfolio personale! Questo sito web statico, sviluppato in HTML e CSS, è pensato per presentare il mio profilo professionale, le mie competenze e i miei progetti in modo chiaro, moderno e responsive. Il sito è ottimizzato per essere ospitato su GitHub Pages.
 
-## Struttura del Progetto
+## 🚀 Caratteristiche principali
+
+- **Design minimale e pulito** con colori blu e grigio
+- **Completamente responsive** per una perfetta visualizzazione su desktop, tablet e smartphone
+- **Navigazione in-header** con scroll fluido alle sezioni
+- **Sezioni dedicate** a profilo, istruzione, competenze tecniche, progetti, certificazioni, soft skills e contatti
+- **Codice statico** senza backend, pronto per il deploy su GitHub Pages
+
+## 📁 Struttura del Progetto
 
 ```
 .
-├── index.html              # Pagina principale
+├── index.html              # Pagina principale del portfolio
 ├── assets/
 │   ├── css/
 │   │   └── style.css      # Stili CSS
-│   └── images/            # Directory per le immagini
+│   └── images/            # Immagini e badge certificazioni
 └── README.md              # Questo file
 ```
 
-## Tecnologie Utilizzate
+## 🛠️ Tecnologie Utilizzate
 
 - HTML5
-- CSS3
-- Font Awesome (per le icone)
-- Design Responsive
-- Animazioni CSS
+- CSS3 (responsive, animazioni, variabili CSS)
+- [Font Awesome](https://fontawesome.com/) per le icone
 
-## Caratteristiche
+## 🌐 Deploy su GitHub Pages
 
-- Design moderno e minimalista
-- Layout completamente responsive
-- Navigazione fluida tra le sezioni
-- Animazioni e transizioni smooth
-- Ottimizzato per SEO
-- Compatibile con tutti i browser moderni
-
-## Deploy su GitHub Pages
-
-1. Assicurati di avere un repository GitHub con il nome `username.github.io` (dove username è il tuo nome utente GitHub)
-2. Clona il repository localmente:
+1. Crea un repository pubblico chiamato `username.github.io` (sostituisci username con il tuo nome utente GitHub)
+2. Clona il repository:
 
    ```bash
    git clone https://github.com/username/username.github.io.git
    ```
 
-3. Copia tutti i file del progetto nella directory del repository
-4. Commit e push delle modifiche:
+3. Copia i file del progetto nella cartella del repository
+4. Esegui:
 
    ```bash
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Deploy portfolio"
    git push origin main
    ```
 
-5. Il sito sarà automaticamente pubblicato su `https://username.github.io`
+5. Vai nelle impostazioni del repository su GitHub, sezione **Pages**, e assicurati che la pubblicazione sia attiva sul branch `main`
+6. Il sito sarà visibile su `https://username.github.io`
 
-## Personalizzazione
+## ✏️ Personalizzazione
 
-Per personalizzare il sito:
+- Modifica `index.html` per aggiornare contenuti, progetti e certificazioni
+- Modifica `assets/css/style.css` per cambiare colori o layout
+- Inserisci le tue immagini e badge in `assets/images/`
 
-1. Modifica il file `index.html` per aggiornare i contenuti
-2. Modifica il file `assets/css/style.css` per personalizzare lo stile
-3. Aggiungi le tue immagini nella cartella `assets/images/`
+## 📬 Contatti
 
-## Licenza
+- **Email:** [nickmastromarino54@gmail.com](mailto:nickmastromarino54@gmail.com)
+- **LinkedIn:** [Nicola Mastromarino](https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/)
+- **GitHub:** [NicolaM99](https://github.com/NicolaM99/NicolaM99)
 
-Questo progetto è distribuito con licenza MIT. Vedi il file `LICENSE` per maggiori dettagli.
+## 📄 Licenza
 
-## Contatti
+Questo progetto è distribuito con licenza MIT. Consulta il file `LICENSE` per maggiori dettagli.
 
-- Email: [Inserisci la tua email]
-- LinkedIn: [Inserisci il tuo profilo LinkedIn]
-- GitHub: [Inserisci il tuo profilo GitHub]
+---
+
+Se hai suggerimenti o vuoi segnalare un problema, sentiti libero di aprire una issue o contattarmi tramite i riferimenti sopra!
