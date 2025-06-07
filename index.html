@@ -3,28 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio di Nicola Mastromarino - Cloud Consultant presso Nimbus Reply. Esperto in sviluppo software, cloud-native, DevSecOps, CI/CD, machine learning e computer vision.">
+    <meta name="keywords" content="Nicola Mastromarino, Cloud Consultant, Nimbus Reply, Computer Science, AI, Machine Learning, Cloud Native, DevSecOps">
+    <meta name="author" content="Nicola Mastromarino">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Nicola Mastromarino - Portfolio">
+    <meta property="og:description" content="Cloud Consultant presso Nimbus Reply, esperto in sviluppo software e tecnologie cloud.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nicolam99.github.io/">
     <title>Nicola Mastromarino - Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
     <header>
-        <nav>
+        <nav aria-label="Menu principale">
+            <div class="logo">
+                <a href="#hero" aria-label="Torna all'inizio">NM</a>
+            </div>
             <ul>
-                <li><a href="#profilo">Profilo</a></li>
-                <li><a href="#istruzione">Istruzione</a></li>
-                <li><a href="#competenze">Competenze</a></li>
-                <li><a href="#progetti">Progetti</a></li>
-                <li><a href="#certificazioni">Certificazioni</a></li>
-                <li><a href="#contatti">Contatti</a></li>
+                <li><a href="#profilo" aria-label="Vai alla sezione Profilo">Profilo</a></li>
+                <li><a href="#istruzione" aria-label="Vai alla sezione Istruzione">Istruzione</a></li>
+                <li><a href="#competenze" aria-label="Vai alla sezione Competenze">Competenze</a></li>
+                <li><a href="#progetti" aria-label="Vai alla sezione Progetti">Progetti</a></li>
+                <li><a href="#certificazioni" aria-label="Vai alla sezione Certificazioni">Certificazioni</a></li>
+                <li><a href="#contatti" aria-label="Vai alla sezione Contatti">Contatti</a></li>
             </ul>
+            <button class="menu-toggle" aria-label="Menu mobile" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
-        <section id="hero">
-            <h1>Nicola Mastromarino</h1>
-            <h2>Cloud Consultant presso Nimbus Reply</h2>
+        <section id="hero" aria-label="Sezione principale">
+            <div class="hero-content">
+                <h1>Nicola Mastromarino</h1>
+                <h2>Cloud Consultant presso Nimbus Reply</h2>
+                <p class="hero-description">Esperto in sviluppo software, cloud-native, DevSecOps, CI/CD, machine learning e computer vision</p>
+                <a href="#contatti" class="cta-button" aria-label="Contattami">Contattami</a>
+            </div>
         </section>
 
         <section id="profilo">
