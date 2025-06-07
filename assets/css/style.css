@@ -266,21 +266,61 @@ section h2::after {
 
 .project-card {
     background: var(--card-background);
-    padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all var(--transition-speed) ease;
+    padding: var(--spacing-unit);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-card h3 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
     font-size: 1.5rem;
+}
+
+.project-description {
+    margin: var(--spacing-unit) 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: var(--spacing-unit) 0;
+}
+
+.tech-tag {
+    background: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.project-link:hover {
+    color: var(--accent-color);
+}
+
+.project-link i {
+    font-size: 1.25rem;
 }
 
 /* Certificazioni */
@@ -395,6 +435,15 @@ footer {
 
     .certification {
         min-width: 100%;
+    }
+
+    .project-tech {
+        justify-content: center;
+    }
+
+    .project-link {
+        width: 100%;
+        justify-content: center;
     }
 }
 
