@@ -1,12 +1,17 @@
 /* Variabili CSS */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --background-color: #f5f6fa;
-    --card-background: #ffffff;
-    --spacing-unit: 1rem;
+    --primary-color: #f5f6fa;
+    /* Colore testo principale, chiaro */
+    --secondary-color: #b2bec3;
+    /* Colore testo secondario, grigio chiaro */
+    --background-color: #2d3436;
+    /* Sfondo scuro principale */
+    --card-background: #42494c;
+    /* Sfondo card leggermente più chiaro del background */
+    --text-color: #f5f6fa;
+    /* Colore testo generale, chiaro */
+    --accent-color: #0984e3;
+    /* Accento blu, come prima */
     --border-radius: 8px;
     --transition-speed: 0.3s;
 }
@@ -27,67 +32,47 @@ body {
 
 /* Header e Navigazione */
 header {
-    background-color: var(--primary-color);
-    padding: 1rem 0;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo a {
-    color: white;
     font-size: 1.5rem;
     font-weight: 700;
+    color: var(--primary-color);
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--secondary-color);
-    border-radius: var(--border-radius);
-    transition: all var(--transition-speed) ease;
-}
-
-.logo a:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
 }
 
 nav ul {
     display: flex;
-    list-style: none;
     gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 500;
     transition: color var(--transition-speed) ease;
-    position: relative;
 }
 
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--secondary-color);
-    transition: width var(--transition-speed) ease;
-}
-
-nav a:hover::after {
-    width: 100%;
+nav a:hover {
+    color: var(--accent-color);
 }
 
 .menu-toggle {
@@ -109,70 +94,66 @@ nav a:hover::after {
 
 /* Sezione Hero */
 #hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)),
-        url('../images/hero-bg.jpg') center/cover;
-    color: white;
-    padding: 0 1rem;
+    padding: 2rem;
+    background-color: var(--background-color);
 }
 
 .hero-content {
     max-width: 800px;
-    animation: fadeInUp 1s ease-out;
 }
 
-#hero h1 {
+.hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    font-weight: 700;
+    color: var(--primary-color);
 }
 
-#hero h2 {
+.hero-content h2 {
     font-size: 1.8rem;
-    font-weight: 400;
-    margin-bottom: 1.5rem;
     color: var(--secondary-color);
+    margin-bottom: 1.5rem;
 }
 
 .hero-description {
     font-size: 1.2rem;
+    color: var(--secondary-color);
     margin-bottom: 2rem;
-    opacity: 0.9;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1rem;
+    justify-content: center;
     margin-top: 2rem;
 }
 
 .cta-button {
     padding: 0.8rem 1.5rem;
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+    font-weight: 500;
 }
 
 .cta-button:hover {
-    background-color: var(--primary-color-dark);
+    background-color: #0873c4;
+    transform: translateY(-2px);
 }
 
 .download-cv {
-    background-color: var(--secondary-color);
+    background-color: var(--card-background);
+    color: var(--text-color);
 }
 
 .download-cv:hover {
-    background-color: var(--secondary-color-dark);
-}
-
-.download-cv i {
-    margin-right: 0.5rem;
+    background-color: #555c5f;
 }
 
 /* Sezioni generali */
@@ -183,23 +164,10 @@ section {
 }
 
 section h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    text-align: center;
     font-size: 2.5rem;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-section h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
 }
 
 /* Timeline Istruzione */
@@ -210,7 +178,7 @@ section h2::after {
 }
 
 .event {
-    background: var(--card-background);
+    background: var(--background-color);
     padding: 2rem;
     border-radius: var(--border-radius);
     margin-bottom: 2rem;
@@ -229,21 +197,25 @@ section h2::after {
 }
 
 /* Griglia Competenze */
-.skills-grid {
+.skills-grid,
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-top: 2rem;
 }
 
-.skill-category {
-    background: var(--card-background);
+.skill-category,
+.project-card {
+    background-color: var(--card-background);
     padding: 2rem;
     border-radius: var(--border-radius);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform var(--transition-speed) ease;
 }
 
-.skill-category:hover {
+.skill-category:hover,
+.project-card:hover {
     transform: translateY(-5px);
 }
 
@@ -271,26 +243,6 @@ section h2::after {
     font-size: 1.2rem;
 }
 
-/* Griglia Progetti */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--card-background);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-unit);
-    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
 .project-card h3 {
     color: var(--secondary-color);
     margin-bottom: 1rem;
@@ -311,12 +263,13 @@ section h2::after {
 }
 
 .tech-tag {
-    background: var(--accent-color);
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: var(--accent-color);
     color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 0.3rem;
 }
 
 .project-link {
@@ -347,7 +300,7 @@ section h2::after {
 
 .certification {
     text-align: center;
-    background: var(--card-background);
+    background: var(--background-color);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -383,7 +336,7 @@ section h2::after {
     text-decoration: none;
     padding: 1rem 2rem;
     border-radius: var(--border-radius);
-    background: var(--card-background);
+    background: var(--background-color);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: all var(--transition-speed) ease;
 }
@@ -400,11 +353,12 @@ section h2::after {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
     text-align: center;
     padding: 2rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--card-background);
 }
 
 /* Media Queries */
@@ -415,26 +369,13 @@ footer {
 
     nav ul {
         display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: var(--primary-color);
-        padding: 1rem 0;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
     }
 
-    nav ul.active {
-        display: flex;
-    }
-
-    #hero h1 {
+    .hero-content h1 {
         font-size: 2.5rem;
     }
 
-    #hero h2 {
+    .hero-content h2 {
         font-size: 1.5rem;
     }
 
@@ -462,7 +403,7 @@ footer {
 }
 
 /* Animazioni */
-@keyframes fadeInUp {
+@keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -474,16 +415,6 @@ footer {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 section {
-    animation: fadeIn 0.5s ease-out;
+    animation: fadeIn 0.8s ease-out;
 }
