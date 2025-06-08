@@ -18,9 +18,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="assets/js/main.js" defer></script>
 </head>
 <body>
+    <div id="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <nav aria-label="Menu principale">
             <div class="logo">
@@ -45,14 +50,18 @@
 
     <main>
         <section id="hero" aria-label="Sezione principale">
+            <div id="particles-js"></div>
             <div class="hero-content">
-                <h1>Nicola Mastromarino</h1>
-                <h2>Cloud Consultant presso Nimbus Reply</h2>
+                <h2 class="text-secondary">CLOUD CONSULTANT</h2>
+                <h1 class="gradient-text">Nicola Mastromarino</h1>
                 <p class="hero-description">Esperto in sviluppo software, cloud-native, DevSecOps, CI/CD, machine learning e computer vision</p>
                 <div class="hero-buttons">
                     <a href="#contatti" class="cta-button" aria-label="Contattami">Contattami</a>
                     <a href="assets/documents/CV_Nicola_Mastromarino.pdf" class="cta-button download-cv" download aria-label="Scarica CV">
                         <i class="fas fa-download"></i> Scarica CV
+                    </a>
+                    <a href="#progetti" class="cta-button" aria-label="Vai alla sezione Progetti">
+                        <i class="fas fa-folder-open"></i> Progetti
                     </a>
                 </div>
             </div>
