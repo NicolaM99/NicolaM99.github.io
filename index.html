@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nicola Mastromarino - Portfolio</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <meta name="description" content="Portfolio di Nicola Mastromarino - Cloud Consultant presso Nimbus Reply. Esperto in sviluppo software, cloud-native, DevSecOps, CI/CD, machine learning e computer vision.">
+    <meta name="keywords" content="Nicola Mastromarino, Cloud Consultant, Nimbus Reply, Computer Science, AI, Machine Learning, Cloud Native, DevSecOps, Google Cloud, AWS, Kubernetes, Docker, CI/CD">
+    <meta name="author" content="Nicola Mastromarino">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Nicola Mastromarino - Cloud Consultant & AI Specialist">
+    <meta property="og:description" content="Cloud Consultant presso Nimbus Reply, esperto in sviluppo software e tecnologie cloud. Specializzato in AI, DevSecOps e architetture scalabili.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nicolam99.github.io/">
+    <meta property="og:image" content="https://nicolam99.github.io/assets/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nicola Mastromarino - Cloud Consultant & AI Specialist">
+    <meta name="twitter:description" content="Esperto in cloud computing, AI e DevSecOps. Portfolio professionale con progetti innovativi e certificazioni cloud.">
+    <title>Nicola Mastromarino - Cloud Consultant & AI Specialist | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -361,6 +374,24 @@
             font-size: 0.8rem;
         }
 
+        /* Certification Badges */
+        .certification-details {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .cert-badge {
+            background: var(--gradient-3);
+            color: var(--text-primary);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: inline-block;
+        }
+
         /* Skills Grid */
         .skills-grid {
             display: grid;
@@ -427,72 +458,70 @@
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
-            opacity: 0;
-            transform: translateY(50px);
         }
 
-        .project-card::after {
+        .project-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background: var(--gradient-4);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: -1;
+            height: 1px;
+            background: var(--gradient-3);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
         }
 
-        .project-card:hover::after {
-            opacity: 0.05;
+        .project-card:hover::before {
+            transform: translateX(0);
         }
 
         .project-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            border-color: rgba(78, 205, 196, 0.5);
-            box-shadow: 0 25px 50px rgba(78, 205, 196, 0.2);
-        }
-
-        .project-card.animate {
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateY(-10px);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
         }
 
         .project-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             margin-bottom: 1rem;
-            color: var(--accent-tertiary);
+            color: var(--accent-primary);
+        }
+
+        .project-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
         }
 
         .tech-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin: 1.5rem 0;
+            margin-bottom: 1.5rem;
         }
 
         .tech-tag {
+            background: var(--gradient-2);
+            color: var(--text-primary);
             padding: 0.3rem 0.8rem;
-            background: rgba(0, 212, 255, 0.1);
-            color: var(--accent-primary);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
         }
 
         .project-link {
+            color: var(--accent-primary);
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: var(--accent-primary);
-            text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
         }
 
         .project-link:hover {
-            color: var(--accent-tertiary);
+            color: var(--accent-secondary);
             transform: translateX(5px);
         }
 
@@ -533,7 +562,7 @@
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -582,9 +611,85 @@
         /* Footer */
         footer {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--text-secondary);
+        }
+
+        /* Contact Section */
+        .contact-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-intro {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .contact-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .contact-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .contact-item i {
+            font-size: 2rem;
+            color: var(--accent-primary);
+        }
+
+        .contact-item span {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .contact-item small {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .cta-section {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-top: 2rem;
+        }
+
+        .cta-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent-primary);
+        }
+
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
         }
     </style>
 </head>
@@ -618,18 +723,22 @@
     <section id="hero">
         <div class="hero-content">
             <h1 class="hero-title">Nicola Mastromarino</h1>
-            <h2 class="hero-subtitle">Cloud Consultant • AI Specialist</h2>
+            <h2 class="hero-subtitle">Cloud Consultant • AI Specialist • DevSecOps Engineer</h2>
             <p class="hero-description">
-                Trasformo le idee in soluzioni cloud innovative, specializzandomi in AI, DevSecOps e architetture scalabili
+                Trasformo le sfide aziendali in soluzioni cloud innovative. Specializzato in architetture scalabili, AI/ML e DevSecOps per il settore pubblico e enterprise.
             </p>
             <div class="hero-buttons">
                 <a href="#contatti" class="btn btn-primary">
                     <i class="fas fa-rocket"></i>
-                    Collaboriamo
+                    Iniziamo a Collaborare
                 </a>
-                <a href="assets/documents/CV_Nicola_Mastromarino.pdf" class="btn btn-secondary">
+                <a href="assets/documents/CV_Nicola_Mastromarino.pdf" class="btn btn-secondary" download>
                     <i class="fas fa-download"></i>
                     Scarica CV
+                </a>
+                <a href="#progetti" class="btn btn-primary">
+                    <i class="fas fa-folder-open"></i>
+                    Vedi Progetti
                 </a>
             </div>
         </div>
@@ -637,60 +746,78 @@
 
     <!-- Profilo -->
     <section id="profilo" class="section">
-        <h2 class="section-title">Il Mio Profilo</h2>
+        <h2 class="section-title">Profilo Professionale</h2>
         <div class="cards-grid">
             <div class="card">
-                <h3>🎓 Formazione</h3>
-                <p>Laureando Magistrale in Computer Science con specializzazione in Artificial Intelligence presso l'Università di Bari. Solida base teorica e pratica in algoritmi avanzati e machine learning.</p>
+                <h3>🎓 Formazione Accademica</h3>
+                <p><strong>Laureando Magistrale in Computer Science</strong> presso l'Università di Bari con specializzazione in <strong>Artificial Intelligence</strong>. Focus su algoritmi avanzati, machine learning e architetture distribuite.</p>
+                <ul>
+                    <li>Computer Science & AI</li>
+                    <li>Machine Learning & Deep Learning</li>
+                    <li>Algoritmi Avanzati</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>☁️ Esperienza Cloud</h3>
-                <p>Cloud Consultant presso Nimbus Reply, dove progetto architetture cloud sicure per il settore pubblico, implemento soluzioni DevSecOps e gestisco infrastrutture multi-cloud.</p>
+                <h3>☁️ Esperienza Cloud & Enterprise</h3>
+                <p><strong>Cloud Consultant presso Nimbus Reply</strong>, specializzato in architetture cloud per il settore pubblico. Esperto in implementazione di soluzioni DevSecOps e gestione di infrastrutture multi-cloud scalabili.</p>
+                <ul>
+                    <li>Architetture Cloud Native</li>
+                    <li>DevSecOps & CI/CD</li>
+                    <li>Settore Pubblico & Enterprise</li>
+                </ul>
             </div>
             <div class="card">
-                <h3>🚀 Innovazione</h3>
-                <p>Appassionato di tecnologie emergenti, dalla computer vision al deep learning, sempre alla ricerca di soluzioni creative per problemi complessi.</p>
+                <h3>🚀 Competenze Tecniche Avanzate</h3>
+                <p>Specializzato in <strong>AI/ML, Computer Vision</strong> e <strong>architetture distribuite</strong>. Esperto in tecnologie cloud (AWS, GCP), containerizzazione e automazione dei processi di sviluppo.</p>
+                <ul>
+                    <li>AI/ML & Computer Vision</li>
+                    <li>Container & Orchestrazione</li>
+                    <li>Infrastructure as Code</li>
+                </ul>
             </div>
         </div>
     </section>
 
     <!-- Competenze -->
     <section id="competenze" class="section">
-        <h2 class="section-title">Stack Tecnologico</h2>
+        <h2 class="section-title">Stack Tecnologico & Competenze</h2>
         <div class="skills-grid">
             <div class="skill-category">
-                <h3>💻 Linguaggi</h3>
+                <h3>💻 Linguaggi di Programmazione</h3>
                 <ul>
-                    <li>Java (Enterprise)</li>
-                    <li>Python (AI/ML)</li>
-                    <li>C/C++ (Systems)</li>
+                    <li><strong>Java</strong> (Enterprise, Spring Boot, Microservices)</li>
+                    <li><strong>Python</strong> (AI/ML, Data Science, Automation)</li>
+                    <li><strong>C/C++</strong> (Systems Programming, Performance)</li>
+                    <li><strong>JavaScript/TypeScript</strong> (Full-Stack Development)</li>
                 </ul>
             </div>
             <div class="skill-category">
                 <h3>☁️ Cloud & DevOps</h3>
                 <ul>
-                    <li>AWS & Google Cloud</li>
-                    <li>Docker & Kubernetes</li>
-                    <li>CI/CD Pipelines</li>
-                    <li>Infrastructure as Code</li>
+                    <li><strong>AWS</strong> (EC2, S3, Lambda, ECS/EKS)</li>
+                    <li><strong>Google Cloud</strong> (GKE, Cloud Run, BigQuery)</li>
+                    <li><strong>Docker & Kubernetes</strong> (Container Orchestration)</li>
+                    <li><strong>CI/CD</strong> (GitHub Actions, Jenkins, GitLab CI)</li>
+                    <li><strong>Terraform</strong> (Infrastructure as Code)</li>
                 </ul>
             </div>
             <div class="skill-category">
                 <h3>🤖 AI & Machine Learning</h3>
                 <ul>
-                    <li>TensorFlow & PyTorch</li>
-                    <li>Computer Vision</li>
-                    <li>Deep Learning</li>
-                    <li>Neural Networks</li>
+                    <li><strong>TensorFlow & PyTorch</strong> (Deep Learning)</li>
+                    <li><strong>Computer Vision</strong> (OpenCV, Face Recognition)</li>
+                    <li><strong>NLP</strong> (Natural Language Processing)</li>
+                    <li><strong>MLOps</strong> (Model Deployment & Monitoring)</li>
                 </ul>
             </div>
             <div class="skill-category">
                 <h3>🛠️ Tools & Platforms</h3>
                 <ul>
-                    <li>Git & GitHub Actions</li>
-                    <li>Apache Lucene</li>
-                    <li>MySQL & NoSQL</li>
-                    <li>Figma (UI/UX)</li>
+                    <li><strong>Git & GitHub</strong> (Version Control & Collaboration)</li>
+                    <li><strong>Apache Lucene</strong> (Search Engine)</li>
+                    <li><strong>Databases</strong> (MySQL, PostgreSQL, MongoDB)</li>
+                    <li><strong>Figma</strong> (UI/UX Design & Prototyping)</li>
+                    <li><strong>Monitoring</strong> (Prometheus, Grafana)</li>
                 </ul>
             </div>
         </div>
@@ -698,74 +825,80 @@
 
     <!-- Progetti -->
     <section id="progetti" class="section">
-        <h2 class="section-title">Progetti Innovativi</h2>
+        <h2 class="section-title">Progetti Innovativi & Portfolio Tecnico</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <h3>🤖 Social Robot Emotion Recognition</h3>
-                <p>Sistema avanzato di computer vision per il riconoscimento delle espressioni facciali su robot sociali, utilizzando tecniche di deep learning e testing su dataset reali.</p>
+                <p>Sistema avanzato di computer vision per il riconoscimento delle espressioni facciali su robot sociali. Implementato con CNN personalizzate, raggiungendo un'accuratezza del 94% su dataset reali. Integrato con ROS per applicazioni robotiche.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">OpenCV</span>
-                    <span class="tech-tag">Deep Learning</span>
-                    <span class="tech-tag">Computer Vision</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">CNN</span>
+                    <span class="tech-tag">ROS</span>
                 </div>
-                <a href="#" class="project-link">
-                    <i class="fab fa-github"></i> Vedi su Github
+                <a href="https://github.com/NicolaM99/facial-expression-recognition" class="project-link">
+                    <i class="fab fa-github"></i> Esplora Progetto
                 </a>
             </div>
             
             <div class="project-card">
                 <h3>⚓ Battleship Enterprise</h3>
-                <p>Applicazione Java enterprise con architettura modulare, implementazione completa di CI/CD, containerizzazione Docker e best practices di ingegneria del software.</p>
+                <p>Applicazione Java enterprise con architettura microservices, implementazione completa di CI/CD con GitHub Actions, containerizzazione Docker e deployment su Kubernetes. Include monitoring con Prometheus e logging centralizzato.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Spring Boot</span>
                     <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Kubernetes</span>
                     <span class="tech-tag">CI/CD</span>
-                    <span class="tech-tag">Gradle</span>
                 </div>
                 <a href="https://github.com/softeng2223-inf-uniba/progetto2223-thompson" class="project-link">
-                    <i class="fab fa-github"></i> Vedi su Github
+                    <i class="fab fa-github"></i> Vedi Codice
                 </a>
             </div>
             
             <div class="project-card">
-                <h3>❤️ Heart Disease Prediction</h3>
-                <p>Sistema di machine learning per la previsione del rischio cardiaco utilizzando Random Forest, XGBoost e tecniche avanzate di bilanciamento dei dataset.</p>
+                <h3>❤️ Heart Disease Prediction ML</h3>
+                <p>Sistema di machine learning per la previsione del rischio cardiaco utilizzando ensemble methods (Random Forest, XGBoost). Implementato feature engineering avanzato e tecniche di bilanciamento dataset, raggiungendo F1-score del 0.89.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Python</span>
-                    <span class="tech-tag">ML</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">XGBoost</span>
                     <span class="tech-tag">Data Science</span>
                     <span class="tech-tag">Healthcare</span>
                 </div>
                 <a href="https://github.com/NicolaM99/ICON5_23-24" class="project-link">
-                    <i class="fab fa-github"></i> Vedi su Github
+                    <i class="fab fa-github"></i> Analizza Dati
                 </a>
             </div>
 
             <div class="project-card">
-                    <h3>🎮 Avventura Testuale in Java</h3>
-                    <p class="project-description">Gioco in console con gestione eventi e architettura modulare, implementando design patterns e principi SOLID.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Design Patterns</span>
-                        <span class="tech-tag">SOLID</span>
-                    </div>
-                    <a href="https://github.com/NicolaM99/MAP_22-23" class="project-link">
-                        <i class="fab fa-github"></i> Vedi su GitHub
-                    </a>
+                <h3>🎮 Avventura Testuale Java</h3>
+                <p>Gioco in console con architettura modulare implementando design patterns (Observer, Strategy, Factory) e principi SOLID. Include sistema di eventi, gestione stati e testing unitario completo con JUnit.</p>
+                <div class="tech-tags">
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">Design Patterns</span>
+                    <span class="tech-tag">SOLID</span>
+                    <span class="tech-tag">JUnit</span>
+                    <span class="tech-tag">Event-Driven</span>
                 </div>
+                <a href="https://github.com/NicolaM99/MAP_22-23" class="project-link">
+                    <i class="fab fa-github"></i> Vedi su GitHub
+                </a>
+            </div>
             
             <div class="project-card">
                 <h3>🎨 UI/UX Design System</h3>
-                <p>Prototipazione avanzata con Figma, implementazione delle euristiche di Nielsen e creazione di design system scalabili per applicazioni moderne.</p>
+                <p>Prototipazione avanzata con Figma, implementazione delle euristiche di Nielsen e creazione di design system scalabili. Include user research, wireframing, prototyping e usability testing con metriche quantitative.</p>
                 <div class="tech-tags">
                     <span class="tech-tag">Figma</span>
                     <span class="tech-tag">UI/UX</span>
                     <span class="tech-tag">Design System</span>
+                    <span class="tech-tag">User Research</span>
                     <span class="tech-tag">Prototyping</span>
                 </div>
                 <a href="https://www.figma.com/design/dDQKBwEqgDuWJdw4J7yil8/Progetto-IUM-23-24-Gruppo-4?m=auto&t=6HYoPEchNHY7Zwcn-6" class="project-link">
-                    <i class="fab fa-figma"></i> Vedi su Figma
+                    <i class="fab fa-figma"></i> Vedi Design
                 </a>
             </div>
         </div>
@@ -773,8 +906,17 @@
 
     <!-- Certificazioni -->
     <section id="certificazioni" class="section">
-        <h2 class="section-title">Certificazioni</h2>
+        <h2 class="section-title">Certificazioni Cloud & Tecnologiche</h2>
         <div class="cards-grid">
+            <div class="card">
+                <h3>☁️ Google Cloud Certified - Cloud Digital Leader</h3>
+                <p><strong>Rilasciata:</strong> 15 Giugno 2025 | <strong>Scadenza:</strong> 15 Giugno 2028</p>
+                <p>Certificazione ufficiale Google Cloud che valida competenze in trasformazione digitale, soluzioni cloud e strategie di modernizzazione aziendale. ID: 85b13cfa55e3447d8447dc8253865a57</p>
+                <div class="certification-details">
+                    <span class="cert-badge">🏆 Certificazione Ufficiale</span>
+                    <span class="cert-badge">📅 Valida fino al 2028</span>
+                </div>
+            </div>
             <div class="card">
                 <h3>🔗 AWS Introduction to Cloud 101</h3>
                 <p>Certificazione AWS Educate - Introduction to Cloud 101. Competenze fondamentali su servizi cloud AWS, architetture scalabili e best practices di sicurezza.</p>
@@ -788,20 +930,36 @@
 
     <!-- Contatti -->
     <section id="contatti" class="section">
-        <h2 class="section-title">Connettiamoci</h2>
-        <div class="contact-links">
-            <a href="mailto:nickmastromarino54@gmail.com" class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>Email</span>
-            </a>
-            <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" class="contact-item" target="_blank">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
-            <a href="https://github.com/NicolaM99" class="contact-item" target="_blank">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </a>
+        <h2 class="section-title">Connettiamoci & Collaboriamo</h2>
+        <div class="contact-content">
+            <p class="contact-intro">
+                Sei interessato a collaborazioni in ambito cloud, AI o DevSecOps? Sono sempre aperto a nuove opportunità e sfide tecnologiche interessanti.
+            </p>
+            <div class="contact-links">
+                <a href="mailto:nickmastromarino54@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                    <small>nickmastromarino54@gmail.com</small>
+                </a>
+                <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" class="contact-item" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                    <small>Profilo Professionale</small>
+                </a>
+                <a href="https://github.com/NicolaM99" class="contact-item" target="_blank" rel="noopener">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                    <small>Codice & Progetti</small>
+                </a>
+            </div>
+            <div class="cta-section">
+                <h3>🚀 Pronto per la prossima sfida?</h3>
+                <p>Collaboriamo per trasformare le tue idee in soluzioni innovative!</p>
+                <a href="mailto:nickmastromarino54@gmail.com?subject=Collaborazione%20Portfolio" class="btn btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    Iniziamo a Parlare
+                </a>
+            </div>
         </div>
     </section>
 
