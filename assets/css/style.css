@@ -641,3 +641,19 @@ body.loaded #loading-overlay {
     opacity: 0;
     visibility: hidden;
 }
+
+.cert-id {
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.98em;
+    word-break: break-all;
+}
+
+.cert-logo {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}

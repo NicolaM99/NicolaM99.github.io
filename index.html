@@ -116,6 +116,7 @@
             width: 100%;
             z-index: 1000;
             padding: 1rem 2rem;
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             background: rgba(10, 10, 15, 0.8);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -180,6 +181,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
+            padding-top: 80px;
         }
 
         .hero-content {
@@ -219,16 +221,18 @@
 
         .hero-buttons {
             display: flex;
-            gap: 1.5rem;
+            gap: 2.5rem;
             justify-content: center;
             flex-wrap: wrap;
+            width: 100%;
+            margin: 2rem 0 2rem 0;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 0.9rem 1.5rem;
             border: none;
-            border-radius: 50px;
+            border-radius: 30px;
             font-weight: 600;
             text-decoration: none;
             display: inline-flex;
@@ -309,6 +313,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             transition: all 0.4s ease;
             position: relative;
@@ -405,6 +410,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             transition: all 0.4s ease;
             position: relative;
@@ -454,6 +460,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             transition: all 0.4s ease;
             position: relative;
@@ -545,6 +552,7 @@
             color: var(--text-primary);
             text-decoration: none;
             transition: all 0.4s ease;
+            -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
         }
 
@@ -642,6 +650,8 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 15px;
             padding: 2rem;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             text-decoration: none;
             color: var(--text-primary);
             transition: all 0.4s ease;
@@ -678,6 +688,8 @@
             border-radius: 20px;
             padding: 3rem;
             margin-top: 2rem;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
         }
 
         .cta-section h3 {
@@ -690,6 +702,12 @@
             color: var(--text-secondary);
             margin-bottom: 2rem;
             font-size: 1.1rem;
+        }
+
+        .cert-logo {
+            width: 20px;
+            height: 20px;
+            margin-right: 0.5rem;
         }
     </style>
 </head>
@@ -909,20 +927,20 @@
         <h2 class="section-title">Certificazioni Cloud & Tecnologiche</h2>
         <div class="cards-grid">
             <div class="card">
-                <h3>☁️ Google Cloud Certified - Cloud Digital Leader</h3>
+                <h3><img src="assets/images/google_cloud.jpg" alt="Google Cloud Certified" class="cert-logo"> Google Cloud Certified - Cloud Digital Leader</h3>
                 <p><strong>Rilasciata:</strong> 15 Giugno 2025 | <strong>Scadenza:</strong> 15 Giugno 2028</p>
-                <p>Certificazione ufficiale Google Cloud che valida competenze in trasformazione digitale, soluzioni cloud e strategie di modernizzazione aziendale. ID: 85b13cfa55e3447d8447dc8253865a57</p>
+                <p>Certificazione ufficiale Google Cloud che valida competenze in trasformazione digitale, soluzioni cloud e strategie di modernizzazione aziendale. <span class="cert-id">ID: 85b13cfa55e3447d8447dc8253865a57</span></p>
                 <div class="certification-details">
                     <span class="cert-badge">🏆 Certificazione Ufficiale</span>
                     <span class="cert-badge">📅 Valida fino al 2028</span>
                 </div>
             </div>
             <div class="card">
-                <h3>🔗 AWS Introduction to Cloud 101</h3>
+                <h3><img src="assets/images/amazon_web_services_logo.jpg" alt="AWS Certified" class="cert-logo"> AWS Introduction to Cloud 101</h3>
                 <p>Certificazione AWS Educate - Introduction to Cloud 101. Competenze fondamentali su servizi cloud AWS, architetture scalabili e best practices di sicurezza.</p>
             </div>
             <div class="card">
-                <h3>🌐 Google Cloud Digital Transformation</h3>
+                <h3><img src="assets/images/google_cloud.jpg" alt="Google Cloud Digital Transformation" class="cert-logo"> Google Cloud Digital Transformation</h3>
                 <p>Google Cloud Skills Boost - Trasformazione digitale con focus su automazione, gestione dati e modernizzazione delle applicazioni enterprise.</p>
             </div>
         </div>
