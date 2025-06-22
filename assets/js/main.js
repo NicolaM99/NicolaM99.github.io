@@ -1,16 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Menu mobile
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('nav ul');
-
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        menuToggle.setAttribute('aria-expanded', 
-            menuToggle.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'
-        );
+    // Scroll Progress
+    window.addEventListener('scroll', () => {
+        const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+        document.querySelector('.scroll-progress').style.width = scrolled + '%';
     });
 
-    // Smooth scroll per i link di navigazione
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements
+    document.querySelectorAll('.section-title, .card, .project-card, .skill-category').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -20,36 +35,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     behavior: 'smooth',
                     block: 'start'
                 });
-                // Chiudi il menu mobile se aperto
-                if (navMenu.classList.contains('active')) {
-                    navMenu.classList.remove('active');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                }
             }
         });
     });
 
-    // Animazione al caricamento delle sezioni
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+    // Header background on scroll
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 100) {
+            header.style.background = 'rgba(10, 10, 15, 0.95)';
+        } else {
+            header.style.background = 'rgba(10, 10, 15, 0.8)';
+        }
+    });
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
+    // Add stagger animation to cards
+    setTimeout(() => {
+        document.querySelectorAll('.card, .project-card').forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.1}s`;
         });
-    }, observerOptions);
+    }, 100);
 
-    document.querySelectorAll('section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-        observer.observe(section);
+    // Parallax effect for floating shapes
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const shapes = document.querySelectorAll('.shape');
+        shapes.forEach((shape, index) => {
+            const speed = 0.5 + (index * 0.1);
+            shape.style.transform += ` translateY(${scrolled * speed}px)`;
+        });
     });
 }); 
