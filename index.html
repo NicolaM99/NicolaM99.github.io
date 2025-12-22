@@ -23,21 +23,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Nicola Mastromarino",
-      "jobTitle": "Cloud Consultant, AI Specialist, DevSecOps Engineer",
-      "url": "https://nicolam99.github.io/",
-      "sameAs": [
-        "https://github.com/NicolaM99",
-        "https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Nimbus Reply"
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Nicola Mastromarino",
+        "jobTitle": "Cloud Consultant, AI Specialist, DevSecOps Engineer",
+        "url": "https://nicolam99.github.io/",
+        "sameAs": [
+          "https://github.com/NicolaM99",
+          "https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Nimbus Reply"
+        }
       }
-    }
     </script>
     <style>
         * {
@@ -1087,14 +1087,14 @@
         }, 100);
 
         // Parallax effect for floating shapes
+        const parallaxShapes = document.querySelectorAll('.shape');
         let scrollTicking = false;
         window.addEventListener('scroll', () => {
             if (scrollTicking) return;
             scrollTicking = true;
             requestAnimationFrame(() => {
                 const scrolled = window.pageYOffset;
-                const shapes = document.querySelectorAll('.shape');
-                shapes.forEach((shape, index) => {
+                parallaxShapes.forEach((shape, index) => {
                     const speed = 0.5 + (index * 0.1);
                     shape.style.setProperty('--scroll-offset', `${scrolled * speed}px`);
                 });
