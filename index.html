@@ -1088,6 +1088,7 @@
 
         // Parallax effect for floating shapes
         const parallaxShapes = document.querySelectorAll('.shape');
+        let scrollTicking = false;
         const parallaxScrollHandler = () => {
             if (scrollTicking) return;
             scrollTicking = true;
@@ -1100,7 +1101,6 @@
                 scrollTicking = false;
             });
         };
-        let scrollTicking = false;
         window.addEventListener('scroll', parallaxScrollHandler, { passive: true });
         window.addEventListener('beforeunload', () => {
             window.removeEventListener('scroll', parallaxScrollHandler);
