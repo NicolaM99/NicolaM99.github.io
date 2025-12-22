@@ -114,7 +114,6 @@
             position: absolute;
             border-radius: 50%;
             opacity: 0.1;
-            animation: float 20s infinite linear;
             transform: translateY(var(--scroll-offset));
         }
 
@@ -143,13 +142,6 @@
             top: 80%;
             left: 60%;
             animation-delay: -10s;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(var(--scroll-offset)) rotate(0deg); }
-            25% { transform: translateY(calc(var(--scroll-offset) - 20px)) rotate(90deg); }
-            50% { transform: translateY(calc(var(--scroll-offset) - 40px)) rotate(180deg); }
-            75% { transform: translateY(calc(var(--scroll-offset) - 20px)) rotate(270deg); }
         }
 
         /* Header */
