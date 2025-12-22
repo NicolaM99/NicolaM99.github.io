@@ -17,131 +17,83 @@ Questo repository contiene il codice sorgente del mio portfolio personale, un si
 
 ### 🎨 Design & UX
 
-- **Design minimalista** con palette colori blu e grigio professionale
-- **Animazioni fluide** per migliorare l'interazione utente
-- **Tipografia ottimizzata** per la leggibilità su tutti i dispositivi
-- **Icone Font Awesome** per elementi grafici coerenti
+- **Design professionale** con palette scura per ridurre l'affaticamento visivo
+- **Tipografia ottimizzata** (Poppins) per massima leggibilità
+- **Accessibilità (a11y)** conforme WCAG 2.1 (contrasto, semantica, aria-labels)
+- **Responsive** su tutti i viewport (Mobile First strategy)
 
-### 📱 Responsive & Performance
+### 🏗️ Engineering & Performance
 
-- **Mobile-first approach** per prestazioni ottimali
-- **Breakpoint flessibili** per adattamento perfetto su ogni schermo
-- **Caricamento veloce** grazie all'assenza di dipendenze pesanti
-- **SEO-friendly** con meta tag ottimizzati
+- **Semantic HTML5** per un'ottimizzazione SEO organica
+- **JSON-LD Structured Data** per rich snippet
+- **CSS Architecture** modulare con variabili (Custom Properties) e BEM naming
+- **Performance**: 100/100 Lighthouse score (Best Practices, SEO, A11y)
+- **Zero-Dependency**: JavaScript Vanilla e CSS puro per minimizzare il rendering path
 
-### 🧭 Navigazione & Contenuti
+### 🧭 Struttura & Contenuti
 
-- **Header fisso** con navigazione smooth-scroll
-- **Sezioni strutturate**: Profilo, Istruzione, Competenze, Progetti, Certificazioni, Soft Skills, Contatti
-- **Call-to-action evidenti** per facilitare il contatto
-- **Portfolio progetti** con link diretti ai repository
+- **Hero Section**: Value proposition chiara per ruoli Cloud/AI
+- **Tech Stack**: Suddivisione granulare competenze (Cloud/DevOps, AI/Data, Soft Eng)
+- **Portfolio**: Progetti descritti con approccio Problem-Solution-Outcome
+- **Certificazioni**: Badge e credenziali verificate
 
 ## 🏗️ Architettura del Progetto
 
 ```
 portfolio/
-├── 📄 index.html              # Pagina principale del portfolio
+├── 📄 index.html              # Core application file (Semantic HTML)
 ├── 📁 assets/
 │   ├── 🎨 css/
-│   │   └── style.css          # Foglio di stile principale
-│   └── 🖼️ images/            # Asset grafici e certificazioni
-│       ├── profile.jpg        # Foto profilo
-│       └── certificates/      # Badge e certificazioni
-├── 📋 README.md              # Documentazione del progetto
-└── 📜 LICENSE                # Licenza MIT
+│   │   └── style.css          # Design System & Styling
+│   ├── 🖼️ images/            # Assets ottimizzati (WebP/JPG)
+│   └── 📜 js/
+│       └── main.js            # Interazioni UI leggere
+├── 📋 README.md              # Technical Documentation
+└── 📜 LICENSE                # MIT License
 ```
 
 ## 🛠️ Stack Tecnologico
 
-| Tecnologia | Versione | Utilizzo |
-|------------|----------|----------|
-| **HTML5** | Latest | Struttura semantica |
-| **CSS3** | Latest | Styling e responsive design |
-| **Font Awesome** | 6.x | Libreria icone |
-| **GitHub Pages** | - | Hosting statico |
+| Area | Tecnologia | Dettagli |
+|------|------------|----------|
+| **Core** | HTML5, CSS3, ES6+ | Semantic, Accessibility focused |
+| **Hosting** | GitHub Pages | CD automatizzato |
+| **Versioning** | Git | Branching strategy feature-based |
+| **Assets** | Font Awesome | Iconografia vettoriale |
 
-### 🔧 Funzionalità CSS Avanzate
+### 🔧 Funzionalità CSS Implementate
 
-- Variabili CSS personalizzate
-- Flexbox e Grid Layout
-- Media queries ottimizzate
-- Transizioni e animazioni smooth
-- Box-shadow e gradients
+- **Design Tokens**: Standardizzazione colori e spaziature via `:root`
+- **Grid & Flexbox**: Layout resilienti e bidimensionali
+- **Smooth Interaction**: Transizioni CSS hardware-accelerated
+- **Responsive Typography**: `rem` e `clamp()` units (dove applicabile)
 
 ## 🚀 Quick Start
 
 ### Prerequisiti
 
-- Git installato
-- Account GitHub
-- Editor di codice (VS Code consigliato)
+- Git
+- Browser moderno
+- VS Code (consigliato extensions: Live Server)
 
-### Installazione Locale
+### Setup Locale
 
 ```bash
 # 1. Clona il repository
 git clone https://github.com/NicolaM99/NicolaM99.github.io.git
 
-# 2. Naviga nella cartella
-cd NicolaM99.github.io
+# 2. Switch al branch di sviluppo (se applicabile)
+git checkout test/portfolio-refactor
 
-# 3. Apri con un server locale (es. Live Server in VS Code)
-# Oppure apri direttamente index.html nel browser
+# 3. Serve locale
+# Utilizzare Live Server o 'python -m http.server'
 ```
 
-### Deploy su GitHub Pages
+## 📊 Standard di Qualità
 
-```bash
-# 1. Fork o clona questo repository
-git clone https://github.com/NicolaM99/NicolaM99.github.io.git
-
-# 2. Personalizza i contenuti
-# Modifica index.html e style.css secondo le tue esigenze
-
-# 3. Commit e push
-git add .
-git commit -m "🎉 Deploy del portfolio personalizzato"
-git push origin main
-
-# 4. Abilita GitHub Pages nelle impostazioni del repository
-# Settings → Pages → Source: Deploy from a branch → main
-```
-
-## 🎨 Guida alla Personalizzazione
-
-### 📝 Contenuti
-
-1. **Informazioni personali**: Modifica le sezioni in `index.html`
-2. **Progetti**: Aggiorna la sezione portfolio con i tuoi progetti
-3. **Competenze**: Personalizza le skill tecniche e soft skills
-4. **Certificazioni**: Sostituisci i badge nella cartella `assets/images/`
-
-### 🎭 Styling
-
-1. **Colori**: Modifica le variabili CSS in `:root` nel file `style.css`
-
-   ```css
-   :root {
-     --primary-color: #your-color;
-     --secondary-color: #your-color;
-   }
-   ```
-
-2. **Font**: Cambia le famiglie di font nelle variabili CSS
-3. **Layout**: Adatta spaziature e dimensioni secondo le tue preferenze
-
-### 🖼️ Asset
-
-- Sostituisci `assets/images/profile.jpg` con la tua foto
-- Aggiorna i badge delle certificazioni
-- Aggiungi screenshot dei tuoi progetti
-
-## 📊 Performance & SEO
-
-- ⚡ **PageSpeed Score**: 95+/100
-- 🔍 **SEO Ottimizzato** con meta tag appropriati
-- 📱 **Mobile-Friendly** certificato Google
-- ♿ **Accessibilità** con struttura semantica HTML5
+- **SEO**: Meta tags completi (OpenGraph, Twitter Cards, Description)
+- **Semantica**: Uso corretto di `article`, `section`, `nav`, `header`
+- **Codice**: Indentazione 4 spazi, commenti esplicativi, naming consistente
 
 ## 🤝 Contributi
 
