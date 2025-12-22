@@ -60,6 +60,7 @@
             --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
             --gradient-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
             --focus-outline: 2px dashed #00d4ff;
+            --scroll-offset: 0px;
         }
 
         body {
@@ -114,7 +115,6 @@
             border-radius: 50%;
             opacity: 0.1;
             animation: float 20s infinite linear;
-            --scroll-offset: 0px;
             transform: translateY(var(--scroll-offset));
         }
 
@@ -1102,9 +1102,6 @@
             });
         };
         window.addEventListener('scroll', parallaxScrollHandler, { passive: true });
-        window.addEventListener('beforeunload', () => {
-            window.removeEventListener('scroll', parallaxScrollHandler);
-        });
     </script>
 </body>
 </html>
