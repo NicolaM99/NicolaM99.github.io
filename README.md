@@ -1,130 +1,103 @@
-# 💼 Portfolio Personale - Nicola Mastromarino
-
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-brightgreen)](https://nicolam99.github.io/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![Responsive](https://img.shields.io/badge/Responsive-Yes-success)](https://web.dev/responsive-web-design-basics/)
-
-> Un portfolio web moderno e responsive che presenta il mio profilo professionale, competenze e progetti attraverso un design pulito e minimalista.
-
-## 🎯 Panoramica
-
-Questo repository contiene il codice sorgente del mio portfolio personale, un sito web statico sviluppato con HTML5 e CSS3 puro. Il design è stato pensato per offrire un'esperienza utente ottimale su tutti i dispositivi, dal desktop al mobile, mantenendo al contempo semplicità e professionalità.
-
-**🔗 [Visualizza il Portfolio Live](https://nicolam99.github.io/)**
-
-## ✨ Caratteristiche
-
-### 🎨 Design & UX
-
-- **Design professionale** con palette scura per ridurre l'affaticamento visivo
-- **Tipografia ottimizzata** (Poppins) per massima leggibilità
-- **Accessibilità (a11y)** conforme WCAG 2.1 (contrasto, semantica, aria-labels)
-- **Responsive** su tutti i viewport (Mobile First strategy)
-
-### 🏗️ Engineering & Performance
-
-- **Semantic HTML5** per un'ottimizzazione SEO organica
-- **JSON-LD Structured Data** per rich snippet
-- **CSS Architecture** modulare con variabili (Custom Properties) e BEM naming
-- **Performance**: 100/100 Lighthouse score (Best Practices, SEO, A11y)
-- **Zero-Dependency**: JavaScript Vanilla e CSS puro per minimizzare il rendering path
-
-### 🧭 Struttura & Contenuti
-
-- **Hero Section**: Value proposition chiara per ruoli Cloud/AI
-- **Tech Stack**: Suddivisione granulare competenze (Cloud/DevOps, AI/Data, Soft Eng)
-- **Portfolio**: Progetti descritti con approccio Problem-Solution-Outcome
-- **Certificazioni**: Badge e credenziali verificate
-
-## 🏗️ Architettura del Progetto
-
-```
-portfolio/
-├── 📄 index.html              # Core application file (Semantic HTML)
-├── 📁 assets/
-│   ├── 🎨 css/
-│   │   └── style.css          # Design System & Styling
-│   ├── 🖼️ images/            # Assets ottimizzati (WebP/JPG)
-│   └── 📜 js/
-│       └── main.js            # Interazioni UI leggere
-├── 📋 README.md              # Technical Documentation
-└── 📜 LICENSE                # MIT License
-```
-
-## 🛠️ Stack Tecnologico
-
-| Area | Tecnologia | Dettagli |
-|------|------------|----------|
-| **Core** | HTML5, CSS3, ES6+ | Semantic, Accessibility focused |
-| **Hosting** | GitHub Pages | CD automatizzato |
-| **Versioning** | Git | Branching strategy feature-based |
-| **Assets** | Font Awesome | Iconografia vettoriale |
-
-### 🔧 Funzionalità CSS Implementate
-
-- **Design Tokens**: Standardizzazione colori e spaziature via `:root`
-- **Grid & Flexbox**: Layout resilienti e bidimensionali
-- **Smooth Interaction**: Transizioni CSS hardware-accelerated
-- **Responsive Typography**: `rem` e `clamp()` units (dove applicabile)
-
-## 🚀 Quick Start
-
-### Prerequisiti
-
-- Git
-- Browser moderno
-- VS Code (consigliato extensions: Live Server)
-
-### Setup Locale
-
-```bash
-# 1. Clona il repository
-git clone https://github.com/NicolaM99/NicolaM99.github.io.git
-
-# 2. Switch al branch di sviluppo (se applicabile)
-git checkout test/portfolio-refactor
-
-# 3. Serve locale
-# Utilizzare Live Server o 'python -m http.server'
-```
-
-## 📊 Standard di Qualità
-
-- **SEO**: Meta tags completi (OpenGraph, Twitter Cards, Description)
-- **Semantica**: Uso corretto di `article`, `section`, `nav`, `header`
-- **Codice**: Indentazione 4 spazi, commenti esplicativi, naming consistente
-
-## 🤝 Contributi
-
-I contributi sono benvenuti! Se hai suggerimenti per miglioramenti:
-
-1. 🍴 Fork del repository
-2. 🌿 Crea un branch per la tua feature (`git checkout -b feature/miglioramento`)
-3. 💾 Commit delle modifiche (`git commit -m 'Aggiunge nuovo miglioramento'`)
-4. 📤 Push del branch (`git push origin feature/miglioramento`)
-5. 🔄 Apri una Pull Request
-
-## 📞 Contatti & Social
-
 <div align="center">
 
-[![Email](https://img.shields.io/badge/Email-nickmastromarino54@gmail.com-red?logo=gmail&logoColor=white)](mailto:nickmastromarino54@gmail.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Nicola%20Mastromarino-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/)
-[![GitHub](https://img.shields.io/badge/GitHub-NicolaM99-black?logo=github&logoColor=white)](https://github.com/NicolaM99)
+  <a href="https://nicolam99.github.io/">
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2d3436,0984e3&height=280&section=header&text=Nicola%20Mastromarino&fontSize=50&fontColor=ffffff&desc=Cloud%20Consultant%20%7C%20AI%20Engineer&descAlignY=75&descAlign=50&animation=fadeIn" alt="Nicola Mastromarino Header"/>
+  </a>
+
+  <br />
+
+  <a href="https://nicolam99.github.io/">
+    <img src="https://img.shields.io/badge/🚀_Portfolio-0984e3?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+  </a>&nbsp;
+  <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>&nbsp;
+  <a href="mailto:nickmastromarino54@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
+  </a>
+
+  <br /><br />
+
+  > *"Trasformare le sfide cloud in opportunità di innovazione."*
 
 </div>
 
-## 📜 Licenza
-
-Questo progetto è rilasciato sotto licenza **MIT License**. Vedi il file [LICENSE](LICENSE) per i dettagli completi.
-
 ---
+
+### 👨‍💻 Chi Sono
+
+<div align="left">
+
+Sono un **Cloud Consultant** presso **Nimbus Reply** e studente magistrale in Computer Science (AI Curriculum).
+Mi specializzo nella progettazione di architetture **Cloud Native**, pipelines **DevSecOps** e soluzioni di **Intelligenza Artificiale** per l'enterprise.
+
+```python
+from typing import List
+
+class Nicola(CloudConsultant):
+    def __init__(self):
+        self.location = "Italy 🇮🇹"
+        self.passions = ["Cloud Architecture", "Deep Learning", "Automation"]
+
+    def current_focus(self) -> str:
+        return "Building secure cloud solutions @ Nimbus Reply"
+
+    def tech_stack(self) -> List[str]:
+        return ["AWS/GCP", "Kubernetes", "MLOps", "Terraform"]
+
+    def mission(self) -> str:
+        return "Bridge the gap between Operations and AI"
+```
+
+</div>
+
+<br />
+
+### 🛠️ Tech Stack & Expertise
 
 <div align="center">
 
-**⭐ Se questo progetto ti è stato utile, lascia una stella!**
+| **Cloud & Infrastructure** | **AI & Data Science** | **Development** |
+| :---: | :---: | :---: |
+| ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white) <br> ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white) <br> ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) | ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) <br> ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) <br> ![Scikit-Learn](https://img.shields.io/badge/scikit_learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) <br> ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white) <br> ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white) |
 
-Made with ❤️ by [Nicola Mastromarino](https://github.com/NicolaM99)
+| **DevOps & Tools** | **Computer Vision** | **Database** |
+| :---: | :---: | :---: |
+| ![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat-square&logo=docker&logoColor=white) <br> ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white) <br> ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white) | ![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white) <br> ![YOLO](https://img.shields.io/badge/YOLO-00FFFF?style=flat-square&logo=yolo&logoColor=black) | ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white) <br> ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white) |
 
+</div>
+
+<br />
+
+---
+
+### 📊 GitHub Stats
+
+<div align="center">
+<table style="border: none; background-color: transparent;">
+<tr>
+<td style="border: none;">
+<img src="https://github-readme-stats.vercel.app/api?username=NicolaM99&show_icons=true&theme=nord&hide_border=true&count_private=true&bg_color=2d3436&title_color=0984e3&text_color=dfe6e9&icon_color=0984e3" height="160" alt="Stats" />
+</td>
+<td style="border: none;">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NicolaM99&layout=compact&theme=nord&hide_border=true&bg_color=2d3436&title_color=0984e3&text_color=dfe6e9" height="160" alt="Languages" />
+</td>
+</tr>
+</table>
+</div>
+
+<br />
+
+### 🏆 Certifications
+
+| Certificazione | Emittente | Anno |
+| --- | --- | --- |
+| 🥇 **Cloud Digital Leader** | Google Cloud Certified | 2025 |
+| ☁️ **Introduction to Cloud 101** | AWS Educate | 2025 |
+| 🚀 **Digital Transformation** | Google Cloud Skills Boost | 2025 |
+
+<br />
+
+<div align="center">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0984e3,2d3436&height=80&section=footer" width="100%"/>
 </div>
