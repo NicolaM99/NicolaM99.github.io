@@ -2,282 +2,341 @@
 <html lang="it">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <meta name="description"
-        content="Portfolio di Nicola Mastromarino - Cloud Consultant & AI Engineer. Esperto in Cloud Native Architecture, DevSecOps, e Machine Learning.">
-    <meta name="keywords"
-        content="Nicola Mastromarino, Cloud Consultant, AI Engineer, DevSecOps, AWS, Google Cloud, Machine Learning, Computer Vision">
-    <meta name="author" content="Nicola Mastromarino">
-    <meta name="robots" content="index, follow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <meta name="description"
+    content="Portfolio di Nicola Mastromarino - Cloud Consultant & AI Engineer. Specializzato in GenAI, RAG, LLMOps e Cloud Native su GCP/AWS.">
+  <meta name="keywords"
+    content="Nicola Mastromarino, Cloud Consultant, AI Engineer, GenAI, RAG, LLMOps, QLoRA, GCP, AWS, Machine Learning, DevSecOps">
+  <meta name="author" content="Nicola Mastromarino">
+  <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="profile">
-    <meta property="og:title" content="Nicola Mastromarino - Cloud Consultant & AI Engineer">
-    <meta property="og:description"
-        content="Specializzato in architetture Cloud Native sicure e scalabili, e soluzioni di Intelligenza Artificiale applicata.">
-    <meta property="og:url" content="https://nicolam99.github.io/">
-    <meta property="og:image" content="assets/images/profile-preview.jpg">
+  <!-- Open Graph -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Nicola Mastromarino - Cloud Consultant & AI Engineer">
+  <meta property="og:description"
+    content="Specializzato in architetture GenAI (RAG, LLMOps, QLoRA) e Cloud Native su GCP e AWS.">
+  <meta property="og:url" content="https://nicolam99.github.io/">
+  <meta property="og:image" content="assets/images/profile-preview.jpg">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Nicola Mastromarino - Cloud Consultant & AI Engineer">
-    <meta name="twitter:description"
-        content="Specializzato in architetture Cloud Native sicure e scalabili, e soluzioni di Intelligenza Artificiale applicata.">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nicola Mastromarino - Cloud Consultant & AI Engineer">
+  <meta name="twitter:description"
+    content="Specializzato in architetture GenAI (RAG, LLMOps, QLoRA) e Cloud Native su GCP e AWS.">
 
-    <title>Nicola Mastromarino | Cloud Consultant & AI Engineer</title>
+  <title>Nicola Mastromarino | Cloud Consultant & AI Engineer</title>
 
-    <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Nicola Mastromarino",
-      "jobTitle": "Cloud Consultant",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Nimbus Reply"
-      },
-      "url": "https://nicolam99.github.io/",
-      "sameAs": [
-        "https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/",
-        "https://github.com/NicolaM99"
-      ],
-      "alumniOf": "Università degli Studi di Bari 'Aldo Moro'",
-      "knowsAbout": ["Cloud Computing", "Artificial Intelligence", "DevSecOps", "Machine Learning", "Software Engineering"]
-    }
-    </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Nicola Mastromarino",
+    "jobTitle": "Cloud Consultant & AI Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Nimbus Reply"
+    },
+    "url": "https://nicolam99.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/",
+      "https://github.com/NicolaM99"
+    ],
+    "alumniOf": "Università degli Studi di Bari 'Aldo Moro'",
+    "knowsAbout": ["Cloud Computing", "Generative AI", "RAG", "LLMOps", "DevSecOps", "Machine Learning"]
+  }
+  </script>
 
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script src="assets/js/main.js" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <nav aria-label="Menu principale">
-            <div class="logo">
-                <a href="#hero" aria-label="Nicola Mastromarino Home">NM</a>
-            </div>
-            <ul>
-                <li><a href="#profilo">Chi Sono</a></li>
-                <li><a href="#istruzione">Istruzione</a></li>
-                <li><a href="#competenze">Stack Tecnologico</a></li>
-                <li><a href="#progetti">Progetti</a></li>
-                <li><a href="#certificazioni">Certificazioni</a></li>
-                <li><a href="#contatti">Contatti</a></li>
-            </ul>
-            <button class="menu-toggle" aria-label="Apri menu navigazione" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
-    </header>
+  <header>
+    <nav aria-label="Menu principale">
+      <div class="logo">
+        <a href="#hero" aria-label="Nicola Mastromarino Home">NM</a>
+      </div>
+      <ul>
+        <li><a href="#profilo">Chi Sono</a></li>
+        <li><a href="#istruzione">Istruzione</a></li>
+        <li><a href="#competenze">Stack Tecnologico</a></li>
+        <li><a href="#progetti">Progetti</a></li>
+        <li><a href="#certificazioni">Certificazioni</a></li>
+        <li><a href="#contatti">Contatti</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Apri menu navigazione" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
-    <main>
-        <section id="hero" aria-labelledby="hero-title">
-            <div class="hero-content">
-                <h1 id="hero-title">Nicola Mastromarino</h1>
-                <h2>Cloud Consultant & AI Engineer</h2>
-                <p class="hero-description">Progetto e implemento architetture Cloud Native sicure, pipeline CI/CD
-                    efficienti e soluzioni di Machine Learning avanzate.</p>
-                <div class="hero-buttons">
-                    <a href="#contatti" class="cta-button">Parliamone</a>
-                    <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="cta-button download-cv" download
-                        aria-label="Scarica Curriculum Vitae in PDF">
-                        <i class="fas fa-download"></i> Scarica CV
-                    </a>
-                </div>
-            </div>
-        </section>
+  <main>
+    <section id="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Nicola Mastromarino</h1>
+        <h2>Cloud Consultant & AI Engineer</h2>
+        <p class="hero-description">
+          Progetto e implemento sistemi GenAI (RAG, LLMOps, fine-tuning) e architetture Cloud Native
+          sicure e scalabili su GCP e AWS.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contatti" class="cta-button">Parliamone</a>
+          <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="cta-button download-cv" download
+            aria-label="Scarica Curriculum Vitae in PDF">
+            <i class="fas fa-download"></i> Scarica CV
+          </a>
+        </div>
+      </div>
+    </section>
 
-        <section id="profilo" aria-labelledby="profilo-title">
-            <h2 id="profilo-title">Profilo Professionale</h2>
-            <article>
-                <p>
-                    Sono un <strong>Cloud Consultant</strong> presso <em>Nimbus Reply</em> e studente magistrale in
-                    Computer Science (curriculum AI).
-                    Combino una solida base accademica con l'esperienza pratica nella progettazione di infrastrutture
-                    <strong>Cloud Native</strong> resilienti e scalabili su AWS e GCP.
-                </p>
-                <p>
-                    Il mio focus principale è l'intersezione tra <strong>DevSecOps</strong> e <strong>Artificial
-                        Intelligence</strong>: dall'automazione dei deploy tramite GitHub Actions alla
-                    containerizzazione con Docker, fino all'integrazione di modelli di Machine Learning in produzione.
-                </p>
-            </article>
-        </section>
+    <section id="profilo" aria-labelledby="profilo-title">
+      <h2 id="profilo-title">Profilo Professionale</h2>
+      <article>
+        <p>
+          Sono un <strong>Cloud Consultant</strong> presso <em>Nimbus Reply</em> e specializzando magistrale
+          in Computer Science (curriculum Artificial Intelligence) presso l'Università degli Studi di Bari.
+          Ho completato lo <strong>Short Master in Generative AI</strong> (apr 2026), con progetto finale
+          su un sistema di Clinical Question Answering basato su RAG e fine-tuning di LLM.
+        </p>
+        <p>
+          Il mio focus è l'intersezione tra <strong>GenAI Engineering</strong> e <strong>Cloud Native</strong>:
+          dalla progettazione di pipeline RAG ibride al fine-tuning efficiente di modelli linguistici (QLoRA),
+          fino all'automazione infrastrutturale e DevSecOps in ambienti enterprise multi-cloud (GCP, AWS).
+        </p>
+      </article>
+    </section>
 
-        <section id="istruzione" aria-labelledby="istruzione-title">
-            <h2 id="istruzione-title">Percorso Accademico</h2>
-            <div class="timeline">
-                <div class="event">
-                    <h3>Laurea Magistrale in Computer Science</h3>
-                    <p class="institution">Università degli Studi di Bari "Aldo Moro"</p>
-                    <p><strong>Specializzazione:</strong> Artificial Intelligence</p>
-                    <p class="period">2024 - Presente</p>
-                </div>
-                <div class="event">
-                    <h3>Laurea Triennale in Informatica</h3>
-                    <p class="institution">Università degli Studi di Bari "Aldo Moro"</p>
-                    <p class="period">Ott 2021 - Ott 2024</p>
-                </div>
-                <div class="event">
-                    <h3>Ricerca e Tesi</h3>
-                    <p>Sviluppo di un sistema di <strong>Riconoscimento delle Espressioni Facciali</strong> real-time
-                        utilizzando Python e OpenCV, con focus su ottimizzazione delle performance e accuratezza del
-                        modello Deep Learning.</p>
-                </div>
-            </div>
-        </section>
+    <section id="istruzione" aria-labelledby="istruzione-title">
+      <h2 id="istruzione-title">Percorso Accademico</h2>
+      <div class="timeline">
 
-        <section id="competenze" aria-labelledby="competenze-title">
-            <h2 id="competenze-title">Stack Tecnologico</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-                    <ul>
-                        <li><strong>Piattaforme:</strong> AWS, Google Cloud Platform (GCP)</li>
-                        <li><strong>Infrastructure:</strong> Landing Zones, Multi-account Strategy</li>
-                        <li><strong>Container & Orchestration:</strong> Docker, Kubernetes (Basic)</li>
-                        <li><strong>CI/CD & Automation:</strong> GitHub Actions, Terraform (Learning)</li>
-                        <li><strong>Methodologies:</strong> DevSecOps, Agile/Scrum</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> AI & Data Science</h3>
-                    <ul>
-                        <li><strong>Frameworks:</strong> TensorFlow, PyTorch, Scikit-learn</li>
-                        <li><strong>Computer Vision:</strong> OpenCV, CNN Architectures</li>
-                        <li><strong>Data Engineering:</strong> SQL, NoSQL, Data Optimization</li>
-                        <li><strong>Algorithms:</strong> Neural Networks, Clustering, Random Forest</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Software Engineering</h3>
-                    <ul>
-                        <li><strong>Languages:</strong> Java, Python, C++</li>
-                        <li><strong>Architecture:</strong> Microservices, Design Patterns (SOLID)</li>
-                        <li><strong>Tools:</strong> Git, Gradle, Maven</li>
-                        <li><strong>Database:</strong> MySQL, MongoDB</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+        <div class="event">
+          <h3>Laurea Magistrale in Computer Science</h3>
+          <p class="institution">Università degli Studi di Bari "Aldo Moro"</p>
+          <p><strong>Specializzazione:</strong> Artificial Intelligence</p>
+          <p><em>Machine &amp; Deep Learning, Computer Vision, NLP, Reinforcement Learning</em></p>
+          <p class="period">2024 – Presente</p>
+        </div>
 
-        <section id="progetti" aria-labelledby="progetti-title">
-            <h2 id="progetti-title">Progetti Significativi</h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <h3>Riconoscimento Espressioni Facciali</h3>
-                    <p class="project-description">
-                        <strong>Problema:</strong> Necessità di un'interfaccia uomo-macchina capace di interpretare lo
-                        stato emotivo dell'utente in tempo reale.<br>
-                        <strong>Soluzione:</strong> Sviluppo di una pipeline di Computer Vision ottimizzata per edge
-                        devices.<br>
-                        <strong>Outcome:</strong> Accuratezza elevata su dataset non controllati e bassa latenza di
-                        inferenza.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">Deep Learning</span>
-                    </div>
-                    <a href="https://github.com/NicolaM99/facial-expression-recognition" class="project-link"
-                        target="_blank" rel="noopener" aria-label="Vedi codice sorgente su GitHub">
-                        <i class="fab fa-github"></i> Vedi codice
-                    </a>
-                </article>
+        <div class="event">
+          <h3>Short Master – Generative AI: dalla teoria alla pratica</h3>
+          <p class="institution">Università degli Studi di Bari "Aldo Moro" – Supervisore: Prof. Marco Polignano</p>
+          <p>
+            Percorso intensivo su ingegnerizzazione di soluzioni LLM e architetture RAG.
+            Progetto finale: <strong>Medical RAG Question Answering System</strong> —
+            pipeline RAG ibrida su MIMIC-III, fine-tuning QLoRA di BioMistral-7B,
+            Adaptive Query Router, deployment on-premises allineato EU AI Act.
+          </p>
+          <p class="period">Dic 2025 – Apr 2026</p>
+        </div>
 
-                <article class="project-card">
-                    <h3>Battleship - Architettura Distribuita</h3>
-                    <p class="project-description">
-                        <strong>Brief:</strong> Realizzazione di un gioco distribuito con requisiti stringenti di
-                        manutenibilità e testing.<br>
-                        <strong>Engineering:</strong> Implementazione CI/CD completa con analisi statica (PMD,
-                        Checkstyle) e containerizzazione Docker.<br>
-                        <strong>Risultato:</strong> Code coverage >90% e deploy automatizzato.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">GitHub Actions</span>
-                    </div>
-                    <a href="https://github.com/softeng2223-inf-uniba/progetto2223-thompson" class="project-link"
-                        target="_blank" rel="noopener" aria-label="Vedi codice sorgente su GitHub">
-                        <i class="fab fa-github"></i> Vedi codice
-                    </a>
-                </article>
+        <div class="event">
+          <h3>Laurea Triennale in Informatica</h3>
+          <p class="institution">Università degli Studi di Bari "Aldo Moro"</p>
+          <p>
+            Tesi: <em>"Sistemi di visione artificiale per il riconoscimento delle espressioni facciali
+            durante l'interazione con un social robot"</em> —
+            sviluppo di modelli FER real-time con OpenCV, TensorFlow e PyTorch su piattaforme di Social Robotics.
+          </p>
+          <p class="period">Ott 2021 – Ott 2024</p>
+        </div>
 
-                <article class="project-card">
-                    <h3>Heart Disease Risk Prediction</h3>
-                    <p class="project-description">
-                        <strong>Obiettivo:</strong> Identificare precocemente i fattori di rischio cardiaco tramite data
-                        mining.<br>
-                        <strong>Approccio:</strong> Confronto di modelli ML (XGBoost, Random Forest) con tecniche di
-                        bilanciamento dataset (SMOTE).<br>
-                        <strong>Impact:</strong> Modello ottimizzato per minimizzare i falsi negativi in contesto
-                        medico.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">XGBoost</span>
-                    </div>
-                    <a href="https://github.com/NicolaM99/ICON5_23-24" class="project-link" target="_blank"
-                        rel="noopener" aria-label="Vedi codice sorgente su GitHub">
-                        <i class="fab fa-github"></i> Vedi codice
-                    </a>
-                </article>
-            </div>
-        </section>
+      </div>
+    </section>
 
-        <section id="certificazioni" aria-labelledby="certificazioni-title">
-            <h2 id="certificazioni-title">Certificazioni</h2>
-            <div class="certifications">
-                <div class="certification">
-                    <img src="assets/images/amazon_web_services_logo.jpg" alt="" role="presentation" loading="lazy">
-                    <h3>AWS Educate</h3>
-                    <p class="cert-details">Introduction to Cloud 101</p>
-                    <p class="cert-year">2025</p>
-                </div>
-                <div class="certification">
-                    <img src="assets/images/google_cloud.jpg" alt="" role="presentation" loading="lazy">
-                    <h3>Google Cloud Digital Transformation</h3>
-                    <p class="cert-details">Google Cloud Skills Boost</p>
-                    <p class="cert-year">2025</p>
-                </div>
-            </div>
-        </section>
+    <section id="competenze" aria-labelledby="competenze-title">
+      <h2 id="competenze-title">Stack Tecnologico</h2>
+      <div class="skills-grid">
 
-        <section id="contatti" aria-labelledby="contatti-title">
-            <h2 id="contatti-title">Contatti</h2>
-            <div class="contact-links">
-                <a href="mailto:nickmastromarino54@gmail.com" class="contact-item">
-                    <i class="fas fa-envelope" aria-hidden="true"></i>
-                    <span>Invia Email</span>
-                </a>
-                <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" class="contact-item"
-                    target="_blank" rel="noopener">
-                    <i class="fab fa-linkedin" aria-hidden="true"></i>
-                    <span>LinkedIn Profile</span>
-                </a>
-                <a href="https://github.com/NicolaM99/NicolaM99" class="contact-item" target="_blank" rel="noopener">
-                    <i class="fab fa-github" aria-hidden="true"></i>
-                    <span>GitHub Profile</span>
-                </a>
-            </div>
-        </section>
-    </main>
+        <div class="skill-category">
+          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
+          <ul>
+            <li><strong>Piattaforme:</strong> Google Cloud Platform (GCP), AWS</li>
+            <li><strong>Cloud Management:</strong> Morpheus, multi-cloud provisioning</li>
+            <li><strong>Container:</strong> Docker, GitHub Actions, CI/CD Enterprise</li>
+            <li><strong>Metodologie:</strong> DevSecOps, Infrastructure as Code, Agile</li>
+          </ul>
+        </div>
 
-    <footer>
-        <p>&copy; 2024 Nicola Mastromarino. Tutti i diritti riservati.</p>
-    </footer>
+        <div class="skill-category">
+          <h3><i class="fas fa-brain"></i> AI & GenAI</h3>
+          <ul>
+            <li><strong>GenAI:</strong> RAG Pipelines, LLMOps, Fine-tuning (QLoRA), Hugging Face</li>
+            <li><strong>Retrieval:</strong> BM25, Dense Retrieval (S-PubMedBERT), FAISS, RRF</li>
+            <li><strong>ML Frameworks:</strong> TensorFlow, PyTorch, scikit-learn</li>
+            <li><strong>Computer Vision:</strong> OpenCV, CNN Architectures, FER</li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><i class="fas fa-code"></i> Software Engineering</h3>
+          <ul>
+            <li><strong>Linguaggi:</strong> Python, Java, C/C++, SQL</li>
+            <li><strong>Architettura:</strong> Microservizi, Design Patterns (SOLID)</li>
+            <li><strong>Strumenti:</strong> Git, Gradle, Linux</li>
+            <li><strong>Database:</strong> MySQL, data modeling</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="progetti" aria-labelledby="progetti-title">
+      <h2 id="progetti-title">Progetti Significativi</h2>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <h3>Medical RAG Question Answering System</h3>
+          <p class="project-description">
+            <strong>Obiettivo:</strong> Sistema di Clinical Decision Support (CDSS) su note cliniche
+            non strutturate del dataset MIMIC-III, capace di rispondere a domande cliniche e astenersi
+            esplicitamente quando l'informazione è assente (NO_ANSWER).<br>
+            <strong>Architettura:</strong> Pipeline RAG ibrida BM25 + S-PubMedBERT con Reciprocal Rank
+            Fusion (RRF) e Adaptive Query Router. Fine-tuning QLoRA di BioMistral-7B (~21M parametri)
+            su 2× NVIDIA T4. Deployment on-premises allineato EU AI Act.<br>
+            <strong>Risultati:</strong> Token F1 +190%, allucinazioni −40%, No-Answer Accuracy +112%
+            rispetto alla baseline.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">BioMistral</span>
+            <span class="tech-tag">QLoRA</span>
+            <span class="tech-tag">RAG</span>
+            <span class="tech-tag">FAISS</span>
+            <span class="tech-tag">Hugging Face</span>
+          </div>
+          <a href="https://github.com/NicolaM99" class="project-link" target="_blank" rel="noopener"
+            aria-label="Vedi profilo GitHub">
+            <i class="fab fa-github"></i> Vedi codice
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>Riconoscimento Espressioni Facciali (FER)</h3>
+          <p class="project-description">
+            <strong>Problema:</strong> Necessità di un'interfaccia uomo-macchina capace di interpretare
+            lo stato emotivo in tempo reale su piattaforme di Social Robotics.<br>
+            <strong>Soluzione:</strong> Pipeline di Computer Vision con modelli deep learning ottimizzati
+            per condizioni non controllate (variazioni di illuminazione, angolazione).<br>
+            <strong>Outcome:</strong> Accuratezza elevata su dataset reali; analisi di bias algoritmici
+            e implicazioni etiche integrate nel progetto.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">TensorFlow</span>
+            <span class="tech-tag">PyTorch</span>
+          </div>
+          <a href="https://github.com/NicolaM99/facial-expression-recognition" class="project-link"
+            target="_blank" rel="noopener" aria-label="Vedi codice sorgente su GitHub">
+            <i class="fab fa-github"></i> Vedi codice
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>Battleship – Enterprise CI/CD</h3>
+          <p class="project-description">
+            <strong>Brief:</strong> Applicazione Java enterprise con requisiti stringenti di manutenibilità,
+            testing e deploy automatizzato.<br>
+            <strong>Engineering:</strong> Pipeline CI/CD completa con GitHub Actions, Docker,
+            analisi statica (PMD, Checkstyle) e documentazione UML completa.<br>
+            <strong>Risultato:</strong> Code coverage &gt;90% e deploy automatizzato in produzione.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Docker</span>
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">Gradle</span>
+          </div>
+          <a href="https://github.com/softeng2223-inf-uniba/progetto2223-thompson" class="project-link"
+            target="_blank" rel="noopener" aria-label="Vedi codice sorgente su GitHub">
+            <i class="fab fa-github"></i> Vedi codice
+          </a>
+        </article>
+
+        <article class="project-card">
+          <h3>Heart Disease Risk Prediction</h3>
+          <p class="project-description">
+            <strong>Obiettivo:</strong> Identificare precocemente fattori di rischio cardiaco tramite
+            machine learning su dati clinici.<br>
+            <strong>Approccio:</strong> Confronto di algoritmi (XGBoost, Random Forest, Naive Bayes, k-NN)
+            con tecniche avanzate di bilanciamento dataset (SMOTE) e feature engineering.<br>
+            <strong>Impact:</strong> Accuracy 85%+, modello ottimizzato per minimizzare i falsi negativi.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Scikit-learn</span>
+            <span class="tech-tag">XGBoost</span>
+          </div>
+          <a href="https://github.com/NicolaM99/ICON5_23-24" class="project-link" target="_blank"
+            rel="noopener" aria-label="Vedi codice sorgente su GitHub">
+            <i class="fab fa-github"></i> Vedi codice
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="certificazioni" aria-labelledby="certificazioni-title">
+      <h2 id="certificazioni-title">Certificazioni</h2>
+      <div class="certifications">
+
+        <div class="certification">
+          <img src="assets/images/google_cloud.jpg" alt="" role="presentation" loading="lazy">
+          <h3>Google Cloud Digital Leader</h3>
+          <p class="cert-details">Google Cloud Certified</p>
+          <p class="cert-year">Giu 2025 – Giu 2028</p>
+        </div>
+
+        <div class="certification">
+          <img src="assets/images/amazon_web_services_logo.jpg" alt="" role="presentation" loading="lazy">
+          <h3>AWS Educate – Introduction to Cloud 101</h3>
+          <p class="cert-details">Amazon Web Services</p>
+          <p class="cert-year">2025</p>
+        </div>
+
+        <div class="certification">
+          <img src="assets/images/google_cloud.jpg" alt="" role="presentation" loading="lazy">
+          <h3>Digital Transformation with Google Cloud</h3>
+          <p class="cert-details">Google Cloud Skills Boost</p>
+          <p class="cert-year">2025</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contatti" aria-labelledby="contatti-title">
+      <h2 id="contatti-title">Contatti</h2>
+      <div class="contact-links">
+        <a href="mailto:nickmastromarino54@gmail.com" class="contact-item">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>Invia Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" class="contact-item"
+          target="_blank" rel="noopener">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+          <span>LinkedIn Profile</span>
+        </a>
+        <a href="https://github.com/NicolaM99" class="contact-item" target="_blank" rel="noopener">
+          <i class="fab fa-github" aria-hidden="true"></i>
+          <span>GitHub Profile</span>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Nicola Mastromarino. Tutti i diritti riservati.</p>
+  </footer>
+
 </body>
-
 </html>
