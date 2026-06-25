@@ -1,640 +1,1734 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="assets/images/favicon.png">
-<meta name="description" content="Nicola Mastromarino — Cloud Consultant & AI Engineer. Morpheus CMP, DevSecOps, RAG, LLMOps, QLoRA. Nimbus Reply.">
-<meta name="keywords" content="Nicola Mastromarino, Cloud Consultant, AI Engineer, GenAI, LLMOps, RAG, DevSecOps, GCP, AWS, Morpheus">
-<meta name="author" content="Nicola Mastromarino">
-<meta name="robots" content="index, follow">
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Nicola Mastromarino — Cloud Consultant & AI Engineer">
-<meta property="og:description" content="Cloud Consultant presso Nimbus Reply. Esperto in architetture cloud-native, DevSecOps, RAG e LLMOps.">
-<meta property="og:url" content="https://nicolam99.github.io/">
-<meta property="og:image" content="assets/images/profile-preview.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Nicola Mastromarino — Cloud Consultant & AI Engineer">
-<meta name="twitter:description" content="Cloud Consultant presso Nimbus Reply. Esperto in architetture cloud-native, DevSecOps, RAG e LLMOps.">
-<title>Nicola Mastromarino | Cloud Consultant & AI Engineer</title>
-<script type="application/ld+json">
-{
-  "@context":"http://schema.org",
-  "@type":"Person",
-  "name":"Nicola Mastromarino",
-  "jobTitle":"Cloud Consultant & AI Engineer",
-  "worksFor":{"@type":"Organization","name":"Nimbus Reply"},
-  "url":"https://nicolam99.github.io/",
-  "sameAs":[
-    "https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/",
-    "https://github.com/NicolaM99"
-  ],
-  "alumniOf":"Università degli Studi di Bari 'Aldo Moro'",
-  "knowsAbout":["Cloud Computing","Generative AI","DevSecOps","LLMOps","RAG","QLoRA","Multi-Cloud"]
-}
-</script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#f7f4f0;
-  --bg2:#edeae5;
-  --white:#ffffff;
-  --ink:#111111;
-  --ink2:#444444;
-  --ink3:#888888;
-  --green:#0a5c37;
-  --green2:#14855a;
-  --green-bg:#eaf5ee;
-  --border:rgba(0,0,0,0.09);
-  --serif:'Fraunces',serif;
-  --mono:'DM Mono',monospace;
-  --sans:'Instrument Sans',sans-serif;
-}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7;overflow-x:hidden}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* NAV */
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:16px 7vw;
-  background:rgba(247,244,240,0.92);
-  backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--border);
-}
-.logo{font-family:var(--mono);font-size:13px;color:var(--green);font-weight:500;letter-spacing:0.05em;text-decoration:none}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:12.5px;color:var(--ink2);text-decoration:none;letter-spacing:0.01em;transition:color .2s}
-.nav-links a:hover{color:var(--green)}
-.nav-cta{
-  background:var(--ink);color:var(--white);
-  padding:8px 18px;border-radius:3px;
-  font-size:12px;font-weight:500;text-decoration:none;letter-spacing:0.02em;
-  transition:background .2s;
-}
-.nav-cta:hover{background:var(--green)}
+  <!-- ═══════════════════════════════════════════════
+       SEO & SOCIAL META
+  ═══════════════════════════════════════════════ -->
+  <title>Nicola Mastromarino | Cloud Consultant & AI Engineer</title>
+  <meta name="description" content="Nicola Mastromarino — Cloud Consultant & AI Engineer. Morpheus CMP, DevSecOps, RAG, LLMOps, QLoRA. Nimbus Reply.">
+  <meta name="keywords" content="Nicola Mastromarino, Cloud Consultant, AI Engineer, GenAI, LLMOps, RAG, DevSecOps, GCP, AWS, Morpheus">
+  <meta name="author" content="Nicola Mastromarino">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Nicola Mastromarino — Cloud Consultant & AI Engineer">
+  <meta property="og:description" content="Cloud Consultant presso Nimbus Reply. Esperto in architetture cloud-native, DevSecOps, RAG e LLMOps.">
+  <meta property="og:url" content="https://nicolam99.github.io/">
+  <meta property="og:image" content="assets/images/profile-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nicola Mastromarino — Cloud Consultant & AI Engineer">
+  <meta name="twitter:description" content="Cloud Consultant presso Nimbus Reply. Esperto in architetture cloud-native, DevSecOps, RAG e LLMOps.">
 
-/* HERO */
-#hero{
-  min-height:100vh;
-  padding:120px 7vw 80px;
-  display:grid;
-  grid-template-columns:1fr 420px;
-  gap:5rem;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-}
-.hero-watermark{
-  position:absolute;font-family:var(--serif);
-  font-size:min(28vw,340px);color:rgba(0,0,0,0.03);
-  right:-4vw;bottom:-4vh;line-height:1;
-  pointer-events:none;user-select:none;letter-spacing:-0.04em;
-}
-.hero-eyebrow{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:var(--mono);font-size:11px;letter-spacing:0.10em;
-  color:var(--green);text-transform:uppercase;
-  margin-bottom:1.5rem;
-}
-.dot-live{
-  width:7px;height:7px;border-radius:50%;
-  background:var(--green2);
-  animation:blink 2s infinite;
-}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-.hero-title{
-  font-family:var(--serif);
-  font-size:clamp(3rem,6vw,5.5rem);
-  line-height:1.0;
-  letter-spacing:-0.025em;
-  margin-bottom:1.25rem;
-}
-.hero-title .line2{color:var(--green);font-style:italic}
-.hero-role{font-size:15px;color:var(--ink2);margin-bottom:0.5rem;font-weight:500}
-.hero-desc{font-size:15px;color:var(--ink3);max-width:46ch;margin-bottom:2.5rem;line-height:1.8}
-.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-dark{
-  background:var(--ink);color:var(--white);
-  padding:12px 26px;border-radius:3px;
-  text-decoration:none;font-size:13px;font-weight:500;
-  letter-spacing:0.02em;transition:background .2s,transform .1s;
-  display:inline-flex;align-items:center;gap:8px;
-}
-.btn-dark:hover{background:var(--green);transform:translateY(-1px)}
-.btn-ghost{
-  border:1px solid rgba(0,0,0,0.18);color:var(--ink);
-  padding:12px 26px;border-radius:3px;
-  text-decoration:none;font-size:13px;font-weight:500;
-  transition:border-color .2s,color .2s,transform .1s;
-  display:inline-flex;align-items:center;gap:8px;
-}
-.btn-ghost:hover{border-color:var(--green);color:var(--green);transform:translateY(-1px)}
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
 
-/* IMPACT PANEL */
-.impact-panel{display:flex;flex-direction:column;gap:12px}
-.impact-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:10px;padding:1.1rem 1.25rem;
-  display:flex;align-items:center;gap:1rem;
-}
-.impact-num{font-family:var(--serif);font-size:2rem;line-height:1;color:var(--green);min-width:64px;font-weight:700}
-.impact-label{font-size:12.5px;color:var(--ink2);line-height:1.4}
-.impact-sub{font-size:11px;color:var(--ink3);margin-top:1px;font-family:var(--mono)}
-.impact-card.dark{background:var(--ink);border-color:transparent}
-.impact-card.dark .impact-num{color:#4eca8b}
-.impact-card.dark .impact-label{color:rgba(255,255,255,0.9)}
-.impact-card.dark .impact-sub{color:rgba(255,255,255,0.4)}
+  <!-- ═══════════════════════════════════════════════
+       RESOURCE HINTS — preconnect before any request
+       dns-prefetch as fallback for older browsers
+  ═══════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-/* SECTIONS */
-section{padding:6rem 7vw}
-section.alt{background:var(--bg2)}
-.s-label{font-family:var(--mono);font-size:10.5px;letter-spacing:0.12em;color:var(--green);text-transform:uppercase;margin-bottom:0.5rem}
-.s-title{font-family:var(--serif);font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-0.025em;margin-bottom:3rem;line-height:1.05}
+  <!-- Fonts — display=swap prevents FOUT -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:5fr 3fr;gap:4rem;align-items:start}
-.about-body p{font-size:15.5px;color:var(--ink2);line-height:1.9;margin-bottom:1.2rem}
-.about-body strong{color:var(--ink);font-weight:600}
-.chip-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:1.75rem}
-.chip{font-family:var(--mono);font-size:10.5px;background:var(--white);border:1px solid var(--border);padding:4px 10px;border-radius:20px;color:var(--ink2)}
-.chip.hi{background:var(--green-bg);border-color:rgba(10,92,55,0.2);color:var(--green)}
-.aside-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;gap:1rem}
-.aside-row{display:flex;align-items:flex-start;gap:10px;padding-bottom:1rem;border-bottom:1px solid var(--border)}
-.aside-row:last-child{border-bottom:none;padding-bottom:0}
-.aside-icon{color:var(--green);font-size:14px;margin-top:2px;width:16px;flex-shrink:0}
-.aside-text{font-size:13px;color:var(--ink2);line-height:1.5}
-.aside-text strong{color:var(--ink);display:block;font-size:12px;font-weight:600}
+  <!-- Font Awesome — loaded after fonts so layout paint isn't blocked -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-/* EXPERIENCE */
-.exp-list{display:flex;flex-direction:column;gap:0}
-.exp-item{display:grid;grid-template-columns:160px 1fr;gap:2.5rem;padding:2.5rem 0;border-bottom:1px solid var(--border)}
-.exp-item:first-child{padding-top:0}
-.exp-item:last-child{border-bottom:none}
-.exp-meta{padding-top:4px}
-.exp-period{font-family:var(--mono);font-size:11px;color:var(--ink3);letter-spacing:0.04em;margin-bottom:0.5rem}
-.exp-company{font-size:12px;color:var(--green);font-weight:600}
-.exp-title{font-family:var(--serif);font-size:1.3rem;margin-bottom:0.5rem;letter-spacing:-0.01em}
-.exp-sub{font-size:13px;color:var(--ink3);margin-bottom:1rem}
-.exp-bullets{list-style:none;display:flex;flex-direction:column;gap:6px}
-.exp-bullets li{font-size:13.5px;color:var(--ink2);padding-left:16px;position:relative;line-height:1.6}
-.exp-bullets li::before{content:'—';position:absolute;left:0;color:var(--green);font-family:var(--mono)}
-.exp-bullets li strong{color:var(--ink)}
-.metric-badge{display:inline-block;background:var(--green-bg);color:var(--green);font-family:var(--mono);font-size:10px;padding:1px 7px;border-radius:10px;margin-left:4px;font-weight:500;vertical-align:middle}
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nicola Mastromarino",
+    "jobTitle": "Cloud Consultant & AI Engineer",
+    "worksFor": { "@type": "Organization", "name": "Nimbus Reply" },
+    "url": "https://nicolam99.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/",
+      "https://github.com/NicolaM99"
+    ],
+    "alumniOf": "Università degli Studi di Bari 'Aldo Moro'",
+    "knowsAbout": ["Cloud Computing", "Generative AI", "DevSecOps", "LLMOps", "RAG", "QLoRA", "Multi-Cloud"]
+  }
+  </script>
 
-/* PROJECTS */
-.projects-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-.proj-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:2rem;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-.proj-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,0.07)}
-.proj-card.featured{background:var(--ink);border-color:transparent;grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
-.proj-n{font-family:var(--mono);font-size:10.5px;color:var(--ink3);margin-bottom:0.75rem}
-.proj-card.featured .proj-n{color:rgba(255,255,255,0.35)}
-.proj-h{font-family:var(--serif);font-size:1.5rem;margin-bottom:0.5rem;letter-spacing:-0.01em;line-height:1.15}
-.proj-card.featured .proj-h{color:var(--white)}
-.proj-desc{font-size:13px;color:var(--ink3);line-height:1.7;flex:1;margin-bottom:1.25rem}
-.proj-card.featured .proj-desc{color:rgba(255,255,255,0.6)}
-.proj-metrics{display:flex;flex-direction:column;gap:10px}
-.metric-row{display:flex;align-items:center;gap:10px}
-.metric-val{font-family:var(--serif);font-size:2rem;color:#4eca8b;line-height:1}
-.metric-txt{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.3}
-.proj-foot{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
-.tag-row{display:flex;flex-wrap:wrap;gap:5px}
-.tag{font-family:var(--mono);font-size:10px;background:var(--bg);border:1px solid var(--border);padding:2px 8px;border-radius:3px;color:var(--ink3)}
-.proj-card.featured .tag{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.12);color:rgba(255,255,255,0.6)}
-.gh-btn{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--ink2);text-decoration:none;border:1px solid var(--border);border-radius:3px;padding:5px 10px;transition:background .2s,color .2s;white-space:nowrap;flex-shrink:0}
-.gh-btn:hover{background:var(--ink);color:var(--white);border-color:transparent}
-.proj-card.featured .gh-btn{color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.15)}
-.proj-card.featured .gh-btn:hover{background:var(--green);color:var(--white)}
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       RESET & BOX MODEL
+    ═══════════════════════════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-/* STACK */
-.stack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.stack-col{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem}
-.s-icon{font-size:1.1rem;color:var(--green);margin-bottom:0.75rem}
-.s-head{font-size:11.5px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;color:var(--ink2);margin-bottom:1rem}
-.pill-wrap{display:flex;flex-wrap:wrap;gap:6px}
-.pill{font-family:var(--mono);font-size:10.5px;background:var(--bg);border:1px solid var(--border);padding:3px 9px;border-radius:20px;color:var(--ink2)}
-.pill.hi{background:var(--green-bg);border-color:rgba(10,92,55,0.2);color:var(--green)}
+    /* ═══════════════════════════════════════════════════════════════
+       DESIGN TOKENS  — single source of truth, never use raw values
+       in layout rules below.
+    ═══════════════════════════════════════════════════════════════ */
+    :root {
+      /* Palette */
+      --color-bg:           #f7f4f0;
+      --color-bg-alt:       #edeae5;
+      --color-surface:      #ffffff;
+      --color-ink:          #111111;
+      --color-ink-2:        #444444;
+      --color-ink-3:        #6b6b6b;   /* bumped from #888 → passes AA on white */
+      --color-green:        #0a5c37;
+      --color-green-2:      #0e7448;   /* bumped for AAA on --color-green-bg */
+      --color-green-bright: #4eca8b;   /* on dark surfaces only */
+      --color-green-bg:     #e6f4ec;
+      --color-border:       rgba(0, 0, 0, 0.09);
+      --color-border-dark:  rgba(255, 255, 255, 0.10);
 
-/* CERTS */
-.certs-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
-.cert-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;gap:0.6rem}
-.cert-card.active{border-color:rgba(10,92,55,0.3);background:var(--green-bg)}
-.cert-icon{font-size:1.4rem;margin-bottom:0.25rem}
-.cert-issuer{font-family:var(--mono);font-size:10px;color:var(--ink3);letter-spacing:0.06em;text-transform:uppercase}
-.cert-card.active .cert-issuer{color:var(--green)}
-.cert-name{font-size:13px;font-weight:600;color:var(--ink);line-height:1.35}
-.cert-card.active .cert-name{color:var(--green)}
-.cert-period{font-family:var(--mono);font-size:10px;color:var(--ink3)}
-.cert-card.active .cert-period{color:var(--green2)}
-.cert-id{font-family:var(--mono);font-size:9.5px;color:var(--ink3);word-break:break-all}
+      /* Typography */
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-mono:  'DM Mono', 'Courier New', monospace;
+      --font-sans:  'Instrument Sans', system-ui, sans-serif;
 
-/* EDU */
-.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
-.edu-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.5rem;display:flex;flex-direction:column;gap:0.5rem}
-.edu-period{font-family:var(--mono);font-size:10.5px;color:var(--ink3);letter-spacing:0.04em}
-.edu-deg{font-family:var(--serif);font-size:1.15rem;line-height:1.2;margin-top:0.25rem}
-.edu-inst{font-size:12px;color:var(--ink3);margin-bottom:0.25rem}
-.edu-note{font-size:12.5px;color:var(--ink2);line-height:1.55;margin-top:0.5rem;border-top:1px solid var(--border);padding-top:0.75rem}
+      /* Fluid type scale  (min @ 320px → max @ 1440px) */
+      --text-xs:   clamp(0.625rem, 0.58rem + 0.22vw,  0.75rem);   /* ~10–12px */
+      --text-sm:   clamp(0.75rem,  0.69rem + 0.33vw,  0.875rem);  /* ~12–14px */
+      --text-base: clamp(0.875rem, 0.81rem + 0.33vw,  1rem);      /* ~14–16px */
+      --text-md:   clamp(0.9375rem,0.875rem + 0.31vw, 1.0625rem); /* ~15–17px */
+      --text-lg:   clamp(1.125rem, 1rem + 0.63vw,     1.5rem);
+      --text-xl:   clamp(1.25rem,  1rem + 1.25vw,     2rem);
+      --text-2xl:  clamp(1.5rem,   1.1rem + 2vw,      2.75rem);
+      --text-3xl:  clamp(2rem,     1.25rem + 3.75vw,  3.5rem);
+      --text-hero: clamp(2.75rem,  1.5rem + 6.25vw,   5.5rem);
 
-/* CONTACT */
-#contatti{background:var(--ink);color:var(--white);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;padding:7rem 7vw}
-.contact-title{font-family:var(--serif);font-size:clamp(2.5rem,5vw,4rem);line-height:1.05;letter-spacing:-0.025em;margin-bottom:1rem}
-.contact-sub{font-size:15px;color:rgba(255,255,255,0.55);line-height:1.8;max-width:40ch}
-.c-links{display:flex;flex-direction:column;gap:10px}
-.c-link{display:flex;align-items:center;gap:14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:1rem 1.25rem;text-decoration:none;color:var(--white);transition:background .2s,border-color .2s}
-.c-link:hover{background:rgba(255,255,255,0.09);border-color:rgba(74,202,139,0.4)}
-.c-icon{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;font-size:13px;color:#4eca8b;flex-shrink:0}
-.c-main{font-size:14px;font-weight:500}
-.c-hint{font-family:var(--mono);font-size:10.5px;color:rgba(255,255,255,0.35);margin-top:1px}
-.c-arrow{margin-left:auto;font-size:10px;color:rgba(255,255,255,0.2)}
+      /* Fluid spacing */
+      --space-1:   clamp(0.375rem, 0.35rem + 0.13vw,  0.5rem);
+      --space-2:   clamp(0.625rem, 0.56rem + 0.31vw,  0.875rem);
+      --space-3:   clamp(0.875rem, 0.75rem + 0.63vw,  1.25rem);
+      --space-4:   clamp(1.25rem,  1rem + 1.25vw,     2rem);
+      --space-5:   clamp(2rem,     1.5rem + 2.5vw,    3.5rem);
+      --space-6:   clamp(3rem,     2rem + 5vw,        6rem);
+      --space-7:   clamp(4rem,     2.5rem + 7.5vw,    8rem);
 
-footer{background:var(--ink);border-top:1px solid rgba(255,255,255,0.07);padding:1.75rem 7vw;display:flex;justify-content:space-between;align-items:center}
-footer p{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.3)}
-.foot-links{display:flex;gap:1.5rem}
-.foot-links a{font-family:var(--mono);font-size:11px;color:rgba(255,255,255,0.3);text-decoration:none;transition:color .2s}
-.foot-links a:hover{color:#4eca8b}
+      /* Layout */
+      --page-inline: clamp(1.25rem, 7vw, 7rem);
+      --nav-height:  60px;
+      --radius-sm:   4px;
+      --radius-md:   10px;
+      --radius-pill: 999px;
 
-@media(max-width:900px){
-  #hero{grid-template-columns:1fr;gap:3rem}
-  .impact-panel{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-  .about-grid{grid-template-columns:1fr;gap:2rem}
-  .exp-item{grid-template-columns:1fr;gap:0.5rem}
-  .projects-grid{grid-template-columns:1fr}
-  .proj-card.featured{grid-column:span 1;grid-template-columns:1fr}
-  .stack-grid{grid-template-columns:1fr 1fr}
-  .certs-row{grid-template-columns:1fr 1fr}
-  .edu-grid{grid-template-columns:1fr}
-  #contatti{grid-template-columns:1fr;gap:2.5rem}
-  .nav-links,.nav-cta{display:none}
-}
-</style>
+      /* Motion */
+      --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --dur-fast:    150ms;
+      --dur-base:    250ms;
+      --dur-slow:    400ms;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BASE
+    ═══════════════════════════════════════════════════════════════ */
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family:      var(--font-sans);
+      background-color: var(--color-bg);
+      color:            var(--color-ink);
+      font-size:        var(--text-base);
+      line-height:      1.7;
+      overflow-x:       hidden;
+    }
+
+    /* Reduced-motion: disable all animations for users who prefer it */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration:   0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration:  0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    img, svg { display: block; max-inline-size: 100%; }
+
+    /* Globally visible focus ring — keyboard-nav first */
+    :focus-visible {
+      outline:        2.5px solid var(--color-green);
+      outline-offset: 3px;
+      border-radius:  var(--radius-sm);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SKIP LINK — first tabbable element on page
+    ═══════════════════════════════════════════════════════════════ */
+    .skip-link {
+      position:    absolute;
+      inset-block-start:  -999px;
+      inset-inline-start: 0;
+      background:  var(--color-green);
+      color:       var(--color-surface);
+      padding:     var(--space-2) var(--space-3);
+      font-size:   var(--text-sm);
+      font-weight: 600;
+      text-decoration: none;
+      z-index:     999;
+      border-end-end-radius: var(--radius-sm);
+    }
+    .skip-link:focus-visible {
+      inset-block-start: 0;
+      outline: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       NAV
+       — CSS isolation via `isolation: isolate` to scope stacking context
+       — `will-change: transform` on the bar keeps paint layers separate
+    ═══════════════════════════════════════════════════════════════ */
+    .site-nav {
+      position:   fixed;
+      inset-block-start:  0;
+      inset-inline: 0;
+      z-index:    200;
+      display:    flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-block:  0;
+      padding-inline: var(--page-inline);
+      block-size: var(--nav-height);
+      background: rgba(247, 244, 240, 0.88);
+      /* Isolate the stacking context so backdrop-filter composites correctly */
+      isolation: isolate;
+      -webkit-backdrop-filter: blur(18px) saturate(1.4);
+              backdrop-filter: blur(18px) saturate(1.4);
+      border-block-end: 1px solid var(--color-border);
+      /* Fallback for browsers without backdrop-filter */
+      @supports not (backdrop-filter: blur(1px)) {
+        background: rgba(247, 244, 240, 0.97);
+      }
+    }
+
+    .nav-logo {
+      font-family:     var(--font-mono);
+      font-size:       var(--text-sm);
+      font-weight:     500;
+      color:           var(--color-green);
+      letter-spacing:  0.06em;
+      text-decoration: none;
+      transition:      color var(--dur-fast) var(--ease-out);
+    }
+    .nav-logo:hover { color: var(--color-ink); }
+
+    .nav-links {
+      display:     flex;
+      gap:         clamp(1rem, 2vw, 2rem);
+      list-style:  none;
+    }
+
+    .nav-links a {
+      font-size:       var(--text-xs);
+      color:           var(--color-ink-2);
+      text-decoration: none;
+      letter-spacing:  0.02em;
+      padding-block:   var(--space-1);
+      position:        relative;
+      transition:      color var(--dur-fast) var(--ease-out);
+    }
+
+    /* Underline slide-in micro-interaction — no layout shift */
+    .nav-links a::after {
+      content:    '';
+      position:   absolute;
+      inset-block-end:    -2px;
+      inset-inline-start: 0;
+      inline-size:  0;
+      block-size:   1.5px;
+      background:   var(--color-green);
+      transition:   inline-size var(--dur-base) var(--ease-out);
+    }
+    .nav-links a:hover { color: var(--color-green); }
+    .nav-links a:hover::after { inline-size: 100%; }
+
+    .nav-cta {
+      display:         inline-flex;
+      align-items:     center;
+      gap:             6px;
+      background:      var(--color-ink);
+      color:           var(--color-surface);
+      padding-block:   7px;
+      padding-inline:  16px;
+      border-radius:   var(--radius-sm);
+      font-size:       var(--text-xs);
+      font-weight:     500;
+      text-decoration: none;
+      letter-spacing:  0.03em;
+      /* Hardware-accelerated — no layout properties in transition */
+      transition: background var(--dur-base) var(--ease-out),
+                  transform  var(--dur-fast) var(--ease-spring),
+                  box-shadow var(--dur-base) var(--ease-out);
+    }
+    .nav-cta:hover {
+      background:  var(--color-green);
+      transform:   translateY(-1px);
+      box-shadow:  0 4px 12px rgba(10, 92, 55, 0.25);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════════════════ */
+    #hero {
+      min-block-size:  100svh;  /* svh for mobile browser chrome awareness */
+      padding-block-start:  calc(var(--nav-height) + var(--space-6));
+      padding-block-end:    var(--space-6);
+      padding-inline:       var(--page-inline);
+      display:         grid;
+      /* Fluid two-column: left expands, right clamps at 420px */
+      grid-template-columns: 1fr min(420px, 45%);
+      gap:             clamp(2rem, 5vw, 5rem);
+      align-items:     center;
+      position:        relative;
+      overflow:        hidden;
+    }
+
+    /* Decorative watermark — purely visual, hidden from AT */
+    .hero-watermark {
+      position:      absolute;
+      font-family:   var(--font-serif);
+      font-size:     min(28vw, 340px);
+      color:         rgba(0, 0, 0, 0.025);
+      inset-inline-end:  -4vw;
+      inset-block-end:   -4vh;
+      line-height:   1;
+      pointer-events: none;
+      user-select:   none;
+      letter-spacing: -0.04em;
+    }
+
+    .hero-eyebrow {
+      display:       inline-flex;
+      align-items:   center;
+      gap:           8px;
+      font-family:   var(--font-mono);
+      font-size:     var(--text-xs);
+      letter-spacing: 0.10em;
+      color:         var(--color-green);
+      text-transform: uppercase;
+      margin-block-end: var(--space-4);
+    }
+
+    /* Live dot — aria-label on parent, role="img" equivalent via aria-hidden=false
+       aria-live so screen readers notice the pulsing state */
+    .dot-live {
+      inline-size:  7px;
+      block-size:   7px;
+      border-radius: var(--radius-pill);
+      background:   var(--color-green-2);
+      flex-shrink:  0;
+      animation:    pulse-dot 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1;   transform: scale(1); }
+      50%       { opacity: 0.3; transform: scale(0.85); }
+    }
+
+    .hero-title {
+      font-family:    var(--font-serif);
+      font-size:      var(--text-hero);
+      line-height:    1.0;
+      letter-spacing: -0.025em;
+      margin-block-end: var(--space-3);
+    }
+    .hero-title .line2 {
+      color:      var(--color-green);
+      font-style: italic;
+    }
+
+    .hero-role {
+      font-size:        var(--text-md);
+      color:            var(--color-ink-2);
+      margin-block-end: var(--space-1);
+      font-weight:      500;
+    }
+
+    .hero-desc {
+      font-size:        var(--text-base);
+      color:            var(--color-ink-3);
+      max-inline-size:  48ch;
+      margin-block-end: var(--space-5);
+      line-height:      1.85;
+    }
+
+    .hero-btns {
+      display:     flex;
+      gap:         var(--space-2);
+      flex-wrap:   wrap;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BUTTON COMPONENTS
+       Transitions only touch transform + opacity + background/color
+       — never margin, padding, width, height (would cause layout shift)
+    ═══════════════════════════════════════════════════════════════ */
+    .btn {
+      display:         inline-flex;
+      align-items:     center;
+      gap:             8px;
+      padding-block:   11px;
+      padding-inline:  24px;
+      border-radius:   var(--radius-sm);
+      font-size:       var(--text-sm);
+      font-weight:     500;
+      letter-spacing:  0.03em;
+      text-decoration: none;
+      border:          1.5px solid transparent;
+      transition:
+        background     var(--dur-base) var(--ease-out),
+        color          var(--dur-base) var(--ease-out),
+        border-color   var(--dur-base) var(--ease-out),
+        transform      var(--dur-fast) var(--ease-spring),
+        box-shadow     var(--dur-base) var(--ease-out);
+      cursor:          pointer;
+    }
+
+    .btn-dark {
+      background: var(--color-ink);
+      color:      var(--color-surface);
+    }
+    .btn-dark:hover {
+      background: var(--color-green);
+      transform:  translateY(-2px);
+      box-shadow: 0 6px 18px rgba(10, 92, 55, 0.28);
+    }
+
+    .btn-ghost {
+      background:   transparent;
+      color:        var(--color-ink);
+      border-color: rgba(0, 0, 0, 0.18);
+    }
+    .btn-ghost:hover {
+      border-color: var(--color-green);
+      color:        var(--color-green);
+      transform:    translateY(-2px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       IMPACT PANEL (hero right column)
+    ═══════════════════════════════════════════════════════════════ */
+    .impact-panel {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .impact-card {
+      background:    var(--color-surface);
+      border:        1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding-block:   var(--space-3);
+      padding-inline:  var(--space-3);
+      display:       flex;
+      align-items:   center;
+      gap:           var(--space-3);
+      transition:
+        transform  var(--dur-base) var(--ease-out),
+        box-shadow var(--dur-base) var(--ease-out);
+    }
+    .impact-card:hover {
+      transform:  translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+    }
+
+    .impact-num {
+      font-family:   var(--font-serif);
+      font-size:     var(--text-2xl);
+      line-height:   1;
+      color:         var(--color-green);
+      min-inline-size: 64px;
+      font-weight:   700;
+    }
+
+    .impact-label {
+      font-size:   var(--text-xs);
+      color:       var(--color-ink-2);
+      line-height: 1.45;
+    }
+
+    .impact-sub {
+      font-family: var(--font-mono);
+      font-size:   calc(var(--text-xs) * 0.9);
+      color:       var(--color-ink-3);
+      margin-block-start: 2px;
+    }
+
+    /* Dark variant */
+    .impact-card--dark {
+      background:   var(--color-ink);
+      border-color: transparent;
+    }
+    .impact-card--dark .impact-num   { color: var(--color-green-bright); }
+    .impact-card--dark .impact-label { color: rgba(255, 255, 255, 0.88); }
+    .impact-card--dark .impact-sub   { color: rgba(255, 255, 255, 0.40); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SECTION SHELL
+    ═══════════════════════════════════════════════════════════════ */
+    .section {
+      padding-block:  var(--space-6);
+      padding-inline: var(--page-inline);
+    }
+
+    .section--alt { background-color: var(--color-bg-alt); }
+
+    .section-label {
+      font-family:    var(--font-mono);
+      font-size:      var(--text-xs);
+      letter-spacing: 0.12em;
+      color:          var(--color-green);
+      text-transform: uppercase;
+      margin-block-end: var(--space-1);
+    }
+
+    .section-title {
+      font-family:    var(--font-serif);
+      font-size:      var(--text-3xl);
+      letter-spacing: -0.025em;
+      margin-block-end: var(--space-5);
+      line-height:    1.05;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 5fr 3fr;
+      gap:     clamp(2rem, 4vw, 4rem);
+      align-items: start;
+    }
+
+    .about-body p {
+      font-size:        var(--text-md);
+      color:            var(--color-ink-2);
+      line-height:      1.9;
+      margin-block-end: var(--space-3);
+    }
+    .about-body strong { color: var(--color-ink); font-weight: 600; }
+
+    .chip-row {
+      display:          flex;
+      flex-wrap:        wrap;
+      gap:              7px;
+      margin-block-start: var(--space-4);
+    }
+
+    .chip {
+      font-family:    var(--font-mono);
+      font-size:      var(--text-xs);
+      background:     var(--color-surface);
+      border:         1px solid var(--color-border);
+      padding-block:  4px;
+      padding-inline: 10px;
+      border-radius:  var(--radius-pill);
+      color:          var(--color-ink-2);
+    }
+    .chip--hi {
+      background:   var(--color-green-bg);
+      border-color: rgba(10, 92, 55, 0.22);
+      color:        var(--color-green);
+    }
+
+    /* Aside info card */
+    .aside-card {
+      background:    var(--color-surface);
+      border:        1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding:       var(--space-4);
+      display:       flex;
+      flex-direction: column;
+      gap:           var(--space-3);
+    }
+
+    .aside-row {
+      display:          flex;
+      align-items:      flex-start;
+      gap:              10px;
+      padding-block-end: var(--space-3);
+      border-block-end:  1px solid var(--color-border);
+    }
+    .aside-row:last-child {
+      border-block-end: none;
+      padding-block-end: 0;
+    }
+
+    .aside-icon {
+      color:       var(--color-green);
+      font-size:   14px;
+      margin-block-start: 2px;
+      inline-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .aside-text {
+      font-size:   var(--text-sm);
+      color:       var(--color-ink-2);
+      line-height: 1.5;
+    }
+    .aside-text strong {
+      color:       var(--color-ink);
+      display:     block;
+      font-size:   var(--text-xs);
+      font-weight: 600;
+      margin-block-end: 1px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       EXPERIENCE
+    ═══════════════════════════════════════════════════════════════ */
+    .exp-list {
+      display:        flex;
+      flex-direction: column;
+    }
+
+    .exp-item {
+      display:               grid;
+      grid-template-columns: 160px 1fr;
+      gap:                   clamp(1.5rem, 2.5vw, 2.5rem);
+      padding-block:         var(--space-5);
+      border-block-end:      1px solid var(--color-border);
+    }
+    .exp-item:first-child { padding-block-start: 0; }
+    .exp-item:last-child  { border-block-end: none; }
+
+    .exp-meta { padding-block-start: 4px; }
+
+    .exp-period {
+      font-family:    var(--font-mono);
+      font-size:      var(--text-xs);
+      color:          var(--color-ink-3);
+      letter-spacing: 0.04em;
+      margin-block-end: var(--space-1);
+    }
+
+    .exp-company {
+      font-size:   var(--text-xs);
+      color:       var(--color-green);
+      font-weight: 600;
+    }
+
+    .exp-title {
+      font-family:    var(--font-serif);
+      font-size:      var(--text-lg);
+      margin-block-end: var(--space-1);
+      letter-spacing: -0.01em;
+    }
+
+    .exp-sub {
+      font-size:        var(--text-sm);
+      color:            var(--color-ink-3);
+      margin-block-end: var(--space-3);
+    }
+
+    .exp-bullets {
+      list-style:     none;
+      display:        flex;
+      flex-direction: column;
+      gap:            6px;
+    }
+
+    .exp-bullets li {
+      font-size:        var(--text-sm);
+      color:            var(--color-ink-2);
+      padding-inline-start: 18px;
+      position:         relative;
+      line-height:      1.65;
+    }
+    .exp-bullets li::before {
+      content:               '—';
+      position:              absolute;
+      inset-inline-start:    0;
+      color:                 var(--color-green);
+      font-family:           var(--font-mono);
+    }
+    .exp-bullets li strong { color: var(--color-ink); }
+
+    .metric-badge {
+      display:          inline-block;
+      background:       var(--color-green-bg);
+      color:            var(--color-green);
+      font-family:      var(--font-mono);
+      font-size:        calc(var(--text-xs) * 0.9);
+      padding-block:    1px;
+      padding-inline:   7px;
+      border-radius:    var(--radius-pill);
+      margin-inline-start: 4px;
+      font-weight:      500;
+      vertical-align:   middle;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PROJECTS
+    ═══════════════════════════════════════════════════════════════ */
+    .projects-grid {
+      display:               grid;
+      /* auto-fit: naturally collapses to 1 col on narrow viewports */
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
+      gap:                   var(--space-3);
+    }
+
+    .proj-card {
+      background:    var(--color-surface);
+      border:        1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding:       var(--space-4);
+      display:       flex;
+      flex-direction: column;
+      transition:
+        transform  var(--dur-base) var(--ease-out),
+        box-shadow var(--dur-base) var(--ease-out);
+    }
+    .proj-card:hover {
+      transform:  translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Featured card spans full width then splits internally */
+    .proj-card--featured {
+      background:  var(--color-ink);
+      border-color: transparent;
+      grid-column: 1 / -1;  /* always spans full grid width */
+      display:     grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap:         clamp(2rem, 2.5vw, 2.5rem);
+      align-items: start;
+    }
+
+    .proj-n {
+      font-family:    var(--font-mono);
+      font-size:      var(--text-xs);
+      color:          var(--color-ink-3);
+      margin-block-end: var(--space-2);
+    }
+    .proj-card--featured .proj-n { color: rgba(255, 255, 255, 0.35); }
+
+    .proj-h {
+      font-family:    var(--font-serif);
+      font-size:      var(--text-xl);
+      margin-block-end: var(--space-2);
+      letter-spacing: -0.01em;
+      line-height:    1.15;
+    }
+    .proj-card--featured .proj-h { color: var(--color-surface); }
+
+    .proj-desc {
+      font-size:        var(--text-sm);
+      color:            var(--color-ink-3);
+      line-height:      1.75;
+      flex:             1;
+      margin-block-end: var(--space-3);
+    }
+    .proj-card--featured .proj-desc { color: rgba(255, 255, 255, 0.58); }
+
+    .proj-foot {
+      display:     flex;
+      align-items: center;
+      justify-content: space-between;
+      gap:         var(--space-2);
+      margin-block-start: auto;
+      flex-wrap:   wrap;
+    }
+
+    .tag-row {
+      display:  flex;
+      flex-wrap: wrap;
+      gap:       5px;
+    }
+
+    .tag {
+      font-family:    var(--font-mono);
+      font-size:      calc(var(--text-xs) * 0.9);
+      background:     var(--color-bg);
+      border:         1px solid var(--color-border);
+      padding-block:  2px;
+      padding-inline: 8px;
+      border-radius:  var(--radius-sm);
+      color:          var(--color-ink-3);
+    }
+    .proj-card--featured .tag {
+      background:   rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.12);
+      color:        rgba(255, 255, 255, 0.58);
+    }
+
+    .gh-btn {
+      display:     inline-flex;
+      align-items: center;
+      gap:         6px;
+      font-size:   var(--text-xs);
+      color:       var(--color-ink-2);
+      text-decoration: none;
+      border:      1px solid var(--color-border);
+      border-radius: var(--radius-sm);
+      padding-block:  5px;
+      padding-inline: 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition:
+        background   var(--dur-base) var(--ease-out),
+        color        var(--dur-base) var(--ease-out),
+        border-color var(--dur-base) var(--ease-out),
+        transform    var(--dur-fast) var(--ease-spring);
+    }
+    .gh-btn:hover {
+      background:   var(--color-ink);
+      color:        var(--color-surface);
+      border-color: transparent;
+      transform:    translateY(-1px);
+    }
+
+    .proj-card--featured .gh-btn {
+      color:        rgba(255, 255, 255, 0.6);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+    .proj-card--featured .gh-btn:hover {
+      background: var(--color-green);
+      color:      var(--color-surface);
+    }
+
+    /* Featured metrics column */
+    .proj-metrics {
+      display:        flex;
+      flex-direction: column;
+      gap:            var(--space-3);
+    }
+
+    .proj-metrics-label {
+      font-family:    var(--font-mono);
+      font-size:      calc(var(--text-xs) * 0.88);
+      color:          rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-block-end: var(--space-1);
+    }
+
+    .metric-row {
+      display:     flex;
+      align-items: center;
+      gap:         10px;
+    }
+
+    .metric-val {
+      font-family: var(--font-serif);
+      font-size:   var(--text-2xl);
+      color:       var(--color-green-bright);
+      line-height: 1;
+      min-inline-size: 70px;
+    }
+
+    .metric-txt {
+      font-size:   var(--text-xs);
+      color:       rgba(255, 255, 255, 0.65);
+      line-height: 1.35;
+    }
+
+    .metric-txt-sub {
+      font-family: var(--font-mono);
+      font-size:   calc(var(--text-xs) * 0.85);
+      opacity:     0.5;
+      display:     block;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       STACK
+    ═══════════════════════════════════════════════════════════════ */
+    .stack-grid {
+      display:               grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+      gap:                   var(--space-3);
+    }
+
+    .stack-col {
+      background:    var(--color-surface);
+      border:        1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding:       var(--space-4);
+    }
+
+    .stack-icon {
+      font-size:        1.1rem;
+      color:            var(--color-green);
+      margin-block-end: var(--space-2);
+    }
+
+    .stack-head {
+      font-size:        var(--text-xs);
+      font-weight:      600;
+      letter-spacing:   0.04em;
+      text-transform:   uppercase;
+      color:            var(--color-ink-2);
+      margin-block-end: var(--space-3);
+    }
+
+    .pill-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .pill {
+      font-family:    var(--font-mono);
+      font-size:      calc(var(--text-xs) * 0.95);
+      background:     var(--color-bg);
+      border:         1px solid var(--color-border);
+      padding-block:  3px;
+      padding-inline: 9px;
+      border-radius:  var(--radius-pill);
+      color:          var(--color-ink-2);
+    }
+    .pill--hi {
+      background:   var(--color-green-bg);
+      border-color: rgba(10, 92, 55, 0.22);
+      color:        var(--color-green);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       CERTIFICATIONS
+    ═══════════════════════════════════════════════════════════════ */
+    .certs-row {
+      display:               grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr));
+      gap:                   var(--space-3);
+    }
+
+    .cert-card {
+      background:    var(--color-surface);
+      border:        1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding:       var(--space-4);
+      display:       flex;
+      flex-direction: column;
+      gap:           var(--space-1);
+    }
+
+    .cert-card--active {
+      border-color: rgba(10, 92, 55, 0.30);
+      background:   var(--color-green-bg);
+    }
+
+    .cert-card--pending {
+      border:     1.5px dashed rgba(10, 92, 55, 0.30);
+      background: transparent;
+    }
+
+    .cert-icon {
+      font-size:        1.4rem;
+      margin-block-end: var(--space-1);
+    }
+
+    .cert-issuer {
+      font-family:    var(--font-mono);
+      font-size:      calc(var(--text-xs) * 0.88);
+      color:          var(--color-ink-3);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .cert-card--active .cert-issuer,
+    .cert-card--pending .cert-issuer { color: var(--color-green); }
+
+    .cert-name {
+      font-size:   var(--text-sm);
+      font-weight: 600;
+      color:       var(--color-ink);
+      line-height: 1.35;
+    }
+    .cert-card--active .cert-name,
+    .cert-card--pending .cert-name { color: var(--color-green); }
+
+    .cert-period {
+      font-family: var(--font-mono);
+      font-size:   calc(var(--text-xs) * 0.9);
+      color:       var(--color-ink-3);
+    }
+    .cert-card--active .cert-period  { color: var(--color-green-2); }
+    .cert-card--pending .cert-period { color: var(--color-green-2); }
+
+    .cert-id {
+      font-family:   var(--font-mono);
+      font-size:     calc(var(--text-xs) * 0.85);
+      color:         var(--color-ink-3);
+      word-break:    break-all;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       EDUCATION (nested under certs section)
+    ═══════════════════════════════════════════════════════════════ */
+    .edu-subsection { margin-block-start: var(--space-6); }
+
+    .edu-grid {
+      display:               grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+      gap:                   var(--space-3);
+      margin-block-start:    var(--space-3);
+    }
+
+    .edu-card {
+      background:    var(--color-surface);
+      border:        1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding:       var(--space-4);
+      display:       flex;
+      flex-direction: column;
+      gap:           4px;
+    }
+
+    .edu-period {
+      font-family:    var(--font-mono);
+      font-size:      calc(var(--text-xs) * 0.92);
+      color:          var(--color-ink-3);
+      letter-spacing: 0.04em;
+    }
+
+    .edu-deg {
+      font-family:      var(--font-serif);
+      font-size:        var(--text-lg);
+      line-height:      1.2;
+      margin-block-start: 4px;
+    }
+
+    .edu-inst {
+      font-size:   var(--text-xs);
+      color:       var(--color-ink-3);
+    }
+
+    .edu-note {
+      font-size:          var(--text-sm);
+      color:              var(--color-ink-2);
+      line-height:        1.6;
+      margin-block-start: var(--space-2);
+      border-block-start: 1px solid var(--color-border);
+      padding-block-start: var(--space-2);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       CONTACT SECTION
+       Uses section--dark modifier rather than id-scoped overrides
+    ═══════════════════════════════════════════════════════════════ */
+    .section--dark {
+      background-color: var(--color-ink);
+      color:            var(--color-surface);
+    }
+
+    .contact-grid {
+      display:     grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap:         clamp(2rem, 5vw, 5rem);
+      align-items: center;
+    }
+
+    .contact-title {
+      font-family:    var(--font-serif);
+      font-size:      var(--text-hero);
+      line-height:    1.0;
+      letter-spacing: -0.025em;
+      margin-block-end: var(--space-3);
+    }
+
+    .contact-sub {
+      font-size:       var(--text-md);
+      color:           rgba(255, 255, 255, 0.55);
+      line-height:     1.85;
+      max-inline-size: 42ch;
+    }
+
+    .c-links {
+      display:        flex;
+      flex-direction: column;
+      gap:            var(--space-2);
+    }
+
+    .c-link {
+      display:         flex;
+      align-items:     center;
+      gap:             14px;
+      background:      rgba(255, 255, 255, 0.04);
+      border:          1px solid var(--color-border-dark);
+      border-radius:   var(--radius-md);
+      padding-block:   var(--space-3);
+      padding-inline:  var(--space-3);
+      text-decoration: none;
+      color:           var(--color-surface);
+      transition:
+        background   var(--dur-base) var(--ease-out),
+        border-color var(--dur-base) var(--ease-out),
+        transform    var(--dur-fast) var(--ease-spring);
+    }
+    .c-link:hover {
+      background:   rgba(255, 255, 255, 0.09);
+      border-color: rgba(78, 202, 139, 0.45);
+      transform:    translateX(3px);
+    }
+
+    .c-icon {
+      inline-size:  34px;
+      block-size:   34px;
+      border-radius: var(--radius-pill);
+      background:   rgba(255, 255, 255, 0.07);
+      display:      flex;
+      align-items:  center;
+      justify-content: center;
+      font-size:    13px;
+      color:        var(--color-green-bright);
+      flex-shrink:  0;
+    }
+
+    .c-main {
+      font-size:   var(--text-sm);
+      font-weight: 500;
+    }
+
+    .c-hint {
+      font-family: var(--font-mono);
+      font-size:   calc(var(--text-xs) * 0.9);
+      color:       rgba(255, 255, 255, 0.35);
+      margin-block-start: 1px;
+    }
+
+    .c-arrow {
+      margin-inline-start: auto;
+      font-size:  10px;
+      color:      rgba(255, 255, 255, 0.22);
+      transition: color var(--dur-base) var(--ease-out),
+                  transform var(--dur-base) var(--ease-out);
+    }
+    .c-link:hover .c-arrow {
+      color:     rgba(78, 202, 139, 0.8);
+      transform: translateX(3px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════════ */
+    .site-footer {
+      background-color:  var(--color-ink);
+      border-block-start: 1px solid rgba(255, 255, 255, 0.07);
+      padding-block:     var(--space-4);
+      padding-inline:    var(--page-inline);
+      display:           flex;
+      justify-content:   space-between;
+      align-items:       center;
+      flex-wrap:         wrap;
+      gap:               var(--space-2);
+    }
+
+    .site-footer p {
+      font-family: var(--font-mono);
+      font-size:   var(--text-xs);
+      color:       rgba(255, 255, 255, 0.3);
+    }
+
+    .foot-links {
+      display: flex;
+      gap:     clamp(1rem, 1.5vw, 1.5rem);
+    }
+
+    .foot-links a {
+      font-family:     var(--font-mono);
+      font-size:       var(--text-xs);
+      color:           rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      transition:      color var(--dur-base) var(--ease-out);
+    }
+    .foot-links a:hover { color: var(--color-green-bright); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       RESPONSIVE OVERRIDES
+       Only what auto-fit/minmax can't handle natively.
+       Keep these minimal — the grid system handles most collapse.
+    ═══════════════════════════════════════════════════════════════ */
+    @media (max-width: 860px) {
+      /* Hero: stack columns, impact panel goes 2-up grid */
+      #hero {
+        grid-template-columns: 1fr;
+        gap: var(--space-5);
+      }
+
+      .impact-panel {
+        display:               grid;
+        grid-template-columns: 1fr 1fr;
+        gap:                   var(--space-2);
+      }
+
+      /* About: single column */
+      .about-grid { grid-template-columns: 1fr; }
+
+      /* Experience: collapse meta into flow */
+      .exp-item {
+        grid-template-columns: 1fr;
+        gap:                   var(--space-2);
+      }
+
+      /* Hide nav items on mobile — simple approach;
+         a burger menu can be layered in future */
+      .nav-links,
+      .nav-cta { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .impact-panel { grid-template-columns: 1fr; }
+
+      .proj-foot {
+        flex-direction: column;
+        align-items:    flex-start;
+      }
+
+      .contact-grid { gap: var(--space-4); }
+    }
+  </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#hero" class="logo">NM_</a>
-  <ul class="nav-links">
-    <li><a href="#about">Profilo</a></li>
-    <li><a href="#exp">Esperienza</a></li>
-    <li><a href="#projects">Progetti</a></li>
-    <li><a href="#stack">Stack</a></li>
-    <li><a href="#certs">Certificazioni</a></li>
-  </ul>
-  <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="nav-cta" download>↓ CV</a>
-</nav>
+  <!-- Skip navigation — first focusable element for keyboard users -->
+  <a class="skip-link" href="#main-content">Vai al contenuto principale</a>
 
-<!-- HERO -->
-<section id="hero">
-  <div>
-    <div class="hero-eyebrow"><div class="dot-live"></div>Cloud Consultant · Nimbus Reply</div>
-    <h1 class="hero-title">Nicola<br><span class="line2">Mastromarino</span></h1>
-    <p class="hero-role">Cloud Consultant & AI Engineer — GenAI · LLMOps · Multi-Cloud</p>
-    <p class="hero-desc">Progetto e implemento architetture cloud-native sicure, pipeline DevSecOps enterprise e sistemi AI avanzati con focus su RAG, LLMOps e fine-tuning di LLM.</p>
-    <div class="hero-btns">
-      <a href="#contatti" class="btn-dark"><i class="fas fa-paper-plane" style="font-size:11px"></i>Contattami</a>
-      <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="btn-ghost" download><i class="fas fa-download" style="font-size:11px"></i>Scarica CV</a>
-      <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" target="_blank" rel="noopener" class="btn-ghost"><i class="fab fa-linkedin" style="font-size:11px"></i>LinkedIn</a>
-    </div>
-  </div>
-  <div class="impact-panel">
-    <div class="impact-card dark">
-      <div class="impact-num">−70%</div>
-      <div>
-        <div class="impact-label">Carico operativo ridotto con automazione Python + Morpheus API</div>
-        <div class="impact-sub">Nimbus Reply · 2025</div>
-      </div>
-    </div>
-    <div class="impact-card">
-      <div class="impact-num">+190%</div>
-      <div>
-        <div class="impact-label">Token F1 migliorato nel sistema Medical RAG vs baseline</div>
-        <div class="impact-sub">Short Master GenAI · 2026</div>
-      </div>
-    </div>
-    <div class="impact-card">
-      <div class="impact-num">−40%</div>
-      <div>
-        <div class="impact-label">Riduzione allucinazioni con QLoRA fine-tuning BioMistral-7B</div>
-        <div class="impact-sub">21M parametri · NVIDIA T4 ×2</div>
-      </div>
-    </div>
-    <div class="impact-card dark">
-      <div class="impact-num">GCP</div>
-      <div>
-        <div class="impact-label">Cloud Digital Leader certificato</div>
-        <div class="impact-sub">Giu 2025 – Giu 2028</div>
-      </div>
-    </div>
-  </div>
-  <div class="hero-watermark" aria-hidden="true">NM</div>
-</section>
+  <!-- ═══════════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════════ -->
+  <nav class="site-nav" role="navigation" aria-label="Navigazione principale">
+    <a href="#hero" class="nav-logo" aria-label="Nicola Mastromarino — vai alla home">NM_</a>
 
-<!-- ABOUT -->
-<section id="about" class="alt">
-  <div class="s-label">01 — Profilo</div>
-  <div class="s-title">Chi sono</div>
-  <div class="about-grid">
-    <div class="about-body">
-      <p><strong>Cloud Consultant</strong> presso Nimbus Reply con operatività diretta su <strong>Morpheus CMP</strong>, la piattaforma di gestione multi-cloud usata in ambienti enterprise regolamentati. Automatizzo workflow di provisioning, gestione RBAC e riconciliazione dati tra vCenter, Morpheus, ServiceNow e NSX tramite Python e API.</p>
-      <p>In parallelo porto avanti una specializzazione in <strong>AI e Generative AI</strong>: la mia tesi finale del Short Master ha prodotto un sistema Clinical Decision Support (CDSS) su MIMIC-III con pipeline RAG ibrida, fine-tuning QLoRA di BioMistral-7B e un Adaptive Query Router originale.</p>
-      <p>Il mio profilo è volutamente ibrido: unisco la solidità operativa del cloud engineer alla profondità tecnica dell'AI engineer. Cerco ruoli che valorizzino entrambe le dimensioni.</p>
-      <div class="chip-row">
-        <span class="chip hi">Multi-Cloud</span>
-        <span class="chip hi">DevSecOps</span>
-        <span class="chip hi">RAG / LLMOps</span>
-        <span class="chip hi">QLoRA Fine-tuning</span>
-        <span class="chip">Morpheus CMP</span>
-        <span class="chip">Python Automation</span>
-        <span class="chip">CI/CD Enterprise</span>
-        <span class="chip">RBAC / IAM</span>
-        <span class="chip">Categorie Protette L.68/99</span>
-      </div>
-    </div>
-    <div class="aside-card">
-      <div class="aside-row">
-        <div class="aside-icon"><i class="fas fa-map-marker-alt"></i></div>
-        <div class="aside-text"><strong>Sede</strong>Italia — disponibile in ibrido/remoto</div>
-      </div>
-      <div class="aside-row">
-        <div class="aside-icon"><i class="fas fa-briefcase"></i></div>
-        <div class="aside-text"><strong>Ruolo attuale</strong>Cloud Consultant · Nimbus Reply (Reply Group)</div>
-      </div>
-      <div class="aside-row">
-        <div class="aside-icon"><i class="fas fa-graduation-cap"></i></div>
-        <div class="aside-text"><strong>Formazione</strong>LM Computer Science (AI) + Short Master GenAI · UniBA</div>
-      </div>
-      <div class="aside-row">
-        <div class="aside-icon"><i class="fas fa-language"></i></div>
-        <div class="aside-text"><strong>Lingue</strong>Italiano (madrelingua) · Inglese B1</div>
-      </div>
-      <div class="aside-row">
-        <div class="aside-icon"><i class="fas fa-envelope"></i></div>
-        <div class="aside-text"><strong>Email</strong>nickmastromarino54@gmail.com</div>
-      </div>
-    </div>
-  </div>
-</section>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">Profilo</a></li>
+      <li><a href="#exp">Esperienza</a></li>
+      <li><a href="#projects">Progetti</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#certs">Credenziali</a></li>
+    </ul>
 
-<!-- ESPERIENZA -->
-<section id="exp">
-  <div class="s-label">02 — Esperienza</div>
-  <div class="s-title">Carriera</div>
-  <div class="exp-list">
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Apr 2025 — Presente</div>
-        <div class="exp-company">Nimbus Reply</div>
-      </div>
-      <div>
-        <div class="exp-title">Cloud Consultant</div>
-        <div class="exp-sub">Multi-Cloud · DevSecOps · Python Automation</div>
-        <ul class="exp-bullets">
-          <li>Automazione workflow di provisioning tramite Python e <strong>Morpheus Data API</strong> <span class="metric-badge">−70% ops manuali</span></li>
-          <li>Pipeline di riconciliazione dati tra <strong>vCenter, Morpheus CMP, ServiceNow e NSX</strong></li>
-          <li>Tool Bash per verifica massiva connettività (netcat, ping) su ambienti Windows e Linux</li>
-          <li>Gestione <strong>Secret (Cyphers) e auditing RBAC</strong> su piattaforme cloud multi-tenant</li>
-          <li>Sviluppo e ottimizzazione pipeline <strong>CI/CD e processi DevSecOps</strong> in ambienti regolamentati</li>
-          <li>Analisi sistemi legacy e definizione strategie di migrazione cloud-native</li>
-        </ul>
-      </div>
-    </div>
-    <div class="exp-item">
-      <div class="exp-meta">
-        <div class="exp-period">Lug — Ott 2024</div>
-        <div class="exp-company">UniBA · Research</div>
-      </div>
-      <div>
-        <div class="exp-title">Graduate Research Intern</div>
-        <div class="exp-sub">Computer Vision · Social Robotics · Deep Learning</div>
-        <ul class="exp-bullets">
-          <li>Sviluppo modelli <strong>Computer Vision per Facial Expression Recognition</strong> real-time su piattaforme di Social Robotics</li>
-          <li>Pipeline completa con <strong>OpenCV, TensorFlow, PyTorch</strong>: preprocessing, data augmentation, feature extraction</li>
-          <li>Analisi di bias algoritmici e implicazioni etiche nei sistemi AI</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROGETTI -->
-<section id="projects" class="alt">
-  <div class="s-label">03 — Progetti</div>
-  <div class="s-title">Lavori significativi</div>
-  <div class="projects-grid">
-    <div class="proj-card featured">
-      <div>
-        <div class="proj-n">Progetto principale · 2026</div>
-        <h2 class="proj-h">Medical RAG Question Answering System</h2>
-        <p class="proj-desc">Sistema Clinical Decision Support su note cliniche MIMIC-III. Pipeline RAG ibrida con BM25 + S-PubMedBERT-MS-MARCO, Reciprocal Rank Fusion e Adaptive Query Router. Fine-tuning QLoRA di BioMistral-7B (~21M parametri) su 2× NVIDIA T4 per meccanismi di astensione esplicita (NO_ANSWER). Deployment on-premises con attenzione a EU AI Act e supervisione umana obbligatoria.</p>
-        <div class="tag-row" style="margin-bottom:1.25rem">
-          <span class="tag">BioMistral-7B</span><span class="tag">QLoRA</span>
-          <span class="tag">FAISS</span><span class="tag">BM25</span>
-          <span class="tag">S-PubMedBERT</span><span class="tag">Python</span>
-          <span class="tag">HuggingFace</span><span class="tag">MIMIC-III</span>
-        </div>
-        <a href="https://github.com/NicolaM99" target="_blank" rel="noopener" class="gh-btn"><i class="fab fa-github"></i>GitHub</a>
-      </div>
-      <div class="proj-metrics">
-        <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,0.3);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem">Risultati misurati</div>
-        <div class="metric-row">
-          <div class="metric-val">+190%</div>
-          <div class="metric-txt">Token F1 vs baseline<br><span style="font-family:var(--mono);font-size:9px;opacity:.5">ablation S4</span></div>
-        </div>
-        <div class="metric-row">
-          <div class="metric-val">+112%</div>
-          <div class="metric-txt">No-Answer Accuracy<br><span style="font-family:var(--mono);font-size:9px;opacity:.5">vs sistema S1</span></div>
-        </div>
-        <div class="metric-row">
-          <div class="metric-val">−40%</div>
-          <div class="metric-txt">Riduzione allucinazioni<br><span style="font-family:var(--mono);font-size:9px;opacity:.5">rispetto a baseline</span></div>
-        </div>
-        <div class="metric-row">
-          <div class="metric-val">21M</div>
-          <div class="metric-txt">Parametri fine-tunati<br><span style="font-family:var(--mono);font-size:9px;opacity:.5">QLoRA r=8 α=16</span></div>
-        </div>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-n">Tesi triennale · 2024</div>
-      <h3 class="proj-h">Facial Expression Recognition</h3>
-      <p class="proj-desc">Pipeline Computer Vision per FER real-time su piattaforme di Social Robotics. OpenCV + TensorFlow/PyTorch, data augmentation, analisi bias algoritmici su dataset pubblici e ambienti non controllati.</p>
-      <div class="proj-foot">
-        <div class="tag-row"><span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span></div>
-        <a href="https://github.com/NicolaM99/facial-expression-recognition" target="_blank" rel="noopener" class="gh-btn"><i class="fab fa-github"></i> Codice</a>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-n">AI/ML Project · 2024</div>
-      <h3 class="proj-h">Heart Disease Prediction</h3>
-      <p class="proj-desc">Sistema ML per previsione rischio cardiovascolare con accuracy 85%+. Random Forest, XGBoost, Naive Bayes, k-NN. Feature engineering, SMOTE per bilanciamento dataset, ottimizzazione per minimizzare falsi negativi.</p>
-      <div class="proj-foot">
-        <div class="tag-row"><span class="tag">Python</span><span class="tag">XGBoost</span><span class="tag">Scikit-learn</span><span class="tag">SMOTE</span></div>
-        <a href="https://github.com/NicolaM99/ICON5_23-24" target="_blank" rel="noopener" class="gh-btn"><i class="fab fa-github"></i> Codice</a>
-      </div>
-    </div>
-    <div class="proj-card">
-      <div class="proj-n">Software Engineering · 2024</div>
-      <h3 class="proj-h">Enterprise CI/CD — Battleship</h3>
-      <p class="proj-desc">App Java enterprise con architettura modulare e CI/CD completa (GitHub Actions, Docker). Quality assurance con Checkstyle e PMD, documentazione UML, code coverage >90% e deploy automatizzato.</p>
-      <div class="proj-foot">
-        <div class="tag-row"><span class="tag">Java</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">PMD</span></div>
-        <a href="https://github.com/softeng2223-inf-uniba/progetto2223-thompson" target="_blank" rel="noopener" class="gh-btn"><i class="fab fa-github"></i> Codice</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STACK -->
-<section id="stack">
-  <div class="s-label">04 — Stack</div>
-  <div class="s-title">Tecnologie</div>
-  <div class="stack-grid">
-    <div class="stack-col">
-      <div class="s-icon"><i class="fas fa-cloud"></i></div>
-      <div class="s-head">Cloud & DevOps</div>
-      <div class="pill-wrap">
-        <span class="pill hi">GCP</span><span class="pill hi">AWS</span>
-        <span class="pill">Morpheus CMP</span><span class="pill">Docker</span>
-        <span class="pill">Kubernetes</span><span class="pill">GitHub Actions</span>
-        <span class="pill">Terraform</span><span class="pill">CI/CD</span>
-        <span class="pill">DevSecOps</span><span class="pill">multi-cloud</span>
-      </div>
-    </div>
-    <div class="stack-col">
-      <div class="s-icon"><i class="fas fa-brain"></i></div>
-      <div class="s-head">AI & GenAI</div>
-      <div class="pill-wrap">
-        <span class="pill hi">RAG Pipelines</span><span class="pill hi">LLMOps</span>
-        <span class="pill hi">QLoRA</span><span class="pill">BioMistral-7B</span>
-        <span class="pill">FAISS</span><span class="pill">BM25</span>
-        <span class="pill">HuggingFace</span><span class="pill">PyTorch</span>
-        <span class="pill">TensorFlow</span><span class="pill">Scikit-learn</span>
-        <span class="pill">Computer Vision</span><span class="pill">NLP</span>
-      </div>
-    </div>
-    <div class="stack-col">
-      <div class="s-icon"><i class="fas fa-code"></i></div>
-      <div class="s-head">Sviluppo</div>
-      <div class="pill-wrap">
-        <span class="pill hi">Python</span><span class="pill">Java</span>
-        <span class="pill">C/C++</span><span class="pill">SQL</span>
-        <span class="pill">Bash</span><span class="pill">REST API</span>
-        <span class="pill">MySQL</span><span class="pill">Git</span>
-      </div>
-    </div>
-    <div class="stack-col">
-      <div class="s-icon"><i class="fas fa-network-wired"></i></div>
-      <div class="s-head">Sistemi & Metodi</div>
-      <div class="pill-wrap">
-        <span class="pill">Linux</span><span class="pill">Windows Server</span>
-        <span class="pill">Networking</span><span class="pill">RBAC</span>
-        <span class="pill">IAM</span><span class="pill">Agile</span>
-        <span class="pill">SOLID</span><span class="pill">Microservizi</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTS + EDU -->
-<section id="certs" class="alt">
-  <div class="s-label">05 — Credenziali</div>
-  <div class="s-title">Certificazioni</div>
-  <div class="certs-row">
-    <div class="cert-card active">
-      <div class="cert-icon">☁️</div>
-      <div class="cert-issuer">Google Cloud · Attiva</div>
-      <div class="cert-name">Cloud Digital Leader</div>
-      <div class="cert-period">Giu 2025 – Giu 2028</div>
-      <div class="cert-id">ID: 85b13cfa55e3447d...</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🚀</div>
-      <div class="cert-issuer">Google Cloud Skills Boost</div>
-      <div class="cert-name">Digital Transformation with Google Cloud</div>
-      <div class="cert-period">Apr 2025</div>
-      <div class="cert-id">ID: 14992713</div>
-    </div>
-    <div class="cert-card">
-      <div class="cert-icon">🟠</div>
-      <div class="cert-issuer">AWS Educate</div>
-      <div class="cert-name">Introduction to Cloud 101</div>
-      <div class="cert-period">Apr 2025</div>
-      <div class="cert-id">EC2 · S3 · VPC · IAM</div>
-    </div>
-    <div class="cert-card" style="border:1.5px dashed rgba(10,92,55,0.3);background:transparent">
-      <div class="cert-icon">🎯</div>
-      <div class="cert-issuer" style="color:var(--green)">In preparazione</div>
-      <div class="cert-name" style="color:var(--green)">Associate Cloud Engineer</div>
-      <div class="cert-period" style="color:var(--green2)">Google Cloud · 2026</div>
-    </div>
-  </div>
-  <div style="margin-top:3rem">
-    <div class="s-label" style="margin-bottom:1rem">06 — Formazione</div>
-    <div class="edu-grid">
-      <div class="edu-card">
-        <div class="edu-period">Dic 2025 — Apr 2026</div>
-        <div class="edu-deg">Short Master — Generative AI</div>
-        <div class="edu-inst">Università degli Studi di Bari · Supervisore: Prof. M. Polignano</div>
-        <div class="edu-note">Progetto finale: Medical RAG QA System · pipeline RAG ibrida · fine-tuning QLoRA BioMistral-7B · ablation study S1–S5</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-period">2024 — In corso</div>
-        <div class="edu-deg">Laurea Magistrale — Computer Science</div>
-        <div class="edu-inst">Università degli Studi di Bari "Aldo Moro"</div>
-        <div class="edu-note">Curriculum AI · ML, Deep Learning, Computer Vision, NLP, Reinforcement Learning</div>
-      </div>
-      <div class="edu-card">
-        <div class="edu-period">2021 — 2024</div>
-        <div class="edu-deg">Laurea Triennale — Informatica</div>
-        <div class="edu-inst">Università degli Studi di Bari "Aldo Moro"</div>
-        <div class="edu-note">Tesi: sistemi di visione artificiale per FER durante interazione con social robot</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contatti">
-  <div>
-    <div class="contact-title">Parliamone.</div>
-    <p class="contact-sub">Sono aperto a opportunità in architettura cloud, AI/GenAI e ruoli ibridi Cloud+AI. Se il tuo team cerca un profilo tecnico con competenze operative reali, scrivimi.</p>
-  </div>
-  <div class="c-links">
-    <a href="mailto:nickmastromarino54@gmail.com" class="c-link">
-      <div class="c-icon"><i class="fas fa-envelope"></i></div>
-      <div><div class="c-main">Email</div><div class="c-hint">nickmastromarino54@gmail.com</div></div>
-      <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
+    <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="nav-cta btn" download aria-label="Scarica il CV in PDF">
+      <i class="fas fa-download" aria-hidden="true"></i>CV
     </a>
-    <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" target="_blank" rel="noopener" class="c-link">
-      <div class="c-icon"><i class="fab fa-linkedin"></i></div>
-      <div><div class="c-main">LinkedIn</div><div class="c-hint">nicola-mastromarino-3a3b74189</div></div>
-      <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
-    </a>
-    <a href="https://github.com/NicolaM99" target="_blank" rel="noopener" class="c-link">
-      <div class="c-icon"><i class="fab fa-github"></i></div>
-      <div><div class="c-main">GitHub</div><div class="c-hint">NicolaM99</div></div>
-      <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
-    </a>
-    <a href="https://nicolam99.github.io/" target="_blank" rel="noopener" class="c-link">
-      <div class="c-icon"><i class="fas fa-globe"></i></div>
-      <div><div class="c-main">Portfolio</div><div class="c-hint">nicolam99.github.io</div></div>
-      <div class="c-arrow"><i class="fas fa-arrow-right"></i></div>
-    </a>
-  </div>
-</section>
+  </nav>
 
-<footer>
-  <p>© 2026 Nicola Mastromarino · Cloud Consultant & AI Engineer</p>
-  <div class="foot-links">
-    <a href="https://github.com/NicolaM99/NicolaM99.github.io" target="_blank" rel="noopener">Sorgente</a>
-    <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-</footer>
+  <!-- ═══════════════════════════════════════════
+       MAIN LANDMARK
+  ═══════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- HERO ────────────────────────────────── -->
+    <section id="hero" aria-labelledby="hero-name">
+
+      <div class="hero-content">
+        <!-- Live status badge -->
+        <p class="hero-eyebrow">
+          <span
+            class="dot-live"
+            role="img"
+            aria-label="Stato: attivo"
+            aria-live="polite"
+          ></span>
+          Cloud Consultant · Nimbus Reply
+        </p>
+
+        <h1 id="hero-name" class="hero-title">
+          Nicola<br>
+          <span class="line2">Mastromarino</span>
+        </h1>
+
+        <p class="hero-role">Cloud Consultant &amp; AI Engineer — GenAI · LLMOps · Multi-Cloud</p>
+        <p class="hero-desc">Progetto e implemento architetture cloud-native sicure, pipeline DevSecOps enterprise e sistemi AI avanzati con focus su RAG, LLMOps e fine-tuning di LLM.</p>
+
+        <div class="hero-btns">
+          <a href="#contatti" class="btn btn-dark">
+            <i class="fas fa-paper-plane" aria-hidden="true" style="font-size:11px"></i>
+            Contattami
+          </a>
+          <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="btn btn-ghost" download>
+            <i class="fas fa-download" aria-hidden="true" style="font-size:11px"></i>
+            Scarica CV
+          </a>
+          <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" aria-label="Profilo LinkedIn (si apre in una nuova scheda)">
+            <i class="fab fa-linkedin" aria-hidden="true" style="font-size:11px"></i>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+
+      <!-- Impact metrics panel -->
+      <aside class="impact-panel" aria-label="Metriche chiave">
+        <div class="impact-card impact-card--dark">
+          <div class="impact-num" aria-label="Meno 70 percento">−70%</div>
+          <div>
+            <div class="impact-label">Carico operativo ridotto con automazione Python + Morpheus API</div>
+            <div class="impact-sub">Nimbus Reply · 2025</div>
+          </div>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-num" aria-label="Più 190 percento">+190%</div>
+          <div>
+            <div class="impact-label">Token F1 migliorato nel sistema Medical RAG vs baseline</div>
+            <div class="impact-sub">Short Master GenAI · 2026</div>
+          </div>
+        </div>
+
+        <div class="impact-card">
+          <div class="impact-num" aria-label="Meno 40 percento">−40%</div>
+          <div>
+            <div class="impact-label">Riduzione allucinazioni con QLoRA fine-tuning BioMistral-7B</div>
+            <div class="impact-sub">21M parametri · NVIDIA T4 ×2</div>
+          </div>
+        </div>
+
+        <div class="impact-card impact-card--dark">
+          <div class="impact-num">GCP</div>
+          <div>
+            <div class="impact-label">Cloud Digital Leader certificato</div>
+            <div class="impact-sub">Giu 2025 – Giu 2028</div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Decorative background text — hidden from AT -->
+      <span class="hero-watermark" aria-hidden="true">NM</span>
+    </section>
+
+    <!-- ABOUT ───────────────────────────────── -->
+    <section id="about" class="section section--alt" aria-labelledby="about-title">
+      <p class="section-label">01 — Profilo</p>
+      <h2 id="about-title" class="section-title">Chi sono</h2>
+
+      <div class="about-grid">
+        <div class="about-body">
+          <p>
+            <strong>Cloud Consultant</strong> presso Nimbus Reply con operatività diretta su
+            <strong>Morpheus CMP</strong>, la piattaforma di gestione multi-cloud usata in ambienti
+            enterprise regolamentati. Automatizzo workflow di provisioning, gestione RBAC e
+            riconciliazione dati tra vCenter, Morpheus, ServiceNow e NSX tramite Python e API.
+          </p>
+          <p>
+            In parallelo porto avanti una specializzazione in <strong>AI e Generative AI</strong>:
+            la mia tesi finale del Short Master ha prodotto un sistema Clinical Decision Support
+            (CDSS) su MIMIC-III con pipeline RAG ibrida, fine-tuning QLoRA di BioMistral-7B e
+            un Adaptive Query Router originale.
+          </p>
+          <p>
+            Il mio profilo è volutamente ibrido: unisco la solidità operativa del cloud engineer
+            alla profondità tecnica dell'AI engineer. Cerco ruoli che valorizzino entrambe le
+            dimensioni.
+          </p>
+
+          <div class="chip-row" role="list" aria-label="Competenze chiave">
+            <span class="chip chip--hi" role="listitem">Multi-Cloud</span>
+            <span class="chip chip--hi" role="listitem">DevSecOps</span>
+            <span class="chip chip--hi" role="listitem">RAG / LLMOps</span>
+            <span class="chip chip--hi" role="listitem">QLoRA Fine-tuning</span>
+            <span class="chip" role="listitem">Morpheus CMP</span>
+            <span class="chip" role="listitem">Python Automation</span>
+            <span class="chip" role="listitem">CI/CD Enterprise</span>
+            <span class="chip" role="listitem">RBAC / IAM</span>
+            <span class="chip" role="listitem">Categorie Protette L.68/99</span>
+          </div>
+        </div>
+
+        <!-- Quick-facts sidebar -->
+        <aside class="aside-card" aria-label="Informazioni rapide">
+          <div class="aside-row">
+            <div class="aside-icon" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="aside-text">
+              <strong>Sede</strong>
+              Italia — disponibile in ibrido/remoto
+            </div>
+          </div>
+          <div class="aside-row">
+            <div class="aside-icon" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
+            <div class="aside-text">
+              <strong>Ruolo attuale</strong>
+              Cloud Consultant · Nimbus Reply (Reply Group)
+            </div>
+          </div>
+          <div class="aside-row">
+            <div class="aside-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></div>
+            <div class="aside-text">
+              <strong>Formazione</strong>
+              LM Computer Science (AI) + Short Master GenAI · UniBA
+            </div>
+          </div>
+          <div class="aside-row">
+            <div class="aside-icon" aria-hidden="true"><i class="fas fa-language"></i></div>
+            <div class="aside-text">
+              <strong>Lingue</strong>
+              Italiano (madrelingua) · Inglese B1
+            </div>
+          </div>
+          <div class="aside-row">
+            <div class="aside-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+            <div class="aside-text">
+              <strong>Email</strong>
+              <a href="mailto:nickmastromarino54@gmail.com" style="color:inherit">nickmastromarino54@gmail.com</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE ──────────────────────────── -->
+    <section id="exp" class="section" aria-labelledby="exp-title">
+      <p class="section-label">02 — Esperienza</p>
+      <h2 id="exp-title" class="section-title">Carriera</h2>
+
+      <div class="exp-list">
+        <!-- Role 1 -->
+        <article class="exp-item">
+          <div class="exp-meta">
+            <time class="exp-period" datetime="2025-04">Apr 2025 — Presente</time>
+            <div class="exp-company">Nimbus Reply</div>
+          </div>
+          <div>
+            <h3 class="exp-title">Cloud Consultant</h3>
+            <p class="exp-sub">Multi-Cloud · DevSecOps · Python Automation</p>
+            <ul class="exp-bullets">
+              <li>Automazione workflow di provisioning tramite Python e <strong>Morpheus Data API</strong> <span class="metric-badge">−70% ops manuali</span></li>
+              <li>Pipeline di riconciliazione dati tra <strong>vCenter, Morpheus CMP, ServiceNow e NSX</strong></li>
+              <li>Tool Bash per verifica massiva connettività (netcat, ping) su ambienti Windows e Linux</li>
+              <li>Gestione <strong>Secret (Cyphers) e auditing RBAC</strong> su piattaforme cloud multi-tenant</li>
+              <li>Sviluppo e ottimizzazione pipeline <strong>CI/CD e processi DevSecOps</strong> in ambienti regolamentati</li>
+              <li>Analisi sistemi legacy e definizione strategie di migrazione cloud-native</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Role 2 -->
+        <article class="exp-item">
+          <div class="exp-meta">
+            <time class="exp-period" datetime="2024-07">Lug — Ott 2024</time>
+            <div class="exp-company">UniBA · Research</div>
+          </div>
+          <div>
+            <h3 class="exp-title">Graduate Research Intern</h3>
+            <p class="exp-sub">Computer Vision · Social Robotics · Deep Learning</p>
+            <ul class="exp-bullets">
+              <li>Sviluppo modelli <strong>Computer Vision per Facial Expression Recognition</strong> real-time su piattaforme di Social Robotics</li>
+              <li>Pipeline completa con <strong>OpenCV, TensorFlow, PyTorch</strong>: preprocessing, data augmentation, feature extraction</li>
+              <li>Analisi di bias algoritmici e implicazioni etiche nei sistemi AI</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS ────────────────────────────── -->
+    <section id="projects" class="section section--alt" aria-labelledby="projects-title">
+      <p class="section-label">03 — Progetti</p>
+      <h2 id="projects-title" class="section-title">Lavori significativi</h2>
+
+      <div class="projects-grid">
+        <!-- Featured project -->
+        <article class="proj-card proj-card--featured" aria-label="Progetto principale: Medical RAG">
+          <div>
+            <p class="proj-n">Progetto principale · 2026</p>
+            <h3 class="proj-h">Medical RAG Question Answering System</h3>
+            <p class="proj-desc">
+              Sistema Clinical Decision Support su note cliniche MIMIC-III. Pipeline RAG ibrida con
+              BM25 + S-PubMedBERT-MS-MARCO, Reciprocal Rank Fusion e Adaptive Query Router.
+              Fine-tuning QLoRA di BioMistral-7B (~21M parametri) su 2× NVIDIA T4 per meccanismi
+              di astensione esplicita (NO_ANSWER). Deployment on-premises con attenzione a EU AI
+              Act e supervisione umana obbligatoria.
+            </p>
+            <div class="tag-row" style="margin-block-end: var(--space-4)">
+              <span class="tag">BioMistral-7B</span>
+              <span class="tag">QLoRA</span>
+              <span class="tag">FAISS</span>
+              <span class="tag">BM25</span>
+              <span class="tag">S-PubMedBERT</span>
+              <span class="tag">Python</span>
+              <span class="tag">HuggingFace</span>
+              <span class="tag">MIMIC-III</span>
+            </div>
+            <a href="https://github.com/NicolaM99" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="Vai al profilo GitHub di NicolaM99 (si apre in una nuova scheda)">
+              <i class="fab fa-github" aria-hidden="true"></i>GitHub
+            </a>
+          </div>
+
+          <div class="proj-metrics" aria-label="Risultati misurati">
+            <p class="proj-metrics-label" aria-hidden="true">Risultati misurati</p>
+            <div class="metric-row">
+              <div class="metric-val" aria-label="Più 190 percento">+190%</div>
+              <div class="metric-txt">Token F1 vs baseline<span class="metric-txt-sub">ablation S4</span></div>
+            </div>
+            <div class="metric-row">
+              <div class="metric-val" aria-label="Più 112 percento">+112%</div>
+              <div class="metric-txt">No-Answer Accuracy<span class="metric-txt-sub">vs sistema S1</span></div>
+            </div>
+            <div class="metric-row">
+              <div class="metric-val" aria-label="Meno 40 percento">−40%</div>
+              <div class="metric-txt">Riduzione allucinazioni<span class="metric-txt-sub">rispetto a baseline</span></div>
+            </div>
+            <div class="metric-row">
+              <div class="metric-val">21M</div>
+              <div class="metric-txt">Parametri fine-tunati<span class="metric-txt-sub">QLoRA r=8 α=16</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="proj-card">
+          <p class="proj-n">Tesi triennale · 2024</p>
+          <h3 class="proj-h">Facial Expression Recognition</h3>
+          <p class="proj-desc">Pipeline Computer Vision per FER real-time su piattaforme di Social Robotics. OpenCV + TensorFlow/PyTorch, data augmentation, analisi bias algoritmici su dataset pubblici e ambienti non controllati.</p>
+          <div class="proj-foot">
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">OpenCV</span>
+              <span class="tag">TensorFlow</span>
+              <span class="tag">PyTorch</span>
+            </div>
+            <a href="https://github.com/NicolaM99/facial-expression-recognition" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="Codice su GitHub (si apre in una nuova scheda)">
+              <i class="fab fa-github" aria-hidden="true"></i>Codice
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="proj-card">
+          <p class="proj-n">AI/ML Project · 2024</p>
+          <h3 class="proj-h">Heart Disease Prediction</h3>
+          <p class="proj-desc">Sistema ML per previsione rischio cardiovascolare con accuracy 85%+. Random Forest, XGBoost, Naive Bayes, k-NN. Feature engineering, SMOTE per bilanciamento dataset, ottimizzazione per minimizzare falsi negativi.</p>
+          <div class="proj-foot">
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">XGBoost</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">SMOTE</span>
+            </div>
+            <a href="https://github.com/NicolaM99/ICON5_23-24" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="Codice su GitHub (si apre in una nuova scheda)">
+              <i class="fab fa-github" aria-hidden="true"></i>Codice
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="proj-card">
+          <p class="proj-n">Software Engineering · 2024</p>
+          <h3 class="proj-h">Enterprise CI/CD — Battleship</h3>
+          <p class="proj-desc">App Java enterprise con architettura modulare e CI/CD completa (GitHub Actions, Docker). Quality assurance con Checkstyle e PMD, documentazione UML, code coverage >90% e deploy automatizzato.</p>
+          <div class="proj-foot">
+            <div class="tag-row">
+              <span class="tag">Java</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">PMD</span>
+            </div>
+            <a href="https://github.com/softeng2223-inf-uniba/progetto2223-thompson" target="_blank" rel="noopener noreferrer" class="gh-btn" aria-label="Codice su GitHub (si apre in una nuova scheda)">
+              <i class="fab fa-github" aria-hidden="true"></i>Codice
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK ───────────────────────────────── -->
+    <section id="stack" class="section" aria-labelledby="stack-title">
+      <p class="section-label">04 — Stack</p>
+      <h2 id="stack-title" class="section-title">Tecnologie</h2>
+
+      <div class="stack-grid">
+        <div class="stack-col">
+          <div class="stack-icon" aria-hidden="true"><i class="fas fa-cloud"></i></div>
+          <h3 class="stack-head">Cloud &amp; DevOps</h3>
+          <div class="pill-wrap" role="list" aria-label="Tecnologie Cloud e DevOps">
+            <span class="pill pill--hi" role="listitem">GCP</span>
+            <span class="pill pill--hi" role="listitem">AWS</span>
+            <span class="pill" role="listitem">Morpheus CMP</span>
+            <span class="pill" role="listitem">Docker</span>
+            <span class="pill" role="listitem">Kubernetes</span>
+            <span class="pill" role="listitem">GitHub Actions</span>
+            <span class="pill" role="listitem">Terraform</span>
+            <span class="pill" role="listitem">CI/CD</span>
+            <span class="pill" role="listitem">DevSecOps</span>
+            <span class="pill" role="listitem">multi-cloud</span>
+          </div>
+        </div>
+
+        <div class="stack-col">
+          <div class="stack-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
+          <h3 class="stack-head">AI &amp; GenAI</h3>
+          <div class="pill-wrap" role="list" aria-label="Tecnologie AI e GenAI">
+            <span class="pill pill--hi" role="listitem">RAG Pipelines</span>
+            <span class="pill pill--hi" role="listitem">LLMOps</span>
+            <span class="pill pill--hi" role="listitem">QLoRA</span>
+            <span class="pill" role="listitem">BioMistral-7B</span>
+            <span class="pill" role="listitem">FAISS</span>
+            <span class="pill" role="listitem">BM25</span>
+            <span class="pill" role="listitem">HuggingFace</span>
+            <span class="pill" role="listitem">PyTorch</span>
+            <span class="pill" role="listitem">TensorFlow</span>
+            <span class="pill" role="listitem">Scikit-learn</span>
+            <span class="pill" role="listitem">Computer Vision</span>
+            <span class="pill" role="listitem">NLP</span>
+          </div>
+        </div>
+
+        <div class="stack-col">
+          <div class="stack-icon" aria-hidden="true"><i class="fas fa-code"></i></div>
+          <h3 class="stack-head">Sviluppo</h3>
+          <div class="pill-wrap" role="list" aria-label="Linguaggi e strumenti di sviluppo">
+            <span class="pill pill--hi" role="listitem">Python</span>
+            <span class="pill" role="listitem">Java</span>
+            <span class="pill" role="listitem">C/C++</span>
+            <span class="pill" role="listitem">SQL</span>
+            <span class="pill" role="listitem">Bash</span>
+            <span class="pill" role="listitem">REST API</span>
+            <span class="pill" role="listitem">MySQL</span>
+            <span class="pill" role="listitem">Git</span>
+          </div>
+        </div>
+
+        <div class="stack-col">
+          <div class="stack-icon" aria-hidden="true"><i class="fas fa-network-wired"></i></div>
+          <h3 class="stack-head">Sistemi &amp; Metodi</h3>
+          <div class="pill-wrap" role="list" aria-label="Sistemi e metodologie">
+            <span class="pill" role="listitem">Linux</span>
+            <span class="pill" role="listitem">Windows Server</span>
+            <span class="pill" role="listitem">Networking</span>
+            <span class="pill" role="listitem">RBAC</span>
+            <span class="pill" role="listitem">IAM</span>
+            <span class="pill" role="listitem">Agile</span>
+            <span class="pill" role="listitem">SOLID</span>
+            <span class="pill" role="listitem">Microservizi</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS + EDUCATION ─────────── -->
+    <section id="certs" class="section section--alt" aria-labelledby="certs-title">
+      <p class="section-label">05 — Credenziali</p>
+      <h2 id="certs-title" class="section-title">Certificazioni</h2>
+
+      <div class="certs-row">
+        <div class="cert-card cert-card--active">
+          <div class="cert-icon" role="img" aria-label="Cloud">☁️</div>
+          <p class="cert-issuer">Google Cloud · Attiva</p>
+          <h3 class="cert-name">Cloud Digital Leader</h3>
+          <time class="cert-period" datetime="2025-06">Giu 2025 – Giu 2028</time>
+          <p class="cert-id">ID: 85b13cfa55e3447d…</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon" role="img" aria-label="Rocket">🚀</div>
+          <p class="cert-issuer">Google Cloud Skills Boost</p>
+          <h3 class="cert-name">Digital Transformation with Google Cloud</h3>
+          <time class="cert-period" datetime="2025-04">Apr 2025</time>
+          <p class="cert-id">ID: 14992713</p>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-icon" role="img" aria-label="AWS">🟠</div>
+          <p class="cert-issuer">AWS Educate</p>
+          <h3 class="cert-name">Introduction to Cloud 101</h3>
+          <time class="cert-period" datetime="2025-04">Apr 2025</time>
+          <p class="cert-id">EC2 · S3 · VPC · IAM</p>
+        </div>
+
+        <div class="cert-card cert-card--pending">
+          <div class="cert-icon" role="img" aria-label="Target">🎯</div>
+          <p class="cert-issuer">In preparazione</p>
+          <h3 class="cert-name">Associate Cloud Engineer</h3>
+          <p class="cert-period">Google Cloud · 2026</p>
+        </div>
+      </div>
+
+      <!-- Education sub-section -->
+      <div class="edu-subsection">
+        <p class="section-label" style="margin-block-end: 0">06 — Formazione</p>
+        <h2 id="edu-title" class="section-title" style="margin-block-start: var(--space-1)">Percorso accademico</h2>
+
+        <div class="edu-grid">
+          <div class="edu-card">
+            <time class="edu-period" datetime="2025-12">Dic 2025 — Apr 2026</time>
+            <h3 class="edu-deg">Short Master — Generative AI</h3>
+            <p class="edu-inst">Università degli Studi di Bari · Supervisore: Prof. M. Polignano</p>
+            <p class="edu-note">Progetto finale: Medical RAG QA System · pipeline RAG ibrida · fine-tuning QLoRA BioMistral-7B · ablation study S1–S5</p>
+          </div>
+
+          <div class="edu-card">
+            <time class="edu-period" datetime="2024">2024 — In corso</time>
+            <h3 class="edu-deg">Laurea Magistrale — Computer Science</h3>
+            <p class="edu-inst">Università degli Studi di Bari "Aldo Moro"</p>
+            <p class="edu-note">Curriculum AI · ML, Deep Learning, Computer Vision, NLP, Reinforcement Learning</p>
+          </div>
+
+          <div class="edu-card">
+            <time class="edu-period" datetime="2021">2021 — 2024</time>
+            <h3 class="edu-deg">Laurea Triennale — Informatica</h3>
+            <p class="edu-inst">Università degli Studi di Bari "Aldo Moro"</p>
+            <p class="edu-note">Tesi: sistemi di visione artificiale per FER durante interazione con social robot</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ─────────────────────────────── -->
+    <section id="contatti" class="section section--dark" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div>
+          <h2 id="contact-title" class="contact-title">Parliamone.</h2>
+          <p class="contact-sub">Sono aperto a opportunità in architettura cloud, AI/GenAI e ruoli ibridi Cloud+AI. Se il tuo team cerca un profilo tecnico con competenze operative reali, scrivimi.</p>
+        </div>
+
+        <nav class="c-links" aria-label="Contatti e profili">
+          <a href="mailto:nickmastromarino54@gmail.com" class="c-link">
+            <div class="c-icon" aria-hidden="true"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="c-main">Email</div>
+              <div class="c-hint">nickmastromarino54@gmail.com</div>
+            </div>
+            <div class="c-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" target="_blank" rel="noopener noreferrer" class="c-link" aria-label="LinkedIn (si apre in una nuova scheda)">
+            <div class="c-icon" aria-hidden="true"><i class="fab fa-linkedin"></i></div>
+            <div>
+              <div class="c-main">LinkedIn</div>
+              <div class="c-hint">nicola-mastromarino-3a3b74189</div>
+            </div>
+            <div class="c-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://github.com/NicolaM99" target="_blank" rel="noopener noreferrer" class="c-link" aria-label="GitHub (si apre in una nuova scheda)">
+            <div class="c-icon" aria-hidden="true"><i class="fab fa-github"></i></div>
+            <div>
+              <div class="c-main">GitHub</div>
+              <div class="c-hint">NicolaM99</div>
+            </div>
+            <div class="c-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+          </a>
+
+          <a href="https://nicolam99.github.io/" target="_blank" rel="noopener noreferrer" class="c-link" aria-label="Portfolio online (si apre in una nuova scheda)">
+            <div class="c-icon" aria-hidden="true"><i class="fas fa-globe"></i></div>
+            <div>
+              <div class="c-main">Portfolio</div>
+              <div class="c-hint">nicolam99.github.io</div>
+            </div>
+            <div class="c-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></div>
+          </a>
+        </nav>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- FOOTER ──────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <p>© 2026 Nicola Mastromarino · Cloud Consultant &amp; AI Engineer</p>
+    <nav class="foot-links" aria-label="Link footer">
+      <a href="https://github.com/NicolaM99/NicolaM99.github.io" target="_blank" rel="noopener noreferrer" aria-label="Codice sorgente su GitHub (si apre in una nuova scheda)">Sorgente</a>
+      <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/" target="_blank" rel="noopener noreferrer" aria-label="Profilo LinkedIn (si apre in una nuova scheda)">LinkedIn</a>
+    </nav>
+  </footer>
 
 </body>
 </html>
