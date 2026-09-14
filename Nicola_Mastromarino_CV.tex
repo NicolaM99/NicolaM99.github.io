@@ -1,0 +1,109 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\geometry{a4paper,left=13mm,right=13mm,top=9mm,bottom=8mm}
+
+\titleformat{\section}{\large\bfseries\color{blue!70!black}}{\thesection}{1em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{2pt plus 1pt minus 1pt}{1pt plus 1pt minus 1pt}
+
+\setlist[itemize]{noitemsep, topsep=1pt, parsep=0pt, partopsep=0pt, itemsep=0pt, leftmargin=1.2em}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    urlcolor=blue!70!black,
+    citecolor=blue!70!black
+}
+
+\begin{document}
+\pagestyle{empty}
+
+\begin{center}
+    {\Large\bfseries\color{blue!80!black} Nicola Mastromarino}\\[0.15em]
+    {\normalsize\textbf{AI Engineer -- GenAI / LLMOps / Cloud-Native}}\\[0.2em]
+    \href{mailto:nickmastromarino54@gmail.com}{nickmastromarino54@gmail.com} $\mid$
+    \href{https://www.linkedin.com/in/nicola-mastromarino-3a3b74189}{LinkedIn} $\mid$
+    \href{https://github.com/NicolaM99}{GitHub} $\mid$
+    \href{https://nicolam99.github.io/}{Portfolio}
+\end{center}
+
+\vspace{-0.8em}
+\section{Profilo Professionale}
+AI Engineer presso Machine Learning Reply, con background da Cloud Consultant in Nimbus Reply (Reply Group), specializzato in automazione cloud, DevSecOps e piattaforme enterprise. Laureando Magistrale in Computer Science (Curriculum AI) e diplomato Short Master in Generative AI (UniBa). Esperienza diretta su pipeline RAG (Hybrid/Graph), fine-tuning LLM (QLoRA) e deployment cloud-native production-ready con forte attenzione a governance e compliance.
+
+\section{Esperienza Professionale}
+\begin{itemize}
+    \item \textbf{AI Engineer} -- \textit{Machine Learning Reply} \hfill \textbf{Set 2026 -- Presente}
+    \begin{itemize}
+        \item Sviluppata la piattaforma GenAI per la generazione di video promozionali e brandizzati tramite orchestrazione di scene multimediali.
+        \item Progettato un AI Agent su LLM per l'analisi documentale e la compilazione automatica e strutturata delle schede progetto.
+        \item Gestiti i requisiti architetturali e le checklist aziendali per il deployment e la compliance enterprise della soluzione web.
+    \end{itemize}
+
+    \item \textbf{Cloud Consultant} -- \textit{Nimbus Reply} \hfill \textbf{Apr 2025 -- Set 2026}
+    \begin{itemize}
+        \item Automatizzati i workflow di provisioning tramite Python e Morpheus Data API, riducendo il carico operativo manuale del 70\%.
+        \item Sviluppate pipeline di riconciliazione dati in Python tra vCenter, Morpheus CMP, ServiceNow e NSX in ambienti multi-cloud.
+        \item Gestiti Secret (Cyphers) e condotti audit RBAC su piattaforme multi-tenant con focus su sicurezza e conformità enterprise.
+        \item Progettate e ottimizzate pipeline CI/CD e processi DevSecOps per architetture cloud scalabili in ambienti regolamentati.
+    \end{itemize}
+
+    \item \textbf{Graduate Research Intern} -- \textit{Università degli Studi di Bari} \hfill \textbf{Lug 2024 -- Ott 2024}
+    \begin{itemize}
+        \item Sviluppati modelli di Computer Vision per Facial Expression Recognition (FER) real-time su piattaforme di Social Robotics.
+        \item Applicata data augmentation e ottimizzazione deep learning (OpenCV, TensorFlow, PyTorch) mitigando bias algoritmici.
+    \end{itemize}
+\end{itemize}
+
+\section{Istruzione}
+\begin{itemize}
+    \item \textbf{Laurea Magistrale in Computer Science} (Curriculum Artificial Intelligence) \hfill \textbf{2024 -- In corso}\\
+    Università degli Studi di Bari ``Aldo Moro'' -- \textit{Focus: Deep Learning, Computer Vision, NLP, Reinforcement Learning}
+    \item \textbf{Short Master -- Generative AI: dalla teoria alla pratica} \hfill \textbf{Dic 2025 -- Apr 2026}\\
+    Università degli Studi di Bari ``Aldo Moro'' -- Direttore del Master: Prof. Marco Polignano
+    \item \textbf{Laurea Triennale in Informatica} \hfill \textbf{2021 -- 2024}\\
+    Università degli Studi di Bari ``Aldo Moro'' -- \textit{Tesi: Sistemi di visione artificiale per FER su social robot}
+\end{itemize}
+
+\section{Progetti Significativi}
+\begin{itemize}
+    \item \textbf{Medical RAG Question Answering System} (\textit{Short Master Final Project}) \hfill \textbf{2026}
+    \begin{itemize}
+        \item Pipeline RAG per Clinical QA su note MIMIC-III ($\sim$40K note) con retriever ibrido (BM25 + S-PubMedBERT, RRF) e Adaptive Query Router.
+        \item Fine-tuning QLoRA di BioMistral-7B su 2$\times$ NVIDIA T4: allucinazioni ridotte del 40\%, Token F1 +190\% vs baseline.
+        \item Architettura conforme all'EU AI Act con supervisione Human-in-the-Loop (HITL). Stack: \textit{FAISS, Hugging Face, Python}.
+    \end{itemize}
+    \item \textbf{FactKG -- Graph RAG su Knowledge Graph} (\textit{Progetto NLP}) \hfill \textbf{2025}
+    \begin{itemize}
+        \item Pipeline GraphRAG per fact-verification su 9.041 claim DBpedia con Llama-3 8B quantizzato a 4-bit (accuracy: 0.7350).
+    \end{itemize}
+\end{itemize}
+
+\section{Certificazioni \& Pubblicazioni}
+\begin{itemize}
+    \item \textbf{Google Cloud Certified -- Cloud Digital Leader} (\textit{ID: 85b13cfa55e3447d8447dc8253865a57}) \hfill \textbf{Giu 2025 -- Giu 2028}
+    \item \textbf{AWS Educate -- Introduction to Cloud 101} $\mid$ \textbf{Digital Transformation with GCP} \hfill \textbf{Apr 2025}
+    \item \textbf{Pubblicazione:} \textit{L'Arte di Rallentare nell'Era dell'Iper-Velocità} (Lug 2026) -- Saggio sull'impatto della GenAI su carico cognitivo e deep work.
+\end{itemize}
+
+\section{Competenze Tecniche \& Linguistiche}
+\begin{itemize}
+    \item \textbf{AI \& GenAI:} RAG (Graph/Hybrid Retrieval, RRF), Fine-tuning (QLoRA), Model Evaluation, Prompt Engineering, Agentic Workflows
+    \item \textbf{Framework \& Librerie:} PyTorch, TensorFlow, scikit-learn, Hugging Face, FAISS, BM25, OpenCV
+    \item \textbf{Cloud, DevOps \& OS:} GCP, AWS, Docker, GitHub Actions, CI/CD, DevSecOps, Morpheus CMP, Linux, vCenter
+    \item \textbf{Linguaggi \& Metodologie:} Python, Java, C/C++, SQL, Bash $\mid$ Architetture Microservizi, Design Patterns, Agile
+    \item \textbf{Lingue:} Italiano (Madrelingua), Inglese (B1)
+\end{itemize}
+
+\vfill
+\begin{center}
+    \scriptsize\textit{Appartengo alle categorie protette (Legge 68/1999). Autorizzo il trattamento dei dati personali ai sensi del GDPR (Regolamento UE 2016/679).}
+\end{center}
+
+\end{document}
