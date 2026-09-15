@@ -436,7 +436,7 @@
       padding-inline:  var(--space-3);
       display:       flex;
       align-items:   center;
-      gap:           var(--space-3);
+      gap:           var(--space-4);
       transition:
         transform  var(--dur-base) var(--ease-out),
         box-shadow var(--dur-base) var(--ease-out);
@@ -451,7 +451,8 @@
       font-size:     var(--text-2xl);
       line-height:   1;
       color:         var(--color-accent);
-      min-inline-size: 64px;
+      min-inline-size: 120px;
+      flex-shrink:   0;
       font-weight:   700;
     }
 
@@ -553,7 +554,7 @@
       padding:       var(--space-4);
       display:       flex;
       flex-direction: column;
-      gap:           var(--space-3);
+      gap:           var(--space-4);
     }
 
     .aside-row {
