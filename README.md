@@ -1,13 +1,13 @@
 <div align="center">
 
   <a href="https://nicolam99.github.io/">
-    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2d3436,0984e3&height=280&section=header&text=Nicola%20Mastromarino&fontSize=50&fontColor=ffffff&desc=Cloud%20Consultant%20%7C%20AI%20Engineer&descAlignY=75&descAlign=50&animation=fadeIn" alt="Nicola Mastromarino Header"/>
+    <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0d0d0d,e8603c&height=280&section=header&text=Nicola%20Mastromarino&fontSize=50&fontColor=ffffff&desc=AI%20Engineer%20%7C%20Generative%20AI&descAlignY=75&descAlign=50&animation=fadeIn" alt="Nicola Mastromarino Header"/>
   </a>
 
   <br />
 
   <a href="https://nicolam99.github.io/">
-    <img src="https://img.shields.io/badge/🚀_Portfolio-0984e3?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/🚀_Portfolio-e8603c?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio" />
   </a>&nbsp;
   <a href="https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
@@ -18,7 +18,7 @@
 
   <br /><br />
 
-  > *"Trasformare le sfide cloud in opportunità di innovazione."*
+  > *"Trasformare i dati in intelligenza, e l'AI in soluzioni di impatto."*
 
 </div>
 
@@ -28,25 +28,25 @@
 
 <div align="left">
 
-Sono un **Cloud Consultant** presso **Nimbus Reply** e studente magistrale in Computer Science (AI Curriculum).
-Mi specializzo nella progettazione di architetture **Cloud Native**, pipelines **DevSecOps** e soluzioni di **Intelligenza Artificiale** per l'enterprise.
+Sono un **AI Engineer** presso **Machine Learning Reply** e specialista in Computer Science (AI Curriculum).
+Mi specializzo nella progettazione di architetture **RAG**, soluzioni **Generative AI**, pipelines **LLMOps** e piattaforme Cloud Native per l'enterprise.
 
 ```python
 from typing import List
 
-class Nicola(CloudConsultant):
+class Nicola(AIEngineer):
     def __init__(self):
         self.location = "Italy 🇮🇹"
-        self.passions = ["Cloud Architecture", "Deep Learning", "Automation"]
+        self.passions = ["Generative AI", "LLMOps", "Cloud Architecture"]
 
     def current_focus(self) -> str:
-        return "Building secure cloud solutions @ Nimbus Reply"
+        return "Building scalable AI solutions @ Machine Learning Reply"
 
     def tech_stack(self) -> List[str]:
-        return ["AWS/GCP", "Kubernetes", "MLOps", "Terraform"]
+        return ["Python", "TensorFlow/PyTorch", "AWS/GCP", "LLMs & RAG"]
 
     def mission(self) -> str:
-        return "Bridge the gap between Operations and AI"
+        return "Empower enterprise innovation through Artificial Intelligence"
 ```
 
 </div>
@@ -59,7 +59,7 @@ class Nicola(CloudConsultant):
 
 | **Cloud & Infrastructure** | **AI & Data Science** | **Development** |
 | :---: | :---: | :---: |
-| ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white) <br> ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white) <br> ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) | ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) <br> ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) <br> ![Scikit-Learn](https://img.shields.io/badge/scikit_learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) <br> ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white) <br> ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white) |
+| ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazon-aws&logoColor=white) <br> ![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=flat-square&logo=google-cloud&logoColor=white) <br> ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) | ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white) <br> ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white) <br> ![Hugging Face](https://img.shields.io/badge/Hugging_Face-F7931E?style=flat-square&logo=huggingface&logoColor=white) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) <br> ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white) <br> ![C++](https://img.shields.io/badge/C++-00599C?style=flat-square&logo=c%2B%2B&logoColor=white) |
 
 | **DevOps & Tools** | **Computer Vision** | **Database** |
 | :---: | :---: | :---: |
@@ -77,10 +77,10 @@ class Nicola(CloudConsultant):
 <table style="border: none; background-color: transparent;">
 <tr>
 <td style="border: none;">
-<img src="https://github-readme-stats.vercel.app/api?username=NicolaM99&show_icons=true&theme=nord&hide_border=true&count_private=true&bg_color=2d3436&title_color=0984e3&text_color=dfe6e9&icon_color=0984e3" height="160" alt="Stats" />
+<img src="https://github-readme-stats.vercel.app/api?username=NicolaM99&show_icons=true&theme=nord&hide_border=true&count_private=true&bg_color=1c1c1c&title_color=e8603c&text_color=e8e4dc&icon_color=e8603c" height="160" alt="Stats" />
 </td>
 <td style="border: none;">
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NicolaM99&layout=compact&theme=nord&hide_border=true&bg_color=2d3436&title_color=0984e3&text_color=dfe6e9" height="160" alt="Languages" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NicolaM99&layout=compact&theme=nord&hide_border=true&bg_color=1c1c1c&title_color=e8603c&text_color=e8e4dc" height="160" alt="Languages" />
 </td>
 </tr>
 </table>
@@ -99,5 +99,5 @@ class Nicola(CloudConsultant):
 <br />
 
 <div align="center">
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0984e3,2d3436&height=80&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=e8603c,0d0d0d&height=80&section=footer" width="100%"/>
 </div>
