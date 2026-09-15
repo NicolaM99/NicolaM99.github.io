@@ -33,7 +33,7 @@
   <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
   <!-- Fonts — display=swap prevents FOUT -->
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400..800;1,400..800&family=Hind:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Font Awesome — loaded after fonts so layout paint isn't blocked -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
@@ -75,23 +75,23 @@
     ═══════════════════════════════════════════════════════════════ */
     :root {
       /* Palette */
-      --color-bg:           #f7f4f0;
-      --color-bg-alt:       #edeae5;
-      --color-surface:      #ffffff;
-      --color-ink:          #111111;
-      --color-ink-2:        #444444;
-      --color-ink-3:        #6b6b6b;   /* bumped from #888 → passes AA on white */
-      --color-green:        #0a5c37;
-      --color-green-2:      #0e7448;   /* bumped for AAA on --color-green-bg */
-      --color-green-bright: #4eca8b;   /* on dark surfaces only */
-      --color-green-bg:     #e6f4ec;
-      --color-border:       rgba(0, 0, 0, 0.09);
-      --color-border-dark:  rgba(255, 255, 255, 0.10);
+      --color-bg:           #0d0d0d;
+      --color-bg-alt:       #161616;
+      --color-surface:      #1c1c1c;
+      --color-ink:          #e8e4dc;
+      --color-ink-2:        #b7ab98;
+      --color-ink-3:        #8a7e6e;
+      --color-accent:       #e8603c;
+      --color-accent-2:     #c4482a;
+      --color-accent-bright:#ff7f5c;
+      --color-accent-bg:    rgba(232, 96, 60, 0.15);
+      --color-border:       #2a2725;
+      --color-border-dark:  #4a4540;
 
       /* Typography */
-      --font-serif: 'Fraunces', Georgia, serif;
-      --font-mono:  'DM Mono', 'Courier New', monospace;
-      --font-sans:  'Instrument Sans', system-ui, sans-serif;
+      --font-display: 'Montserrat', system-ui, sans-serif;
+      --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+      --font-sans:    'Hind', system-ui, sans-serif;
 
       /* Fluid type scale  (min @ 320px → max @ 1440px) */
       --text-xs:   clamp(0.625rem, 0.58rem + 0.22vw,  0.75rem);   /* ~10–12px */
@@ -161,7 +161,7 @@
 
     /* Globally visible focus ring — keyboard-nav first */
     :focus-visible {
-      outline:        2.5px solid var(--color-green);
+      outline:        2.5px solid var(--color-accent);
       outline-offset: 3px;
       border-radius:  var(--radius-sm);
     }
@@ -173,7 +173,7 @@
       position:    absolute;
       inset-block-start:  -999px;
       inset-inline-start: 0;
-      background:  var(--color-green);
+      background:  var(--color-accent);
       color:       var(--color-surface);
       padding:     var(--space-2) var(--space-3);
       font-size:   var(--text-sm);
@@ -203,7 +203,7 @@
       padding-block:  0;
       padding-inline: var(--page-inline);
       block-size: var(--nav-height);
-      background: rgba(247, 244, 240, 0.88);
+      background: rgba(13, 13, 13, 0.88);
       /* Isolate the stacking context so backdrop-filter composites correctly */
       isolation: isolate;
       -webkit-backdrop-filter: blur(18px) saturate(1.4);
@@ -211,7 +211,7 @@
       border-block-end: 1px solid var(--color-border);
       /* Fallback for browsers without backdrop-filter */
       @supports not (backdrop-filter: blur(1px)) {
-        background: rgba(247, 244, 240, 0.97);
+        background: rgba(13, 13, 13, 0.97);
       }
     }
 
@@ -219,7 +219,7 @@
       font-family:     var(--font-mono);
       font-size:       var(--text-sm);
       font-weight:     500;
-      color:           var(--color-green);
+      color:           var(--color-accent);
       letter-spacing:  0.06em;
       text-decoration: none;
       transition:      color var(--dur-fast) var(--ease-out);
@@ -250,10 +250,10 @@
       inset-inline-start: 0;
       inline-size:  0;
       block-size:   1.5px;
-      background:   var(--color-green);
+      background:   var(--color-accent);
       transition:   inline-size var(--dur-base) var(--ease-out);
     }
-    .nav-links a:hover { color: var(--color-green); }
+    .nav-links a:hover { color: var(--color-accent); }
     .nav-links a:hover::after { inline-size: 100%; }
 
     .nav-cta {
@@ -275,9 +275,9 @@
                   box-shadow var(--dur-base) var(--ease-out);
     }
     .nav-cta:hover {
-      background:  var(--color-green);
+      background:  var(--color-accent);
       transform:   translateY(-1px);
-      box-shadow:  0 4px 12px rgba(10, 92, 55, 0.25);
+      box-shadow:  0 4px 12px rgba(232, 96, 60, 0.25);
     }
 
     /* ═══════════════════════════════════════════════════════════════
@@ -300,9 +300,9 @@
     /* Decorative watermark — purely visual, hidden from AT */
     .hero-watermark {
       position:      absolute;
-      font-family:   var(--font-serif);
+      font-family:   var(--font-display);
       font-size:     min(28vw, 340px);
-      color:         rgba(0, 0, 0, 0.025);
+      color:         rgba(255, 255, 255, 0.025);
       inset-inline-end:  -4vw;
       inset-block-end:   -4vh;
       line-height:   1;
@@ -318,7 +318,7 @@
       font-family:   var(--font-mono);
       font-size:     var(--text-xs);
       letter-spacing: 0.10em;
-      color:         var(--color-green);
+      color:         var(--color-accent);
       text-transform: uppercase;
       margin-block-end: var(--space-4);
     }
@@ -329,7 +329,7 @@
       inline-size:  7px;
       block-size:   7px;
       border-radius: var(--radius-pill);
-      background:   var(--color-green-2);
+      background:   var(--color-accent-2);
       flex-shrink:  0;
       animation:    pulse-dot 2s ease-in-out infinite;
     }
@@ -340,14 +340,14 @@
     }
 
     .hero-title {
-      font-family:    var(--font-serif);
+      font-family:    var(--font-display);
       font-size:      var(--text-hero);
       line-height:    1.0;
       letter-spacing: -0.025em;
       margin-block-end: var(--space-3);
     }
     .hero-title .line2 {
-      color:      var(--color-green);
+      color:      var(--color-accent);
       font-style: italic;
     }
 
@@ -403,19 +403,19 @@
       color:      var(--color-surface);
     }
     .btn-dark:hover {
-      background: var(--color-green);
+      background: var(--color-accent);
       transform:  translateY(-2px);
-      box-shadow: 0 6px 18px rgba(10, 92, 55, 0.28);
+      box-shadow: 0 6px 18px rgba(232, 96, 60, 0.28);
     }
 
     .btn-ghost {
       background:   transparent;
       color:        var(--color-ink);
-      border-color: rgba(0, 0, 0, 0.18);
+      border-color: rgba(255, 255, 255, 0.15);
     }
     .btn-ghost:hover {
-      border-color: var(--color-green);
-      color:        var(--color-green);
+      border-color: var(--color-accent);
+      color:        var(--color-accent);
       transform:    translateY(-2px);
     }
 
@@ -443,14 +443,14 @@
     }
     .impact-card:hover {
       transform:  translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
     }
 
     .impact-num {
-      font-family:   var(--font-serif);
+      font-family:   var(--font-display);
       font-size:     var(--text-2xl);
       line-height:   1;
-      color:         var(--color-green);
+      color:         var(--color-accent);
       min-inline-size: 64px;
       font-weight:   700;
     }
@@ -470,10 +470,10 @@
 
     /* Dark variant */
     .impact-card--dark {
-      background:   var(--color-ink);
+      background:  var(--color-bg-alt);
       border-color: transparent;
     }
-    .impact-card--dark .impact-num   { color: var(--color-green-bright); }
+    .impact-card--dark .impact-num   { color: var(--color-accent-bright); }
     .impact-card--dark .impact-label { color: rgba(255, 255, 255, 0.88); }
     .impact-card--dark .impact-sub   { color: rgba(255, 255, 255, 0.40); }
 
@@ -491,13 +491,13 @@
       font-family:    var(--font-mono);
       font-size:      var(--text-xs);
       letter-spacing: 0.12em;
-      color:          var(--color-green);
+      color:          var(--color-accent);
       text-transform: uppercase;
       margin-block-end: var(--space-1);
     }
 
     .section-title {
-      font-family:    var(--font-serif);
+      font-family:    var(--font-display);
       font-size:      var(--text-3xl);
       letter-spacing: -0.025em;
       margin-block-end: var(--space-5);
@@ -540,9 +540,9 @@
       color:          var(--color-ink-2);
     }
     .chip--hi {
-      background:   var(--color-green-bg);
-      border-color: rgba(10, 92, 55, 0.22);
-      color:        var(--color-green);
+      background:   var(--color-accent-bg);
+      border-color: rgba(232, 96, 60, 0.22);
+      color:        var(--color-accent);
     }
 
     /* Aside info card */
@@ -569,7 +569,7 @@
     }
 
     .aside-icon {
-      color:       var(--color-green);
+      color:       var(--color-accent);
       font-size:   14px;
       margin-block-start: 2px;
       inline-size: 16px;
@@ -619,12 +619,12 @@
 
     .exp-company {
       font-size:   var(--text-xs);
-      color:       var(--color-green);
+      color:       var(--color-accent);
       font-weight: 600;
     }
 
     .exp-title {
-      font-family:    var(--font-serif);
+      font-family:    var(--font-display);
       font-size:      var(--text-lg);
       margin-block-end: var(--space-1);
       letter-spacing: -0.01em;
@@ -654,15 +654,15 @@
       content:               '—';
       position:              absolute;
       inset-inline-start:    0;
-      color:                 var(--color-green);
+      color:                 var(--color-accent);
       font-family:           var(--font-mono);
     }
     .exp-bullets li strong { color: var(--color-ink); }
 
     .metric-badge {
       display:          inline-block;
-      background:       var(--color-green-bg);
-      color:            var(--color-green);
+      background:       var(--color-accent-bg);
+      color:            var(--color-accent);
       font-family:      var(--font-mono);
       font-size:        calc(var(--text-xs) * 0.9);
       padding-block:    1px;
@@ -696,12 +696,12 @@
     }
     .proj-card:hover {
       transform:  translateY(-4px);
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
     }
 
     /* Featured card spans full width then splits internally */
     .proj-card--featured {
-      background:  var(--color-ink);
+      background:  var(--color-bg-alt);
       border-color: transparent;
       grid-column: 1 / -1;  /* always spans full grid width */
       display:     grid;
@@ -719,13 +719,13 @@
     .proj-card--featured .proj-n { color: rgba(255, 255, 255, 0.35); }
 
     .proj-h {
-      font-family:    var(--font-serif);
+      font-family:    var(--font-display);
       font-size:      var(--text-xl);
       margin-block-end: var(--space-2);
       letter-spacing: -0.01em;
       line-height:    1.15;
     }
-    .proj-card--featured .proj-h { color: var(--color-surface); }
+    .proj-card--featured .proj-h { color: var(--color-ink); }
 
     .proj-desc {
       font-size:        var(--text-sm);
@@ -798,7 +798,7 @@
       border-color: rgba(255, 255, 255, 0.15);
     }
     .proj-card--featured .gh-btn:hover {
-      background: var(--color-green);
+      background: var(--color-accent);
       color:      var(--color-surface);
     }
 
@@ -825,9 +825,9 @@
     }
 
     .metric-val {
-      font-family: var(--font-serif);
+      font-family: var(--font-display);
       font-size:   var(--text-2xl);
-      color:       var(--color-green-bright);
+      color:       var(--color-accent-bright);
       line-height: 1;
       min-inline-size: 70px;
     }
@@ -863,7 +863,7 @@
 
     .stack-icon {
       font-size:        1.1rem;
-      color:            var(--color-green);
+      color:            var(--color-accent);
       margin-block-end: var(--space-2);
     }
 
@@ -889,9 +889,9 @@
       color:          var(--color-ink-2);
     }
     .pill--hi {
-      background:   var(--color-green-bg);
-      border-color: rgba(10, 92, 55, 0.22);
-      color:        var(--color-green);
+      background:   var(--color-accent-bg);
+      border-color: rgba(232, 96, 60, 0.22);
+      color:        var(--color-accent);
     }
 
     /* ═══════════════════════════════════════════════════════════════
@@ -914,12 +914,12 @@
     }
 
     .cert-card--active {
-      border-color: rgba(10, 92, 55, 0.30);
-      background:   var(--color-green-bg);
+      border-color: rgba(232, 96, 60, 0.30);
+      background:   var(--color-accent-bg);
     }
 
     .cert-card--pending {
-      border:     1.5px dashed rgba(10, 92, 55, 0.30);
+      border:     1.5px dashed rgba(232, 96, 60, 0.30);
       background: transparent;
     }
 
@@ -936,7 +936,7 @@
       text-transform: uppercase;
     }
     .cert-card--active .cert-issuer,
-    .cert-card--pending .cert-issuer { color: var(--color-green); }
+    .cert-card--pending .cert-issuer { color: var(--color-accent); }
 
     .cert-name {
       font-size:   var(--text-sm);
@@ -945,15 +945,15 @@
       line-height: 1.35;
     }
     .cert-card--active .cert-name,
-    .cert-card--pending .cert-name { color: var(--color-green); }
+    .cert-card--pending .cert-name { color: var(--color-accent); }
 
     .cert-period {
       font-family: var(--font-mono);
       font-size:   calc(var(--text-xs) * 0.9);
       color:       var(--color-ink-3);
     }
-    .cert-card--active .cert-period  { color: var(--color-green-2); }
-    .cert-card--pending .cert-period { color: var(--color-green-2); }
+    .cert-card--active .cert-period  { color: var(--color-accent-2); }
+    .cert-card--pending .cert-period { color: var(--color-accent-2); }
 
     .cert-id {
       font-family:   var(--font-mono);
@@ -992,7 +992,7 @@
     }
 
     .edu-deg {
-      font-family:      var(--font-serif);
+      font-family:      var(--font-display);
       font-size:        var(--text-lg);
       line-height:      1.2;
       margin-block-start: 4px;
@@ -1029,7 +1029,7 @@
     }
 
     .contact-title {
-      font-family:    var(--font-serif);
+      font-family:    var(--font-display);
       font-size:      var(--text-hero);
       line-height:    1.0;
       letter-spacing: -0.025em;
@@ -1067,7 +1067,7 @@
     }
     .c-link:hover {
       background:   rgba(255, 255, 255, 0.09);
-      border-color: rgba(78, 202, 139, 0.45);
+      border-color: rgba(255, 127, 92, 0.45);
       transform:    translateX(3px);
     }
 
@@ -1080,7 +1080,7 @@
       align-items:  center;
       justify-content: center;
       font-size:    13px;
-      color:        var(--color-green-bright);
+      color:        var(--color-accent-bright);
       flex-shrink:  0;
     }
 
@@ -1104,7 +1104,7 @@
                   transform var(--dur-base) var(--ease-out);
     }
     .c-link:hover .c-arrow {
-      color:     rgba(78, 202, 139, 0.8);
+      color:     rgba(255, 127, 92, 0.8);
       transform: translateX(3px);
     }
 
@@ -1112,7 +1112,7 @@
        FOOTER
     ═══════════════════════════════════════════════════════════════ */
     .site-footer {
-      background-color:  var(--color-ink);
+      background-color:  var(--color-bg-alt);
       border-block-start: 1px solid rgba(255, 255, 255, 0.07);
       padding-block:     var(--space-4);
       padding-inline:    var(--page-inline);
@@ -1141,7 +1141,7 @@
       text-decoration: none;
       transition:      color var(--dur-base) var(--ease-out);
     }
-    .foot-links a:hover { color: var(--color-green-bright); }
+    .foot-links a:hover { color: var(--color-accent-bright); }
 
     /* ═══════════════════════════════════════════════════════════════
        RESPONSIVE OVERRIDES
@@ -1646,7 +1646,7 @@
           <p class="cert-id">EC2 · S3 · VPC · IAM</p>
         </div>
 
-        <div class="cert-card cert-card--active" style="border-color: rgba(10, 92, 55, 0.30); background: var(--color-green-bg);">
+        <div class="cert-card cert-card--active" style="border-color: rgba(232, 96, 60, 0.30); background: var(--color-accent-bg);">
           <div class="cert-icon" role="img" aria-label="Book">📖</div>
           <p class="cert-issuer">Pubblicazione · Lug 2026</p>
           <h3 class="cert-name">L'Arte di Rallentare nell'Era dell'Iper-Velocità</h3>
