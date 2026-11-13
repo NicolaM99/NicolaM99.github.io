@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="10" fill="#0d0d0d"/>
+  <rect x="2" y="2" width="60" height="60" rx="8" fill="none" stroke="#2a2725" stroke-width="2"/>
+  <rect x="10" y="10" width="8" height="8" rx="2" fill="#e8603c"/>
+  <text x="32" y="44" text-anchor="middle" font-family="Montserrat, system-ui, -apple-system, sans-serif" font-weight="800" font-size="24" letter-spacing="-1" fill="#f4f0ea">NM</text>
+</svg>
