@@ -1,0 +1,20 @@
+# Nicola Mastromarino
+
+> Personal portfolio of Nicola Mastromarino, AI Engineer at Machine Learning Reply specializing in Generative AI, RAG architectures, LLMOps pipelines, and Cloud Native platforms.
+
+## Main Pages
+
+- [Portfolio](https://nicolam99.github.io/): Personal website, bio, tech stack, certifications, and featured AI engineering work.
+- [CV (LaTeX source)](https://nicolam99.github.io/Nicola_Mastromarino_CV.tex): Curriculum Vitae source in LaTeX format.
+
+## Expertise & Focus Areas
+
+- **Generative AI & LLMs:** RAG architectures, LLMOps, Hugging Face, TensorFlow, PyTorch.
+- **Cloud & Infrastructure:** AWS, Google Cloud Platform (GCP), Kubernetes, Docker, Terraform, GitHub Actions.
+- **Development & Data:** Python, Java, C++, PostgreSQL, MongoDB, Computer Vision (OpenCV, YOLO).
+
+## Contact & Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/): Professional profile and experience.
+- [GitHub](https://github.com/NicolaM99): Open-source repositories and projects.
+- [Email](mailto:nickmastromarino54@gmail.com): Direct contact.
