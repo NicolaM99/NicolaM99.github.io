@@ -50,10 +50,39 @@
     "url": "https://nicolam99.github.io/",
     "sameAs": [
       "https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/",
-      "https://github.com/NicolaM99"
+      "https://github.com/NicolaM99",
+      "https://www.artedirallentare.it/"
     ],
-    "alumniOf": "Università degli Studi di Bari 'Aldo Moro'",
-    "knowsAbout": ["Cloud Computing", "Generative AI", "DevSecOps", "LLMOps", "RAG", "QLoRA", "Multi-Cloud"]
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Università degli Studi di Bari Aldo Moro"
+    },
+    "knowsAbout": ["Cloud Computing", "Generative AI", "DevSecOps", "LLMOps", "RAG", "Graph RAG", "QLoRA", "Multi-Cloud"],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Cloud Certified - Cloud Digital Leader",
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": "Google Cloud" }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "AWS Educate - Introduction to Cloud 101",
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" }
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Cloud Skills Boost - Digital Transformation",
+        "credentialCategory": "certification",
+        "recognizedBy": { "@type": "Organization", "name": "Google Cloud" }
+      }
+    ],
+    "author": {
+      "@type": "Book",
+      "name": "L'Arte di Rallentare nell'Era dell'Iper-Velocità",
+      "url": "https://www.artedirallentare.it/"
+    }
   }
   </script>
 
@@ -1201,16 +1230,22 @@
     <a href="#hero" class="nav-logo" aria-label="Nicola Mastromarino — vai alla home">NM_</a>
 
     <ul class="nav-links" role="list">
-      <li><a href="#about">Profilo</a></li>
-      <li><a href="#exp">Esperienza</a></li>
-      <li><a href="#projects">Progetti</a></li>
-      <li><a href="#stack">Stack</a></li>
-      <li><a href="#certs">Credenziali</a></li>
+      <li><a href="#about" data-i18n="nav_about">Profilo</a></li>
+      <li><a href="#exp" data-i18n="nav_exp">Esperienza</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Progetti</a></li>
+      <li><a href="#stack" data-i18n="nav_stack">Stack</a></li>
+      <li><a href="#certs" data-i18n="nav_certs">Credenziali</a></li>
     </ul>
 
-    <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="nav-cta btn" download aria-label="Scarica il CV in PDF">
-      <i class="fas fa-download" aria-hidden="true"></i>CV
-    </a>
+    <div class="nav-actions">
+      <div class="lang-switch" role="group" aria-label="Seleziona lingua">
+        <button type="button" class="lang-btn is-active" data-lang="it" aria-pressed="true">IT</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="assets/documents/Nicola_Mastromarino_CV.pdf" class="nav-cta btn" download aria-label="Scarica il CV in PDF">
+        <i class="fas fa-download" aria-hidden="true"></i>CV
+      </a>
+    </div>
   </nav>
 
   <!-- ═══════════════════════════════════════════
@@ -1299,7 +1334,7 @@
     <!-- ABOUT ───────────────────────────────── -->
     <section id="about" class="section section--alt" aria-labelledby="about-title">
       <p class="section-label">01 — Profilo</p>
-      <h2 id="about-title" class="section-title">Chi sono</h2>
+      <h2 id="about-title" class="section-title" data-i18n="h2_about">AI Engineering &amp; Cloud Architecture</h2>
 
       <div class="about-grid">
         <div class="about-body">
@@ -1436,7 +1471,7 @@
     <!-- PROJECTS ────────────────────────────── -->
     <section id="projects" class="section section--alt" aria-labelledby="projects-title">
       <p class="section-label">03 — Progetti</p>
-      <h2 id="projects-title" class="section-title">Lavori significativi</h2>
+      <h2 id="projects-title" class="section-title" data-i18n="h2_projects">Sistemi AI &amp; Case Study</h2>
 
       <div class="projects-grid">
         <!-- Featured project -->
@@ -1651,14 +1686,17 @@
           <div class="cert-icon" role="img" aria-label="Book">📖</div>
           <p class="cert-issuer">Pubblicazione · Lug 2026</p>
           <h3 class="cert-name">L'Arte di Rallentare nell'Era dell'Iper-Velocità</h3>
-          <p class="cert-period">Saggio sull'impatto della GenAI su carico cognitivo e deep work.</p>
+          <p class="cert-period" data-i18n="pub_desc">Saggio sull'impatto della GenAI su carico cognitivo e deep work.</p>
+          <a href="https://www.artedirallentare.it/" target="_blank" rel="noopener noreferrer" class="gh-btn" style="margin-top: 0.75rem; display: inline-flex;" aria-label="Visita il sito ufficiale del libro L'Arte di Rallentare (si apre in una nuova scheda)" data-i18n="pub_link">
+            <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>artedirallentare.it
+          </a>
         </div>
       </div>
 
       <!-- Education sub-section -->
       <div class="edu-subsection">
         <p class="section-label" style="margin-block-end: 0">06 — Formazione</p>
-        <h2 id="edu-title" class="section-title" style="margin-block-start: var(--space-1)">Percorso accademico</h2>
+        <h2 id="edu-title" class="section-title" style="margin-block-start: var(--space-1)" data-i18n="h2_edu">Formazione Accademica</h2>
 
         <div class="edu-grid">
           <div class="edu-card">
@@ -1744,5 +1782,243 @@
     </nav>
   </footer>
 
+  <!-- ═══════════════════════════════════════════
+       TECHNICAL DRAWER (Architecture, Metrics & Ablation Study)
+  ═══════════════════════════════════════════ -->
+  <div id="drawer-overlay" class="drawer-overlay" aria-hidden="true"></div>
+  <aside id="tech-drawer" class="tech-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+    <div class="drawer-header">
+      <div>
+        <p id="drawer-eyebrow" class="drawer-eyebrow"></p>
+        <h3 id="drawer-title" class="drawer-title"></h3>
+      </div>
+      <button type="button" id="drawer-close" class="drawer-close" aria-label="Chiudi pannello tecnico">
+        <i class="fas fa-times" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="drawer-body"></div>
+  </aside>
+
+  <script>
+    (function () {
+      const i18n = {
+        it: {
+          meta_title: "Nicola Mastromarino | AI Engineer — Generative AI, LLMOps & Cloud",
+          meta_desc: "Nicola Mastromarino — AI Engineer presso Machine Learning Reply. Esperto in Generative AI, architetture RAG, pipeline LLMOps e piattaforme Cloud-Native.",
+          nav_about: "Profilo",
+          nav_exp: "Esperienza",
+          nav_projects: "Progetti",
+          nav_stack: "Stack",
+          nav_certs: "Credenziali",
+          h2_about: "AI Engineering & Cloud Architecture",
+          h2_exp: "Esperienza Enterprise",
+          h2_projects: "Sistemi AI & Case Study",
+          h2_stack: "Stack Tecnologico",
+          h2_certs: "Certificazioni & Pubblicazioni",
+          h2_edu: "Formazione Accademica",
+          btn_drawer_arch: '<i class="fas fa-layer-group" aria-hidden="true"></i>Architettura &amp; Metriche',
+          pub_desc: "Saggio sull'impatto della GenAI su carico cognitivo e deep work.",
+          pub_link: '<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>artedirallentare.it'
+        },
+        en: {
+          meta_title: "Nicola Mastromarino | AI Engineer — Generative AI, LLMOps & Cloud",
+          meta_desc: "Nicola Mastromarino — AI Engineer at Machine Learning Reply. Specialized in Generative AI, RAG architectures, LLMOps pipelines, and Cloud-Native platforms.",
+          nav_about: "Profile",
+          nav_exp: "Experience",
+          nav_projects: "Projects",
+          nav_stack: "Stack",
+          nav_certs: "Credentials",
+          h2_about: "AI Engineering & Cloud Architecture",
+          h2_exp: "Enterprise Experience",
+          h2_projects: "AI Systems & Case Studies",
+          h2_stack: "Technology Stack",
+          h2_certs: "Certifications & Publications",
+          h2_edu: "Academic Background",
+          btn_drawer_arch: '<i class="fas fa-layer-group" aria-hidden="true"></i>Architecture &amp; Metrics',
+          pub_desc: "Essay on the impact of GenAI on cognitive load and deep work.",
+          pub_link: '<i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>artedirallentare.it'
+        }
+      };
+
+      const drawerData = {
+        "medical-rag": {
+          it: {
+            eyebrow: "Case Study · 01 — Clinical NLP",
+            title: "Medical RAG Question Answering System",
+            archTitle: "Architettura del Sistema",
+            arch: "Pipeline RAG ibrida su corpus clinico MIMIC-III: retrieval denso con S-PubMedBERT + FAISS combinato con retrieval lessicale BM25 tramite Reciprocal Rank Fusion (RRF), seguito da generazione con BioMistral-7B fine-tuned via QLoRA (4-bit NF4).",
+            metricsTitle: "Metriche Chiave",
+            metrics: [
+              { val: "+190%", lbl: "Token F1 vs Baseline" },
+              { val: "-40%", lbl: "Allucinazioni Cliniche" },
+              { val: "4-bit", lbl: "Quantizzazione QLoRA" }
+            ],
+            ablationTitle: "Ablation Study (S1–S5)",
+            ablation: [
+              "<strong>S1 (Baseline Zero-Shot):</strong> BioMistral-7B senza retrieval — Token F1 base.",
+              "<strong>S2 (Dense Only):</strong> Aggiunta di FAISS + S-PubMedBERT embeddings.",
+              "<strong>S3 (Hybrid RAG):</strong> Fusione BM25 + Dense via RRF (+recall su termini clinici rari).",
+              "<strong>S4 (QLoRA Fine-Tuning):</strong> Adattamento su coppie QA cliniche.",
+              "<strong>S5 (Full Pipeline):</strong> Hybrid RAG + QLoRA + prompt grounding (+190% Token F1)."
+            ]
+          },
+          en: {
+            eyebrow: "Case Study · 01 — Clinical NLP",
+            title: "Medical RAG Question Answering System",
+            archTitle: "System Architecture",
+            arch: "Hybrid RAG pipeline on the MIMIC-III clinical corpus: dense retrieval with S-PubMedBERT + FAISS combined with BM25 lexical retrieval via Reciprocal Rank Fusion (RRF), followed by generation with BioMistral-7B fine-tuned via QLoRA (4-bit NF4).",
+            metricsTitle: "Key Metrics",
+            metrics: [
+              { val: "+190%", lbl: "Token F1 vs Baseline" },
+              { val: "-40%", lbl: "Clinical Hallucinations" },
+              { val: "4-bit", lbl: "QLoRA Quantization" }
+            ],
+            ablationTitle: "Ablation Study (S1–S5)",
+            ablation: [
+              "<strong>S1 (Zero-Shot Baseline):</strong> BioMistral-7B without retrieval — base Token F1.",
+              "<strong>S2 (Dense Only):</strong> Added FAISS + S-PubMedBERT embeddings.",
+              "<strong>S3 (Hybrid RAG):</strong> BM25 + Dense fusion via RRF (+recall on rare clinical terms).",
+              "<strong>S4 (QLoRA Fine-Tuning):</strong> Domain adaptation on clinical QA pairs.",
+              "<strong>S5 (Full Pipeline):</strong> Hybrid RAG + QLoRA + grounded prompting (+190% Token F1)."
+            ]
+          }
+        },
+        "factkg": {
+          it: {
+            eyebrow: "Case Study · 02 — Graph RAG",
+            title: "FactKG — Knowledge Graph Fact Verification",
+            archTitle: "Architettura del Sistema",
+            arch: "Pipeline GraphRAG per la verifica fattuale su 9.041 claim estratti da DBpedia. Estrazione delle entità dal claim, attraversamento multi-hop del grafo di conoscenza e verifica tramite Llama-3 8B quantizzato a 4-bit.",
+            metricsTitle: "Metriche Chiave",
+            metrics: [
+              { val: "73.50%", lbl: "Accuracy su 9.041 Claim" },
+              { val: "Multi-Hop", lbl: "Graph Traversal" },
+              { val: "4-bit", lbl: "Llama-3 8B" }
+            ],
+            ablationTitle: "Componenti & Risultati",
+            ablation: [
+              "<strong>Entity Linking:</strong> Mappatura automatica delle entità del claim sui nodi DBpedia.",
+              "<strong>Subgraph Retrieval:</strong> Estrazione dei percorsi relazionali a 1-hop e 2-hop.",
+              "<strong>Grounded Reasoning:</strong> Classificazione Supported / Refuted con riduzione delle allucinazioni."
+            ]
+          },
+          en: {
+            eyebrow: "Case Study · 02 — Graph RAG",
+            title: "FactKG — Knowledge Graph Fact Verification",
+            archTitle: "System Architecture",
+            arch: "GraphRAG pipeline for fact verification across 9,041 DBpedia claims. Entity extraction from claims, multi-hop knowledge graph traversal, and verification via 4-bit quantized Llama-3 8B.",
+            metricsTitle: "Key Metrics",
+            metrics: [
+              { val: "73.50%", lbl: "Accuracy on 9,041 Claims" },
+              { val: "Multi-Hop", lbl: "Graph Traversal" },
+              { val: "4-bit", lbl: "Llama-3 8B" }
+            ],
+            ablationTitle: "Components & Results",
+            ablation: [
+              "<strong>Entity Linking:</strong> Automated mapping of claim entities to DBpedia nodes.",
+              "<strong>Subgraph Retrieval:</strong> 1-hop and 2-hop relational path extraction.",
+              "<strong>Grounded Reasoning:</strong> Supported / Refuted classification with reduced hallucinations."
+            ]
+          }
+        }
+      };
+
+      let currentLang = "it";
+      let activeDrawerId = null;
+
+      function applyLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        const dict = i18n[lang];
+        if (!dict) return;
+
+        document.title = dict.meta_title;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute("content", dict.meta_desc);
+
+        document.querySelectorAll("[data-i18n]").forEach(el => {
+          const key = el.getAttribute("data-i18n");
+          if (dict[key]) el.innerHTML = dict[key];
+        });
+
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+          const isSelected = btn.getAttribute("data-lang") === lang;
+          btn.classList.toggle("is-active", isSelected);
+          btn.setAttribute("aria-pressed", isSelected ? "true" : "false");
+        });
+
+        if (activeDrawerId) {
+          renderDrawer(activeDrawerId);
+        }
+      }
+
+      function renderDrawer(id) {
+        const data = drawerData[id] && drawerData[id][currentLang];
+        if (!data) return;
+
+        document.getElementById("drawer-eyebrow").textContent = data.eyebrow;
+        document.getElementById("drawer-title").textContent = data.title;
+
+        const metricsHtml = data.metrics.map(m =>
+          `<div class="drawer-metric-box"><div class="drawer-metric-val">${m.val}</div><div class="drawer-metric-lbl">${m.lbl}</div></div>`
+        ).join("");
+
+        const ablationHtml = data.ablation.map(item => `<li>${item}</li>`).join("");
+
+        document.getElementById("drawer-body").innerHTML = `
+          <div class="drawer-section">
+            <h4>${data.archTitle}</h4>
+            <p>${data.arch}</p>
+          </div>
+          <div class="drawer-section">
+            <h4>${data.metricsTitle}</h4>
+            <div class="drawer-metrics">${metricsHtml}</div>
+          </div>
+          <div class="drawer-section">
+            <h4>${data.ablationTitle}</h4>
+            <ul>${ablationHtml}</ul>
+          </div>
+        `;
+      }
+
+      const overlay = document.getElementById("drawer-overlay");
+      const drawer = document.getElementById("tech-drawer");
+      const closeBtn = document.getElementById("drawer-close");
+
+      function openDrawer(id) {
+        activeDrawerId = id;
+        renderDrawer(id);
+        overlay.classList.add("is-open");
+        drawer.classList.add("is-open");
+        overlay.setAttribute("aria-hidden", "false");
+        drawer.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        closeBtn.focus();
+      }
+
+      function closeDrawer() {
+        activeDrawerId = null;
+        overlay.classList.remove("is-open");
+        drawer.classList.remove("is-open");
+        overlay.setAttribute("aria-hidden", "true");
+        drawer.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => applyLanguage(btn.getAttribute("data-lang")));
+      });
+
+      document.querySelectorAll("[data-drawer]").forEach(btn => {
+        btn.addEventListener("click", () => openDrawer(btn.getAttribute("data-drawer")));
+      });
+
+      closeBtn.addEventListener("click", closeDrawer);
+      overlay.addEventListener("click", closeDrawer);
+      document.addEventListener("keydown", e => {
+        if (e.key === "Escape" && activeDrawerId) closeDrawer();
+      });
+    })();
+  </script>
 </body>
 </html>

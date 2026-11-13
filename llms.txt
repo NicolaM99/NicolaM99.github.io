@@ -1,20 +1,39 @@
 # Nicola Mastromarino
 
-> Personal portfolio of Nicola Mastromarino, AI Engineer at Machine Learning Reply specializing in Generative AI, RAG architectures, LLMOps pipelines, and Cloud Native platforms.
+> AI Engineer at Machine Learning Reply specializing in Generative AI, RAG architectures, LLMOps pipelines, and Cloud Native platforms.
 
-## Main Pages
+## Key Metrics & Impact
 
-- [Portfolio](https://nicolam99.github.io/): Personal website, bio, tech stack, certifications, and featured AI engineering work.
+- **-70% ops:** Operational overhead reduction through automated Cloud-Native & LLMOps pipelines.
+- **+190% Token F1:** Improvement in Medical RAG Question Answering over baseline.
+- **-40% hallucinations:** Reduction in LLM hallucinations via hybrid RAG & Knowledge Graph grounding.
+
+## Main Pages & Resources
+
+- [Portfolio](https://nicolam99.github.io/): Personal website, bio, enterprise experience, case studies, tech stack, and certifications.
 - [CV (LaTeX source)](https://nicolam99.github.io/Nicola_Mastromarino_CV.tex): Curriculum Vitae source in LaTeX format.
+- [L'Arte di Rallentare nell'Era dell'Iper-Velocità](https://www.artedirallentare.it/): Published book by Nicola Mastromarino.
 
-## Expertise & Focus Areas
+## Featured AI Systems & Case Studies
 
-- **Generative AI & LLMs:** RAG architectures, LLMOps, Hugging Face, TensorFlow, PyTorch.
-- **Cloud & Infrastructure:** AWS, Google Cloud Platform (GCP), Kubernetes, Docker, Terraform, GitHub Actions.
-- **Development & Data:** Python, Java, C++, PostgreSQL, MongoDB, Computer Vision (OpenCV, YOLO).
+- **Medical RAG Question Answering System:** Hybrid RAG pipeline with QLoRA fine-tuned BioMistral-7B and S1–S5 ablation study (+190% Token F1 vs baseline).
+- **FactKG — Graph RAG:** Knowledge Graph-grounded RAG system for factual verification and hallucination reduction (-40% hallucinations).
+- **Facial Expression Recognition:** Deep Learning computer vision pipeline ([GitHub](https://github.com/NicolaM99/facial-expression-recognition)).
+
+## Tech Stack
+
+- **Generative AI & LLMs:** RAG, Graph RAG, LLMOps, QLoRA, Hugging Face, TensorFlow, PyTorch.
+- **Cloud & DevSecOps:** AWS, Google Cloud Platform (GCP), Kubernetes, Docker, Terraform, GitHub Actions.
+- **Languages & Data:** Python, Java, C++, PostgreSQL, MongoDB, OpenCV, YOLO.
+
+## Certifications
+
+- Google Cloud Certified — Cloud Digital Leader (2025)
+- AWS Educate — Introduction to Cloud 101 (2025)
+- Google Cloud Skills Boost — Digital Transformation (2025)
 
 ## Contact & Profiles
 
-- [LinkedIn](https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/): Professional profile and experience.
-- [GitHub](https://github.com/NicolaM99): Open-source repositories and projects.
-- [Email](mailto:nickmastromarino54@gmail.com): Direct contact.
+- [LinkedIn](https://www.linkedin.com/in/nicola-mastromarino-3a3b74189/)
+- [GitHub](https://github.com/NicolaM99)
+- [Email](mailto:nickmastromarino54@gmail.com)
