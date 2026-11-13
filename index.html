@@ -1099,8 +1099,25 @@
     }
 
     .cert-icon {
-      font-size:        1.4rem;
+      display:          inline-flex;
+      align-items:      center;
+      justify-content:  center;
+      inline-size:      36px;
+      block-size:       36px;
+      font-size:        1.15rem;
+      color:            var(--color-accent);
       margin-block-end: var(--space-1);
+      border-radius:    var(--radius-sm);
+      overflow:         hidden;
+      background:       var(--color-surface);
+      border:           1px solid var(--color-border);
+    }
+
+    .cert-icon img {
+      inline-size: 100%;
+      block-size:  100%;
+      object-fit:  cover;
+      display:     block;
     }
 
     .cert-issuer {
@@ -2038,7 +2055,9 @@
 
       <div class="certs-row" role="list">
         <div class="cert-card cert-card--active" role="listitem">
-          <div class="cert-icon" role="img" aria-label="Gemini Agent">🤖</div>
+          <div class="cert-icon" aria-hidden="true">
+            <img src="assets/images/google_cloud.jpg" alt="" width="36" height="36" loading="lazy">
+          </div>
           <p class="cert-issuer">Google Cloud Partner Specialist · Attiva</p>
           <h3 class="cert-name">Gemini Enterprise Agent Development</h3>
           <time class="cert-period" datetime="2026-10">Ott 2026 – Apr 2027</time>
@@ -2046,7 +2065,9 @@
         </div>
 
         <div class="cert-card cert-card--active" role="listitem">
-          <div class="cert-icon" role="img" aria-label="Gemini Deployment">🛡️</div>
+          <div class="cert-icon" aria-hidden="true">
+            <img src="assets/images/google_cloud.jpg" alt="" width="36" height="36" loading="lazy">
+          </div>
           <p class="cert-issuer">Google Cloud Partner Specialist · Attiva</p>
           <h3 class="cert-name">Gemini Enterprise Deployment</h3>
           <time class="cert-period" datetime="2026-10">Ott 2026 – Apr 2027</time>
@@ -2054,7 +2075,9 @@
         </div>
 
         <div class="cert-card cert-card--active" role="listitem">
-          <div class="cert-icon" role="img" aria-label="Cloud">☁️</div>
+          <div class="cert-icon" aria-hidden="true">
+            <img src="assets/images/google_cloud.jpg" alt="" width="36" height="36" loading="lazy">
+          </div>
           <p class="cert-issuer">Google Cloud · Attiva</p>
           <h3 class="cert-name">Cloud Digital Leader</h3>
           <time class="cert-period" datetime="2025-06">Giu 2025 – Giu 2028</time>
@@ -2062,7 +2085,9 @@
         </div>
 
         <div class="cert-card" role="listitem">
-          <div class="cert-icon" role="img" aria-label="Rocket">🚀</div>
+          <div class="cert-icon" aria-hidden="true">
+            <img src="assets/images/google_cloud.jpg" alt="" width="36" height="36" loading="lazy">
+          </div>
           <p class="cert-issuer">Google Cloud Skills Boost</p>
           <h3 class="cert-name">Digital Transformation with Google Cloud</h3>
           <time class="cert-period" datetime="2025-04">Apr 2025</time>
@@ -2070,7 +2095,9 @@
         </div>
 
         <div class="cert-card" role="listitem">
-          <div class="cert-icon" role="img" aria-label="AWS">🟠</div>
+          <div class="cert-icon" aria-hidden="true">
+            <img src="assets/images/amazon_web_services_logo.jpg" alt="" width="36" height="36" loading="lazy">
+          </div>
           <p class="cert-issuer">AWS Educate</p>
           <h3 class="cert-name">Introduction to Cloud 101</h3>
           <time class="cert-period" datetime="2025-04">Apr 2025</time>
@@ -2078,7 +2105,9 @@
         </div>
 
         <div class="cert-card cert-card--active" role="listitem">
-          <div class="cert-icon" role="img" aria-label="Book">📖</div>
+          <div class="cert-icon" aria-hidden="true">
+            <i class="fas fa-book-open" aria-hidden="true"></i>
+          </div>
           <p class="cert-issuer">Pubblicazione · Lug 2026</p>
           <h3 class="cert-name">L'Arte di Rallentare nell'Era dell'Iper-Velocità</h3>
           <p class="cert-period" data-i18n="pub_desc">Saggio sull'impatto della GenAI su carico cognitivo e deep work.</p>
